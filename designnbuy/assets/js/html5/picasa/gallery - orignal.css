@@ -1,0 +1,142 @@
+/**
+ * jQuery Image Gallery - simple CSS
+ * 
+ * @name jq-ig.js
+ * @author Watchara Sriswasdi - http://www.eakkew.com/
+ * @version 1.0
+ * @copyright (c) 2011 eakkew(www.eakkew.com)
+ * @Visit http://jq-ig.googlecode.com/ for more informations, and duscussions about this plugin
+ */
+
+
+#image-gallery {
+  width:900px; /* SPECIFY how large of image gallery here */
+  height:500px; /* SPECIFY height of image gallery here */
+}
+
+#albums-container { /* album list container */
+  /*float:left;
+  width:200px;  
+  height:100%;*/
+  border-right:1px solid #DDDDDD;
+  overflow-y:auto;
+  font-size: 12px;
+  line-height: 22px;
+}
+#albums-container .jqig-album{ /* an album name */
+  background: none repeat scroll 0 0 #FFFFFF;
+  color:#AAAAAA;
+  border:solid 1px #DDDDDD;
+  margin:2px 2px;
+  padding:2px 6px;
+  cursor:pointer;
+}
+#albums-container .jqig-album:hover{
+  background: none repeat scroll 0 0 #0063DC;
+  border:solid 1px #FFFFFF;
+  color: #FFFFFF;
+}
+#albums-container .jqig-selected-album{
+  border:solid 1px #DDDDDD;
+  color:#000;
+  margin:2px 2px;
+  padding:2px 6px;
+  font-weight:bold;
+}
+
+#gallery { /* images container */
+  /*margin-left:200px;*/
+  border:solid 1px #DDDDDD;
+}
+.gallery-images-wrapper { height: 100%; overflow: auto;}
+.vertical-scroll-bar-wrapper{ height: 100%; width: 12px; position: relative; float:right;}
+.vertical-scroll-bar { position:relative; height:100%; margin-right:2px; }
+.vertical-scroll-bar .ui-slider-handle{ width:8px; height:10px; background-color:darkgray; display:block; position:absolute; border:3; -moz-border-radius: 3px; border-radius: 3px;}
+.vertical-scroll-bar a {cursor: default;}
+.image-wrapper{
+	float: left;
+  margin: 6px 6px;
+  text-decoration: none;
+}
+.image-wrapper .mask{
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	opacity:0.25;
+	cursor:pointer;
+  z-index: 10;
+}
+.image-wrapper:hover .mask{
+	opacity:0;
+  width:100%; 
+}
+.image-wrapper .image-caption{
+  color:#000;
+  font-size: 12px;
+  line-height: 22px;
+  padding-top: 0px;
+  white-space:nowrap; 
+  width:100%; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;  
+  -ms-text-overflow: ellipsis;
+}
+
+.bottom{
+  padding-bottom: 6px;
+}
+
+.pager {
+  font-size: 12px;
+  line-height: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6px;
+  text-align:center
+}
+.pager a, .pager .selected-page, 
+.pager .next, .pager .previous, 
+.pager .start-page, .pager .end-page{
+  background: none repeat scroll 0 0 #FFFFFF;
+  border:solid 1px #DDDDDD;
+  margin-right:2px;
+  padding:2px 6px;
+  cursor:pointer;
+  text-decoration: none;
+}
+.pager a:hover{
+  background: none repeat scroll 0 0 #0063DC;
+  border:solid 1px #FFFFFF;
+  color: #FFFFFF;
+}
+.pager .selected-page{
+  border:solid 1px #DDDDDD;
+  color:#FF0084;
+  padding:2px 6px;
+  font-weight:bold;
+}
+.pager .start-page{
+    border: 1px solid #EEEEEE;
+    color: #BBBBBB;
+    margin-right: 20px;
+    cursor:default;
+}
+.pager .end-page{
+    border: 1px solid #EEEEEE;
+    color: #BBBBBB;
+    margin-left: 20px;
+    cursor:default;
+}
+.pager .next{
+  border: 1px solid #EEEEEE;
+  margin-left: 20px;
+}
+.pager .previous{
+  border: 1px solid #EEEEEE;
+  margin-right: 20px;
+}
+.pager .more{
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #AAAAAA;
+    padding: 2px 6px;
+}

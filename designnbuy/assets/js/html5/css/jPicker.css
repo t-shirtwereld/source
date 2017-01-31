@@ -1,0 +1,103 @@
+﻿.jPicker  { color:#363636; font-size:12px;}
+.jPicker .Icon {
+	display: inline-block;
+	height: 24px;
+	position: relative;
+	text-align: left;
+	width: 25px
+}
+.jPicker .Icon span.Color, .jPicker .Icon span.Alpha {
+	background-position: 2px 2px;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+.jPicker .Icon span.Image {
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%
+}
+.jPicker.Container {
+	z-index: 10
+}
+
+
+
+table.jPicker {background-color: #E8E8E8;border: none;font-family: Arial, Helvetica, Sans-Serif;font-size: 12px!important;margin: 0;padding: 5px;width: 545px;z-index: 20;}
+.jPicker .Move {
+	background-color: #ddd;
+	border-color: #fff #666 #666 #fff;
+	border-style: solid;
+	border-width: 1px;
+	cursor: move;
+	height: 12px;
+	padding: 0
+}
+.jPicker .Title {font-size: 11px!important; display:none;font-weight: bold;margin: -2px 0 0 0;padding: 0;text-align: center;width: 100%}
+.jPicker div.Map {
+	border: none;
+	cursor: crosshair;
+	height: 260px;
+	margin: 12px 5px 0 5px;
+	
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 260px
+}
+.jPicker div[class="Map"] {
+	height: 256px;
+	width: 256px
+}
+.jPicker div.Bar {
+	border: none;
+	cursor: n-resize;
+	height: 260px;
+	margin: 12px 10px 0 5px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 24px
+}
+.jPicker div[class="Bar"] {
+	height: 256px;
+	width: 20px
+}
+.jPicker .Map .Map1, .jPicker .Map .Map2, .jPicker .Map .Map3, .jPicker .Bar .Map1, .jPicker .Bar .Map2, .jPicker .Bar .Map3, .jPicker .Bar .Map4, .jPicker .Bar .Map5, .jPicker .Bar .Map6 {background-color: transparent;background-image: none;display: block;left: 0;position: absolute;top: 0}
+.jPicker .Map .Map1, .jPicker .Map .Map2, .jPicker .Map .Map3 {	height: 2596px;	width: 256px}
+.jPicker .Bar .Map1, .jPicker .Bar .Map2, .jPicker .Bar .Map3, .jPicker .Bar .Map4 {height: 3896px;	width: 20px}
+.jPicker .Bar .Map5, .jPicker .Bar .Map6 {height: 256px;	width: 20px}
+.jPicker .Map .Map1, .jPicker .Map .Map2, .jPicker .Bar .Map6 {	background-repeat: no-repeat}
+.jPicker .Map .Map3, .jPicker .Bar .Map5 {background-repeat: repeat}
+.jPicker .Bar .Map1, .jPicker .Bar .Map2, .jPicker .Bar .Map3, .jPicker .Bar .Map4 {background-repeat: repeat-x}
+.jPicker .Map .Arrow {display: block;position: absolute; width:15px; height:15px;}
+.jPicker .Bar .Arrow {	display: block;left: 0;position: absolute; width:20px; height:7px;}
+.jPicker .Preview {	font-size: 9px;text-align: center}
+.jPicker .Preview div {	border: 2px solid #eee;	margin: 0 auto;padding: 0;width: 62px;height: 62px;}
+.jPicker .Preview div span {border: 1px solid #000;display: block;height: 30px;margin: 0 auto;padding: 0;width: 60px}
+.jPicker .Preview .Active {border-bottom-width: 0}
+.jPicker .Preview .Current {border-top-width: 0;cursor: pointer;}
+.jPicker .Button {text-align: center; width: 115px}
+.jPicker .Button input {width: 100px}
+.jPicker .Button .Ok {margin: 12px 0 5px 0}
+.jPicker td.Radio {	margin: 0;padding: 0;width: 60px}
+.jPicker td.Radio input {margin: 0 5px 0 0; padding: 0}
+.jPicker td label { font-size:12px;	display:inline-block}
+.jPicker td.Text {font-size: 12px!important; height: 22px; margin: 0;	padding: 0;	text-align: left;width: 120px;}
+.jPicker tr.Hex td.Text {width: 100px}
+.jPicker td.Text input {background-color: #fff;border: 1px solid #aaa;height: 19px;margin: 0 0 0 0px;text-align: left;width: 30px; border-radius:0px;}
+.jPicker td[class="Text"] input {height: 18px; font-size:10px;padding: 0px 2px;}
+.jPicker tr.Hex td.Text input.Hex 	{width: 45px; margin-right:2px; font-size:11px;}
+.jPicker tr.Hex td.Text input.AHex 	{width: 20px}
+.jPicker .Grid {text-align: center;width: 114px;background:#EFEFEF !important; margin-top:29px;}
+.jPicker .Grid span.QuickColor {border: 1px inset #aaa;cursor: pointer;display: inline-block;height:30px;line-height: 15px;margin: 0;padding: 0;width: 30px}
+.jPicker .Grid span[class="QuickColor"] {width: 30px}
+.jPicker hr { margin:2px 0;}

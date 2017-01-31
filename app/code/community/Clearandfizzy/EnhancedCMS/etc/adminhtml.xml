@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+<?php
+/**
+ * Clearandfizzy
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
+ * COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY
+ * COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
+ * AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+
+ * BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE
+ * TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY
+ * BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS
+ * CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND
+ * CONDITIONS.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize this extension for your
+ * needs please refer to http://www.clearandfizzy.com for more information.
+ *
+ * @category    Community
+ * @package     Clearandfizzy_EnhancedCMS
+ * @copyright   Copyright (c) 2015 Clearandfizzy Ltd. (http://www.clearandfizzy.com)
+ * @license     http://www.clearandfizzy.com/licence.txt
+ * @author		Gareth Price <gareth@clearandfizzy.com>
+ * @description This file configures the Clearandfizzy tab and any default menus in the magento admin
+ */
+-->
+<config>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+					<cms>
+						<children>
+							<enhanced translate="title">
+								<title>CMS</title>		
+								<children>				
+			                        <exportcsv translate="title">
+	        	                        <title>Export</title>
+	           	            	         <sort_order>10</sort_order>
+									</exportcsv>								
+			                        <importcsv translate="title">
+	        	                        <title>Import</title>
+	           	            	         <sort_order>20</sort_order>
+									</importcsv>								
+								</children>
+							</enhanced>
+						</children>						
+					</cms>
+					
+					<system>
+                        <children>
+                            <config>
+                                <children>
+									<clearandfizzy_enhancedcms_settings>
+                                    	<title>ClearandFizzy EnhancedCMS Section</title>
+									</clearandfizzy_enhancedcms_settings>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+
+                </children>
+            </admin>
+            
+        </resources>
+    </acl>
+</config>

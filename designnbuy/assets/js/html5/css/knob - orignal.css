@@ -1,0 +1,69 @@
+#transformPanel{display: none; position: absolute; z-index:10}
+.layer-object label {display: inline-block; cursor: pointer; position: relative; padding-left:25px; font-size: 13px;line-height: 40px;}  
+.layer-object {}
+.layer-object input[type=checkbox] { display: none; }  
+
+.layer_row .security label { padding: 0; width: 30px;}
+.layer_row .visibility label:before {content: ""; display:inline-block;width:36px;height:40px;margin-right:10px;position:absolute;left:0;bottom:1px; border-right:#B6E2F4; background:url("../images/check_eye.png")no-repeat 2px 12px;}
+
+.layer_row {border-bottom: 1px solid #e1e1e1;height: 80px;padding-left:0px;padding-top:0px; cursor:pointer;clear:both;position:relative}
+
+.layer_row:hover { background:#eaeaea}
+.layer_row label{}  	
+.layer_row label:before { border-radius: 0px; } 
+.layer_row .visibility input[type=checkbox]:checked + label:before {background:url(../images/check_eye_closed.png)no-repeat 2px 12px;line-height:15px; box-shadow:none;} 
+
+.layer_row .security label:before {content: ""; display:inline-block;width:30px;height:30px;margin-right:10px;position:absolute;left:0; bottombottom:1px; background:url("../images/unlock_object.png") no-repeat scroll 0px 6px;}  	
+.layer_row .security input[type=checkbox]:checked + label:before {background:url("../images/lock_object.png")no-repeat 0px 6px;line-height: 25px; box-shadow:none;} 
+
+.layer_row .security, .visibility {display: inline-block; position:relative;width:30px; }
+.visibility 		{ margin-top: 0px; height:40px;}
+.up-down 		{ float: right; width: 22px;}
+
+
+.layer_row svg {display:block; float:left; width:60px; height:66px;position:relative}
+.layer_row .leftObj {border: 1px solid #e1e1e1; float: left;margin: 5px 0;}
+.layer_row .rightObj {float:right; margin-top:13px; margin-right:10px; }
+.layer_row .titleName {width: 70px;float: left;line-height: 40px;color: #444;text-transform: uppercase;font-size: 12px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+.layer-heading { background:#0d9ed9; height:39px; color:#FFF; font-family:lato; font-size:18px; font-weight:300}
+.layer-heading .layers-sign {float: left;margin:7px 10px 7px 8px}
+.layer-heading i {display: block; float: left;font-style: normal; font-size: 16px; margin-top: 10px;}
+.layer-control {overflow: hidden; padding: 6px;}
+.layer-control button{ cursor:pointer}
+.layer-control button:hover { opacity:0.8}
+.layer-control .left-button-section { float:left }
+.layer-control .right-button-section { float:right }
+.moveDown { background:url(../images/lay_down.png) no-repeat; width:25px; height:25px; margin-right:5px; border:none;margin-top: -1px;}
+.moveUp { background:url(../images/lay_up.png) no-repeat; width:25px; height:25px;  border:none;}
+.layer-control .right-button-section .layer-duplicate { background:url(../images/lay_dup.png) no-repeat; width:22px; height:22px; margin-right:5px; border:none;}
+.layer-control .right-button-section .layer-delete { background:url(../images/lay_delete.png) no-repeat; width:22px; height:22px;  border:none;}
+
+/* D R A G A B L E   P A N E L */
+.move-object-panel { border:1px solid #B6E2F4; width:194px;box-shadow:1px 1px 3px 0px #BDBDBD; background:#fff}
+.move-object-panel .mop-heading {cursor:move;background:#0D9ED9;color: #FFFFFF;font-family: lato;font-size: 16px; line-height:23px;font-weight: 300;height: 23px; padding-left:12px; text-align:left;}
+.move-object-panel .mop-heading .mop-close {color:#FFF;text-decoration:none; float:right; margin-right:15px;font-weight:bold;cursor: pointer; line-height:19px;}
+.ranges-content { padding:6px; overflow:hidden}
+.ranges-content .moving-knob { float:left; cursor:pointer}
+
+.joystic-button {left: 23px; top:-37px; position: absolute;width: 101px;}
+.joystic-button button 					{ border:none; width:30px; height:30px; cursor:pointer; float:left; margin:2px;}
+.joystic-button .toward-up 				{ height: 30px;left: 0;margin: auto;position: absolute;right: 0;width: 35px; margin-top:2px;}
+.joystic-button .toward-up button		{ background:url(../images/j_up.png) no-repeat;}
+
+.joystic-button .toward-left button		{ background:url(../images/j_left.png) no-repeat; margin-top:36px;}
+.joystic-button .toward-down button		{ background:url(../images/j_down.png) no-repeat; margin-top:36px; margin-left:1px;}
+.joystic-button .toward-right button	{ background:url(../images/j_right.png) no-repeat; margin-top:36px; margin-left:1px;}
+
+.upload-mathod {margin:6px 0px 0px 19px}
+.upload-mathod ul li{ width:75px; font-family:Arial, Helvetica, sans-serif;font-size:12px;display:inline-block;padding:5px 5px;text-align:center;line-height: 22px;}
+.upload-mathod ul.inactive li{ border-top:5px solid #999;} 
+.upload-mathod ul.inactive li i{display:none;}
+
+.upload-mathod ul.active li.not-reco{color:#FF0203;border-top:5px solid #FF0203}
+.upload-mathod ul.active li.fair{color:#f5942f;border-top:5px solid #f5942f}
+.upload-mathod ul.active li.luk-gud{color:#007F2F;border-top:5px solid #007F2F}
+
+.not-reco.active i{background: url(../images/red_tick.png) no-repeat; width:15px; height:15px; display:inline-block}
+.fair.active i{background: url(../images/yellow_tick.png) no-repeat; width:15px; height:15px; display:inline-block}
+.luk-gud.active i{background: url(../images/green_tick.png) no-repeat; width:15px; height:15px; display:inline-block}

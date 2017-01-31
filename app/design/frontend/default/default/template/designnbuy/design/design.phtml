@@ -1,0 +1,2006 @@
+<?php
+
+	//$currentStore = Mage::app()->getStore()->getCode();
+	$facebook = Mage::helper('configuration')->getFacebookAPIKey();
+	$flickr = Mage::helper('configuration')->getFlickrAPIKey();
+	$instagram = Mage::helper('configuration')->getInstagramAPIKey();
+	$imageDPI = Mage::helper('design')->getImageDPI();
+	$product = $this->getCurrentProduct();
+    $category = $this->getCurrentCategory();
+    // $categoryIds = array();
+	$cart_id = '';
+    $productId = $this->getProductId();		
+	$productData = $this->getProductData();	
+	$no_of_side = $productData['noofSides'];
+	$Image = $productData['productImages'];
+	$colorSizeData = $productData['allColors']['color'];
+	$isMultiColor = $productData['multiColor'];
+	$flag = false;	
+	if($isMultiColor == 'yes'){
+		foreach($colorSizeData as $colorSize){		
+			if($productData['postData']['colorOptionId'] != ''){
+				if($colorSize['optionID'] == $productData['postData']['colorOptionId']){
+					$flag = true;
+					$Image = $colorSize['image'];
+				}
+			}else if($flag == false){
+				$flag = true;
+				$Image = $colorSize['image'];
+			}			
+		}
+		// $Image = $productData['allColors']['color'];
+	}
+	
+	$productArea = $productData['Area'];
+    // $categoryId = $this->getCategoryId($productId);
+    // $categoryIds = $product->getCategoryIds();
+    $QTY = $this->getQty();
+    // list($colorId, $sizeId) = $this->getAttributeOptionId();
+	
+	//$webpath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).'index.php/';
+	$webpath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+	
+	$cartUrl = Mage::getUrl('checkout/cart/add');
+	
+	$jspath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS).'html5/';	
+		
+?>
+
+<?php
+// $pr_arr = $this->renderChildren(Mage::app()->getStore()->getRootCategoryId());
+$locale = Mage::app()->getLocale()->getLocaleCode();
+$uniqueid = $_SESSION['uniqueid'] = md5(rand());
+if($locale == 'de_CH')	$lang_id = 'lang=de';
+else if($locale == 'en_US')	$lang_id = 'lang=en';
+else	$lang_id = '';
+$customer_id = Mage::getSingleton('customer/session')->getCustomer()->getId();
+$designCategoryArray = $this->getDesignIdea();
+// $xmldata = simplexml_load_string(Mage::getModel('design/design')->getProductFromId($productId));
+$sideNameAry = array('Front','Back','Left','Right');
+$text_area = '';
+
+$_design_idea = '';
+$savedPrintingMethod = "";
+if(Mage::app()->getRequest()->getParam('design_id') != '')
+{
+	$design_id = Mage::app()->getRequest()->getParam('design_id');
+	$_design_idea = Mage::getModel('design/savedesign')->load($design_id);	
+	$savedPrintingMethod = $_design_idea->getPrintingMethod();
+	$svgDir = Mage::getBaseDir(). DS .'media' . DS .'saveimg'. DS;
+}else if(Mage::app()->getRequest()->getParam('cart_id') != ''){
+	$cart_id = Mage::app()->getRequest()->getParam('cart_id');
+	$item = Mage::getModel('sales/quote_item')->load($cart_id);
+	$savedSvg = explode(",", $item->getSavestr());
+	
+	$_design_idea = new Varien_Object();
+	$_design_idea->setFrontImage($savedSvg[0]);
+	$_design_idea->setBackImage($savedSvg[1]);
+	$_design_idea->setLeftImage($savedSvg[2]);
+	$_design_idea->setRightImage($savedSvg[3]);	
+	$svgDir = Mage::getBaseDir(). DS .'media' . DS .'cartimages'. DS;
+}else if(Mage::app()->getRequest()->getParam('did') != ''){
+	$designIdeaId = Mage::app()->getRequest()->getParam('did');
+	$attributes = array('designidea_id'=> $designIdeaId, 'store_id'=> Mage::app()->getStore()->getId());	
+	$designIdea = Mage::getModel('designnbuy_designidea/designideavarchar')->loadByAttributes($attributes);	
+	
+	$_design_idea = new Varien_Object();
+	$_design_idea->setFrontImage($designIdea->getSavestr());
+	$_design_idea->setBackImage(null);
+	$_design_idea->setLeftImage(null);
+	$_design_idea->setRightImage(null);		
+	
+	$svgDir = Mage::getBaseDir(). DS .'media' . DS .'designidea'. DS;
+}
+else{
+	$preTemplate = Mage::app()->getRequest()->getParam('preTemplate');
+	$attributes = array('product_id'=> $productId, 'store_id'=> Mage::app()->getStore()->getId());	
+	$_design_idea = Mage::getModel('designnbuy_designidea/pretemplate')->loadByAttributes($attributes);	
+
+	if ($_design_idea->getId() == ''){
+		$attributes = array('product_id'=> $productId, 'store_id'=> 0);	
+		$_design_idea = Mage::getModel('designnbuy_designidea/pretemplate')->loadByAttributes($attributes);	
+	}
+	// $_design_idea = Mage::getModel('designnbuy_designidea/pretemplate')->load($productId,'product_id');	
+	$svgDir = Mage::getBaseDir(). DS .'media' . DS .'preTemplates'. DS;
+}
+for($i=1; $i<=$no_of_side; $i++){
+	$init_data = '';
+	
+	if($i == 1)
+	{		
+		/*Added By Ajay Confgiurable Product Start*/
+		$design_area = $productArea['frontArea'];	
+		// $design_area = $xmldata->product->Area->frontArea;
+		/*Added By Ajay Confgiurable Product End*/
+		$design_area_arr['front'] = explode(",", $design_area);		
+		if($_design_idea){
+			$file_name = $_design_idea->getFrontImage();
+			if($file_name != '')
+			{
+				$file_name_dir = $svgDir . $file_name;
+				//$init_data = file_get_contents($file_name_dir);
+				$init_data = setSvgSize(file_get_contents($file_name_dir), $design_area_arr['front'][2]*15, $design_area_arr['front'][3]*15);
+			}
+		}
+	}
+	else if($i == 2)
+	{
+		/*Added By Ajay Confgiurable Product Start*/
+		$design_area = $productArea['backArea'];
+		// $design_area = $xmldata->product->Area->backArea;
+		/*Added By Ajay Confgiurable Product End*/
+	
+		$design_area_arr['back'] = explode(",", $design_area);
+		if($_design_idea){
+			$file_name = $_design_idea->getBackImage();
+			if($file_name != '')
+			{
+				$file_name_dir = $svgDir . $file_name;
+				//$init_data = file_get_contents($file_name_dir);
+				$init_data = setSvgSize(file_get_contents($file_name_dir), $design_area_arr['back'][2]*15, $design_area_arr['back'][3]*15);
+			}
+		}
+	}
+	else if($i == 3)
+	{
+		/*Added By Ajay Confgiurable Product Start*/
+		$design_area = $productArea['leftArea'];
+		// $design_area = $xmldata->product->Area->leftArea;
+		/*Added By Ajay Confgiurable Product End*/
+		
+		$design_area_arr['left'] = explode(",", $design_area);
+		if($_design_idea){
+			$file_name = $_design_idea->getLeftImage();
+			if($file_name != '')
+			{
+				$file_name_dir = $svgDir . $file_name;
+				//$init_data = file_get_contents($file_name_dir);
+				$init_data = setSvgSize(file_get_contents($file_name_dir), $design_area_arr['left'][2]*15, $design_area_arr['left'][3]*15);
+			}
+		}
+	}
+	else if($i == 4)
+	{
+		/*Added By Ajay Confgiurable Product Start*/
+		$design_area = $productArea['rightArea'];
+		// $design_area = $xmldata->product->Area->rightArea;
+		/*Added By Ajay Confgiurable Product End*/
+		
+		$design_area_arr['right'] = explode(",", $design_area);
+		if($_design_idea){
+			$file_name = $_design_idea->getRightImage();
+			if($file_name != '')
+			{
+				$file_name_dir = $svgDir . $file_name;
+				//$init_data = file_get_contents($file_name_dir);
+				$init_data = setSvgSize(file_get_contents($file_name_dir), $design_area_arr['right'][2]*15, $design_area_arr['right'][3]*15);
+			}
+		}
+	}	
+	
+	$text_area .= '<textarea style="display:none;" id="textsvg_'.$i.'" name="textsvg_'.$i.'">'.htmlspecialchars($init_data).'</textarea>';
+}
+
+if($no_of_side < 4){
+	for($i = $no_of_side+1; $i <=4; $i++){
+		$text_area .= '<textarea style="display:none;" id="textsvg_'.$i.'" name="textsvg_'.$i.'"></textarea>';
+	}
+}
+
+function setSvgSize($init_data,$width,$height){
+	$webpath = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+	$doc = new DOMDocument();
+	$doc->preserveWhiteSpace = False;
+	$doc->loadXML($init_data);
+	
+	foreach ($doc->getElementsByTagNameNS('http://www.w3.org/2000/svg', 'svg') as $element):
+		foreach ($element->getElementsByTagName("*") as $tags):
+			if($tags->localName=='pattern' && $tags->getAttribute('id')=='gridpattern') {
+				$tags->parentNode->removeChild( $tags );
+			}
+			if($tags->localName=='image' && $tags->getAttribute('xlink:href')!=''):	
+				$imageUrl = $tags->getAttribute('xlink:href');													
+				$uploadedImage = explode('media/',$imageUrl);		
+				if($uploadedImage[0]!='' && $uploadedImage[0] != $webpath):	
+					$tags->setAttribute('xlink:href',Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).$uploadedImage[1]);
+				endif;							
+			endif;
+		endforeach;
+	endforeach;
+	$doc->documentElement->setAttribute("width",$width);    
+	$doc->documentElement->setAttribute("height",$height);
+	return $init_data = $doc->saveXML($doc);
+}
+?>
+
+<?php $productData = Mage::helper('core')->jsonEncode($productData); ?>
+<script type="text/javascript" src="<?php echo $jspath.'jquery.js'; ?>"></script>
+<script>	
+
+	var formkey = '';
+	var productid = '<?php echo $productId;?>';
+	var savedPrintingMethod = "";
+	savedPrintingMethod = '<?php echo $savedPrintingMethod; ?>';
+	savedPrintingMethod = $j.parseJSON(savedPrintingMethod);	
+
+	var isFront = 1;
+	var user = '';
+	var preTemplate = 0;
+	function trace(str){
+		console.log(str);
+	}
+	var formKey = "<?php echo Mage::getSingleton('core/session')->getFormKey();?>";
+	var currentStore = '<?php echo $locale;?>';
+	var jspath = '<?php echo $jspath;?>';
+	var cartUrl = '<?php echo $cartUrl;?>';
+	var facebookAppId = '<?php echo $facebook;?>';
+	var flickrAppId = '<?php echo $flickr;?>';
+	var instagramAppId = '<?php echo $instagram;?>';
+	var imageDPI = '<?php echo $imageDPI;?>';	
+	var basepath = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>';
+	var mediapath = '<?php echo Mage::getBaseUrl('media'); ?>';
+	var cofigcatid = '<?php echo Mage::app()->getRequest()->getParam('cat_id');?>';
+	var confignotfound = '<?php echo Mage::helper('design')->__('Item Not Found');?>';
+	var qrCodePath = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'uploadedImage/'; ?>';
+	var qrCodeLib = '<?php echo $webpath.'designtool/phpqrcode/index.php' ?>';
+	var deleteQrCodeUrl = '<?php echo Mage::getUrl('design/index/deleteqrcode');?>';
+	var relatedSubCategoryUrl = '<?php echo Mage::getUrl('design/index/getrelatedproducttype');?>';
+	var categoryUrl = '<?php echo Mage::getUrl('design/index/getProductCategory');?>';
+	var relatedProductUrl = '<?php echo Mage::getUrl('design/index/getrelatedproduct');?>';
+	var relatedClipartUrl = '<?php echo Mage::getUrl('design/index/getrelatedclipart');?>';
+	var designIdeaCategoryUrl = '<?php echo Mage::getUrl('designidea/designideacategory/getDesignIdeaCategory');?>';
+	var relatedDesignIdeaUrl = '<?php echo Mage::getUrl('design/index/getrelateddesignidea');?>';
+	var productUrl = '<?php echo Mage::getUrl('design/design/product');?>';
+	var fontUrl = '<?php echo Mage::getUrl('fontmanagement/index/font');?>';
+	var clipartCategoryUrl = '<?php echo Mage::getUrl('clipartmanagement/index/clipartCategory');?>';
+	var productPriceUrl = '<?php echo Mage::getUrl('design/index/getrelatedprice');?>';
+	var crossOriginalUploadUrl = '<?php echo Mage::getUrl('design/index/downloadImage');?>';
+	var instagramChannelUrl = '<?php echo Mage::getBaseUrl().'designtool/instagram-channel.html';?>';
+	var loginUrl = '<?php echo Mage::getUrl('customer/account/loginFromTool');?>';
+	var registrationUrl = '<?php echo Mage::getUrl('customer/account/createNewPost');?>';
+	var loginCheckUrl = '<?php echo Mage::getUrl('customer/account/loginCheck');?>';
+	var saveBase64Url = '<?php echo Mage::getUrl('design/index/savebase64onserver');?>';
+	var saveDesignUrl = '<?php echo Mage::getUrl('design/index/savemydesign');?>';
+	var shareDesignUrl = '<?php echo Mage::getUrl('design/index/sharemydesign');?>';
+	var generatePreviewPngUrl = '<?php echo Mage::getUrl('design/index/generatePreviewPng');?>';
+	var previewPdfUrl = '<?php echo Mage::getUrl('design/index/previewPdf');?>';
+	var backgroundImageUrl = '<?php echo Mage::getUrl('w2phtml5background/W2phtml5background/background/');?>';
+	var addToCartUrl = '<?php echo Mage::getUrl('checkout/cart/add');?>';
+	var cartUrl = '<?php echo Mage::getUrl('checkout/cart');?>';
+	var userImagesUrl = '<?php echo Mage::getUrl('design/index/getUserImages');?>';
+	var welcomeMessageUrl = '<?php echo Mage::getUrl('design/index/welcomeMessage');?>';
+	var updateTopLinksUrl = '<?php echo Mage::getUrl('design/index/updateTopLinks');?>';
+	var topCartsUrl = '<?php echo Mage::getUrl('design/index/topCarts');?>';
+	var FBredirectURI = '<?php echo Mage::getBaseUrl().'designtool/FBredirectURI.html';?>';
+	var removeuserImagesUrl = '<?php echo Mage::getUrl('design/index/removeUserImages');?>';
+	var uniqueid = '<?php echo $uniqueid;?>';	
+	/* var fontlist = '<?php //echo $fontArray;?>';
+	jsonfontList = $j.parseJSON(fontlist); */
+	var colorlist = '<?php echo $colorCollection;?>';
+	printableColorList = $j.parseJSON(colorlist);
+	var no_of_side = '<?php echo $no_of_side;?>';
+	var first_font = '';
+	var text_svg1,text_svg2,text_svg3,text_svg4 = '';
+	var side_1 = 1;
+	var side_2 = 0;
+	var side_3 = 0;
+	var side_4 = 0;
+	var png_data;	
+	var filearray = new Array();
+	
+	var customer_id = '<?php echo $customer_id;?>';
+	
+	var added_images = '';
+	var fonts_used = '';
+	var configtotalprice = '<?php echo Mage::helper('design')->__('Total Price');?>';
+	var configselectedsize = '<?php echo Mage::helper('design')->__('Selected Size');?>';
+	var configqtymessage = '<?php echo Mage::helper('design')->__('Please choose appropriate Quantity.');?>';
+	var clipartsloaded = 0;
+	var designIdeasloaded = 0;
+	var curr_side_id = 1;
+	var datauri;
+	var productImageCan;
+	var customizationCan;
+	var priceInterval;
+	var action;
+	var shareType;
+	var sideNameAry = ['Front','Back','Left','Right'];
+	var toolType = "producttool"; //possible values: "producttool", "web2print"	
+	var pickerMode = "full"; //possible values: "full", "printable"
+	
+	var printingMode = "DTG"; //possible values: "DTG", "Vinyl/Screen"	
+	if(pickerMode=="printable"){
+		firstColor = printableColorList[0].colorCode;		
+		borderColor = firstColor.substring(1);		
+	}else{
+		borderColor = "000";
+	}
+	var cartId = '<?php echo $cart_id; ?>';
+	
+	var extensionArray = ['../DO_NOT_UPLOAD/extensions/ext-product.js','../DO_NOT_UPLOAD/extensions/ext-multiColor.js','../DO_NOT_UPLOAD/extensions/ext-curveText.js','../DO_NOT_UPLOAD/extensions/ext-objectPanel.js','../DO_NOT_UPLOAD/extensions/ext-objectLock.js','../DO_NOT_UPLOAD/extensions/ext-LayerPanel.js','../DO_NOT_UPLOAD/extensions/ext-photoCollage.js','../DO_NOT_UPLOAD/extensions/ext-productPricing.js','../DO_NOT_UPLOAD/extensions/ext-ProductMaskOverlayImage.js','../DO_NOT_UPLOAD/extensions/ext-ShowObjectSize.js','../DO_NOT_UPLOAD/extensions/ext-textShape.js','../DO_NOT_UPLOAD/extensions/ext-undoRedo.js'];
+	
+</script>
+
+<?php
+$langCss='';
+if($locale == "de_DE"){
+	$langCss = 'css/default_german.css';
+}
+if($locale == "fr_FR"){
+	$langCss = 'css/default_french.css';
+}
+if($langCss != ""){
+?>
+<link rel="stylesheet" href="<?php echo $jspath.$langCss; ?>">
+<?php
+}
+?>
+
+<!-- load Galleria -->
+
+
+
+
+<link rel="stylesheet" href="<?php echo $jspath.'plupload/jquery.plupload.queue.css'; ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo $jspath.'css/default.css'; ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo $jspath.'css/jquery.loader.css'; ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo $jspath.'css/jPicker.css'; ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo $jspath.'css/jgraduate.css'; ?>" type="text/css" />
+<link rel="stylesheet" href="<?php echo $jspath.'css/knob.css'; ?>" type="text/css" />
+
+<script type="text/javascript" src="<?php echo $jspath.'js-hotkeys/jquery.hotkeys.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'jquerybbq/jquery.bbq.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'svgicons/jquery.svgicons.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'jquery-ui/jquery-ui.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'jgraduate/jpicker.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'jgraduate/jquery.jgraduate.min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'spinbtn/JQuerySpinBtn.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'contextmenu/jquery.contextMenu.js'; ?>"></script>
+
+<?php if($_SERVER[HTTP_HOST] == "192.168.0.222" || $_SERVER[HTTP_HOST] == "192.168.0.139") { ?>
+
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/touch.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/browser.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/svgtransformlist.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/math.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/units.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/svgutils.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/sanitize.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/select.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/history.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/draw.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/path.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/md5-min.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/dnb/DNBBaseObject.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/ProductModule.js?t='.$uniqueid; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/product-src.js?t='.$uniqueid; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/jquery.simple-color.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/svgcanvas.js?t='.$uniqueid; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/svg-editor.js?t='.$uniqueid; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/locale/locale.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/contextmenu.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/font_jsapi.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/font-selector.js';?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/raphael.js';?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/plupload/moxie.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/plupload/plupload.dev.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/plupload/jquery.ui.plupload.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'DO_NOT_UPLOAD/plupload/imageuploader.js'; ?>"></script>
+
+<?php } else { ?>
+
+<script type="text/javascript" src="<?php echo $jspath.'built.product.min.js?t='.$uniqueid; ?>"></script>
+<script type="text/javascript">
+extensionArray = [];
+</script>
+
+<?php } ?>
+
+
+
+<script type="text/javascript" src="<?php echo $jspath.'jquery-ui/jquery.ui.touch-punch.js'; ?>"></script>
+<script type="text/javascript" src="<?php echo $jspath.'plupload/i18n/'.$locale.'.js'; ?>"></script>
+<script type='text/javascript' src='<?php echo $jspath.'picasa/picasa.js'; ?>' /></script>
+<script type="text/javascript" src="<?php echo $jspath.'flickr/jquery.flickr.js'; ?>"></script>
+
+<!-- Image Upload End-->
+<script type="text/javascript">google.load("webfont", "1");</script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Lato::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+<div style="display:none;" id="calAreaDiv"></div>
+<div id="container_dt">
+<div id="loaderImage-overlay" style="display:none;"></div>
+<div id="loaderImage" style="left: 281px;">
+  <!--<div id="loaderImage-loader"></div>-->
+  <img src="<?php echo $jspath.'images/loader.gif' ?>"  />
+</div>
+<div class="wraper_dt"><!-- Control Panel & Canvas Area-->
+  <div>
+    <div class="main_dt">
+      <section id="white">
+        <div class="left-share-panel">
+          <div class="button-area">
+            <ul>
+              <!--<li><button id="Help" title="Studio Help"><div><span class="icon-help">&nbsp;</span></div></button></li>-->
+              <li>
+                <button id="info" title="Product Info">
+                <div><span class="icon-1">&nbsp;</span><span id="productInfoCaption" class="caption">info</span></div>
+                </button>
+              </li>
+              <li>
+                <button id="zoomButton" title="Set Zoomlevel">
+                <div><span class="d_zoom">&nbsp;</span><span id="productZoomCaption" class="caption">Zoom</span></div>
+                </button>
+              </li>
+              <li>
+                <button id="preview" title="Preview">
+                <div><span class="d_preview">&nbsp;</span><span id="productPreviewCaption" class="caption">Preview</span></div>
+                </button>
+              </li>
+              <li>
+                <button id="save_image" title="Save Design" onclick="javascript:action='save'; save_share('save');">
+                <div><span class="d_savenote">&nbsp;</span><span id="productSaveCaption" class="caption">Save</span></div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--<section class="center-share-panel">
+					<div id="pageNav">
+						<span class="firstPage"></span>
+						<span class="prevPage"></span>
+						<span class="gotoPage"><input type="numeric" id="gotoPageTxt" name="gotoPageTxt" maxlength="2" /></span>
+						<span class="nextPage"></span>
+						<span class="lastPage"></span>
+					</div>
+				</section>-->
+        
+        <section class="center-share-panel"> 
+          
+          <!-- Object align Panel -->
+          <div class="object-align" align="center">
+            <ul id="productSides">
+              <?php //echo $text_area; ?>
+            </ul>
+            <div><span id="chooseSideCaption" class="caption">Choose Side</span></div>
+          </div>
+        </section>
+        <section class="right-share-panel">
+          <div class="button-area">
+            <ul>
+              <li>
+                <button id="facebook_share" title="Share on Facebook" onclick="javascript:save_share('facebook');">
+                <div><span class="fb">&nbsp;</span><span id="fbShareCaption" class="caption">Share</span></div>
+                </button>
+              </li>
+              <li>
+                <button id="twitter_share" title="Tweet on Twitter" onclick="javascript:save_share('twitter');">
+                <div><span class="tw">&nbsp;</span><span id="twitterShareCaption" class="caption">Twit</span></div>
+                </button>
+              </li>
+              <li>
+                <button id="pinterest_share" title="Pin design on Pinterest" onclick="javascript:save_share('pinterest');">
+                <div><span class="pnt">&nbsp;</span><span id="pinitShareCaption" class="caption">Pin</span></div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="right-section">
+        <section class="right-panel"> 
+          <button id="addproduct">
+			  <div class="spicon_class">
+				  <span class="icon-1"></span>
+              </div>
+				<div class="caption" id="chooseProductCaption">Product</div>
+		   </button> 
+          <!--<button id="pickcolor"><div><span class="icon-2"></span>
+                        <div class="caption" id="pickColorCaption"><?php //echo $this->__('Pick Color'); ?></div>
+                        </div></button>-->
+          <button id="addtext">
+			  <div class="spicon_class">
+				<span class="icon-4"></span> 
+			  </div>
+			  <div class="caption" id="addTextCaption">Text</div> 
+          </button>
+		  
+          <button id="addart">
+			  <div class="spicon_class">
+				<span class="icon-3"></span> 				
+			  </div>
+			  <div class="caption" id="chooseArtCaption">Art</div> 
+          </button>
+		  
+          <button id="addtimage">
+          <div class="spicon_class">
+				<span class="icon-5"></span> 				
+			  </div>
+		  <div class="caption" id="addImageCaption">Upload</div> 
+          </button>
+          <!--<button id="addshape">
+			<div class="spicon_class">
+				<span class="icon-6"></span> 				
+			</div>
+		  <div class="caption" id="addShapesCaption">Shapes</div> 
+          </button>-->
+		  
+          <!--<button id="qrCode">
+          <div class="spicon_class">
+				<span class="icon-8"></span> 				
+			  </div>
+		  <div class="caption" id="qrCodeCaption">QR</div> 
+          </button>-->
+
+          <button id="desingidea">
+          <div class="spicon_class">
+				<span class="icon-7"></span> 				
+			  </div>
+		  <div class="caption" id="designIdeaCaption">Designs</div> 
+          </button>
+        </section>
+        <!-- right-panel-property -->
+        <section class="right-panel-property">
+          <div id="color_picker"></div>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="addproduct-panel">
+            <div class="box-outer">
+              <div class="aproduct-data">
+                <label class="label"><?php echo Mage::helper('design')->__('Choose Product');?></label>
+                <button id="tool_choose_prod_close"></button>
+                <div class="input-area">
+                  <div class="field-raw">
+                    <div class="product-type">
+                      <select id="prod_type" class="select-small">
+                      </select>
+                    </div>
+                  </div>
+                <!--  <div class="field-raw">
+                    <div id="prod_sub_div_type" class="product-type"></div>
+                  </div>-->
+                </div>
+              </div>
+              <div class="tshirt-product scroll-area">
+                <div>
+                  <ul class="t-shirt-list" id="productconatiner">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right cbp-spmenu-open" id="addtocart-panel">
+            <div id="cartarea" class="quantitysize">
+              <div class="printingMethod-area">
+                <div class="caption-section">
+                  <div id="printingMethodCaption" class="caption">Printing Method</div>
+                </div>
+              </div>
+              <div class="caption-section">
+                <div id="sizeQtyCaption" class="caption">Size/Quantity</div>
+              </div>
+              <div class="border-area">
+                <div class="object-inputs" id="objectinputsize">
+                  <?php //echo $sizecolorarray; ?>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <div class="caption-section">
+                <div id="designInfo" class="captionSmall"></div>
+              </div>
+              <div class="caption-section">
+                <div id="addNoteCaption" class="caption">Add Note</div>
+              </div>
+              <div>
+                <textarea name="addnote" id="addnote"></textarea>
+              </div>
+              <div class="costing">
+                <div class="errornotinstock" id="errornotinstock"></div>
+                <!--<div class="rate" id="price">0.00</div>-->
+                <div class="buttons">
+                  <button id="addcart" class="cobutton proceedto prcadcart" style="display:none;">ADD TO CART</button>
+                </div>
+                <div class="clear"></div>                
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="layer-panel">
+            <div class="box-outer">
+              <div class="caption-section">
+                <div id="manageLayersCaption" class="caption">Manage Layers</div>
+              </div>
+              <div class="input-area">
+                <div class="scroll-area">
+                  <div id="sortableLayerPanel" class="layer-object"></div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="addart-panel">
+            <div class="box-outer">
+              <label class="label"><?php echo Mage::helper('design')->__('Add Art');?></label>
+              <div class="inst" id="inst">i</div>
+              <div style="display:none;" id="design_tooltip" class="tooltip"> 1. <?php echo Mage::helper('design')->__('Ungroup does one level layering, so to do further layering, ungroup again until you can select the element you want to change color for. ');?><br>
+                <br>
+                2. <?php echo Mage::helper('design')->__('Select any layer to change color of complete layer.'); ?> </div>
+              <button id="tool_add_art_close"></button>
+              <div class="input-area">
+				  <!--adding shape glyout-->
+				  <div id="tools_left" class="tools_panel">
+					  <div class="tool_button" id="tool_fhpath" title="Pencil Tool"></div>
+					  <div class="tool_button" id="tool_line" title="Line Tool"></div>
+					  <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
+						<div class="flyout_arrow_horiz"></div>
+					  </div>
+					  <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
+						<div class="flyout_arrow_horiz"></div>
+					  </div>
+					  <div style="display: none; position:relative; border:1px solid">
+						<div id="tool_rect" title="Rectangle"></div>
+						<div id="tool_square" title="Square"></div>
+						<div id="tool_fhrect" title="Free-Hand Rectangle"></div>
+						<div id="tool_ellipse" title="Ellipse"></div>
+						<div id="tool_circle" title="Circle"></div>
+						<div id="tool_fhellipse" title="Free-Hand Ellipse"></div>
+					  </div>
+					</div>
+				<!--adding clipart panel-->
+                <div class="field-raw" id="clipartCategory">                  
+                  <input type="hidden" id="firstclipartcat" name="firstclipartcat" value=""/>
+                </div>
+                <div class="scroll-area-chooseart">
+                  <div class="add-art-product">
+                    <ul id="clipartcontainer" class="art-list">
+                    </ul>
+                  </div>
+                  <div id="container_panel">
+                    <div class="tool_sep"></div>
+                    <label id="group_title" title="Group identification label" style="display:none;"> <span><?php echo Mage::helper('design')->__('label');?>:</span>
+                      <input id="g_title" data-attr="title" size="10" type="text"/>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="addtext-panel">
+            <div class="box-outer">
+              <label class="label"><?php echo $this->__('Place your text'); ?></label>
+              <div class="inst" id="inst_text">i</div>
+              <div style="display:none;" id="inst_text_tooltip" class="tooltip"> 1. <?php echo $this->__('Select the text element and edit it further.'); ?> </div>
+              <button id="tool_place_text_close"></button>
+              <div id="text_panel">
+                <div> 
+                  <!--<input id="text" type="text" size="25"/>-->
+                  <textarea id="text"></textarea>
+                  <button id="btnAddText" title="Add Text">Add Text</button>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="addtimage-panel">
+            <div class="box-outer">
+              <label class="label">ADD IMAGE</label>
+              
+              <div style="display:none;" id="inst_image_tooltip" class="tooltip"> 1. <?php echo Mage::helper('design')->__('Upload images from your local storage.');?><br>
+                <br>
+                2. <?php echo Mage::helper('design')->__('Choose and click the image you want to use in design.');?><br>
+                <br>
+                3. <?php echo Mage::helper('design')->__('You can resize and rotate the image further using editing controls.'); ?> </div>
+              <button id="tool_add_image_close"></button>
+              <div class="upload-permission" align="center" >
+                <input type="checkbox" id="ihavetheright">
+                <label id="rightsCaption">I have the rights to use these images.</label>
+				<div class="inst_image" id="inst_image">i</div>
+              </div>
+              <div class="buttons">
+                <div align="center" class="uploadimage-btn" >
+                  <button id="upload_img_show" type="button" class="disable_img" >
+                  <div id="uploadImageCaption">
+                    <?php //echo Mage::helper('design')->__('Upload Images'); ?>
+                  </div>
+                  </button>
+                </div>
+                <div class="social-media-import-section"> <!--<a class="import_fb">Facebook</a>--> <a class="import_flickr">Flickr</a> <a class="import_picasa">Picasa</a> <a class="import_instagram">Instagram</a> <a id="qrCode" class="add_Qrcode">QRCode</a> </div>
+                <?php /*?><div align="center" class="uploadimage-btn-gallery">
+                                    <button id="upload_img_show_gallery" type="button" class="disable_img" ><div id="imageGalleryCaption"><?php echo Mage::helper('design')->__('Images Gallery'); ?></div></button>
+                                </div><?php */?>
+                <div id="images_loaded"  class="range-blocks">
+                  <div class="range-blocks">
+                    <div class="caption-section">
+	                  <div class="inst_image" id="inst_image_hd">i</div>
+                      <div class="caption" id="imageGallerCaption">Image Gallery</div>
+                    </div>
+                  </div>
+                  <!--<div class="horLine"></div>-->
+                  <div class="listing scroll-area-uploadimage">
+                    <div class="tabcntent">
+
+                      <ul id="flickerresult">
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="horLine"></div>
+                </div>
+                
+                
+              </div>
+              <div id="image_panel">
+                <div class="toolset_image" style="display:none;">
+                  <label><span id="iwidthLabel" class="icon_label"></span>
+                    <input id="image_width" class="attr_changer" title="Change image width" size="3" data-attr="width"/>
+                  </label>
+                  <label><span id="iheightLabel" class="icon_label"></span>
+                    <input id="image_height" class="attr_changer" title="Change image height" size="3" data-attr="height"/>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="addshape-panel">
+            <div class="box-outer">
+              <label class="label"><?php echo Mage::helper('design')->__('ADD SHAPES');?></label>
+              <div class="inst" id="inst_shape">i</div>
+              <div style="display:none;" id="inst_shape_tooltip" class="tooltip"> 1. <?php echo Mage::helper('design')->__('Click any control to get more options.');?><br>
+                <br>
+                2.
+                <?php  echo Mage::helper('design')->__('Please click the select pointer in left panel to exit shape mode.');?>
+              </div>
+              <button id="tool_add_shape_close"></button>
+              <div class="note-background">
+                <!--<div id="tools_left" class="tools_panel">
+                  <div class="tool_button" id="tool_fhpath" title="Pencil Tool"></div>
+                  <div class="tool_button" id="tool_line" title="Line Tool"></div>
+                  <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
+                    <div class="flyout_arrow_horiz"></div>
+                  </div>
+                  <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
+                    <div class="flyout_arrow_horiz"></div>
+                  </div>
+                  <div style="display: none; position:relative; border:1px solid">
+                    <div id="tool_rect" title="Rectangle"></div>
+                    <div id="tool_square" title="Square"></div>
+                    <div id="tool_fhrect" title="Free-Hand Rectangle"></div>
+                    <div id="tool_ellipse" title="Ellipse"></div>
+                    <div id="tool_circle" title="Circle"></div>
+                    <div id="tool_fhellipse" title="Free-Hand Ellipse"></div>
+                  </div>
+                </div>-->
+              </div>
+              <br class="clear" />
+              <br class="clear" />
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="qrcode-panel">
+            <div class="box-outer">
+              <label class="label"><?php echo $this->__('Qr Code'); ?></label>
+              <div class="inst" id="inst_qrcode">i</div>
+              <div style="display:none;" id="inst_qrcode_tooltip" class="tooltip"> 
+                <!--1. <?php //echo $this->__('Click any control to get more options.');?><br><br>2. <?php  //echo $this->__('Please click the select pointer in left panel to exit shape mode.');?>--> 
+                <?php echo $this->__("To place QR Code on your design, choose the type of information you wish to input. Fill in the information and then click the 'Generate' button. To place it on canvas, simply click on the generated QR Code image.");?>
+                <button onclick="$j('#inst_qrcode_tooltip').hide();" class="closebuttonclass">x</button>
+              </div>
+              <div class="scroll-area">
+                <div class="qrcode-section">
+                  <div class="caption-section">
+                    <form id="qrcodeform" name="qrcodeform" method="POST" >
+                      <ul id="qrcodecontainer" class="t-shirt-list">
+                        <label id="qrcodeDataTypeCaption" class="caption">Select Data Type</label>
+                        <select id="qrdatatype" name="qrdatatype" onchange="changeqrform()">
+                          <option id="websiteUrl" selected="selected" value="1"><?php echo $this->__('Website URL'); ?></option>
+                          <option id="youtubeVideo" value="2"><?php echo $this->__('YouTube Video'); ?></option>
+                          <option id="plaintext" value="3"><?php echo $this->__('Plain Text'); ?></option>
+                          <option id="emailAdd" value="4"><?php echo $this->__('Email Address'); ?></option>
+                          <!--<option value="5"><?php echo $this->__('Contatct Details (Vcard)'); ?></option>-->
+                          <option id="telephone" value="6"><?php echo $this->__('Telephone Number'); ?></option>
+                          <option id="emailMsg" value="7"><?php echo $this->__('Email Message'); ?></option>
+                          <option id="socialMedia" value="8"><?php echo $this->__('Social Media'); ?></option>
+                          <option id="gmap" value="9"><?php echo $this->__('Google Maps Location'); ?></option>
+                        </select>
+                        <div id="qr1">
+                          <div class="inputfield">
+                            <label id="websiteCaption" class="caption"><?php echo $this->__('Website URL:'); ?></label>
+                            <input class="required-entry validate-url" type="text" name="websiteurl" id="websiteurl"/>
+                          </div>
+                        </div>
+                        <div id="qr2">
+                          <div class="inputfield">
+                            <label id="videoIdCaption" class="caption"><?php echo $this->__('Video ID:'); ?></label>
+                            <input class="validate-group  validate-number" type="text" name="youtube_video_id" id="youtube_video_id"/>
+                          </div>
+                          <div class="inputfield">
+                            <label id="videoUrlCaption" class="caption"><?php echo $this->__('Video URL:'); ?></label>
+                            <input class="validate-group validate-url" type="text" name="youtube_video_url" id="youtube_video_url"/>
+                          </div>
+                        </div>
+                        <div id="qr3">
+                          <div class="inputfield">
+                            <label id="textCaption" class="caption"><?php echo $this->__('TEXT:'); ?></label>
+                            <textarea class="required-entry" type="text" name="plaintextdata" id="plaintextdata"></textarea>
+                          </div>
+                        </div>
+                        <div id="qr4">
+                          <div class="inputfield">
+                            <label id="emailaddreCaption" class="caption"><?php echo $this->__('Email Address:'); ?></label>
+                            <input class="required-entry validate-email" type="text" name="email_address" id="emailaddress4"/>
+                          </div>
+                        </div>
+                        <!--<div id="qr5">
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('First Name:'); ?></label>
+                                                    <input class="required-entry" type="text" name="first_name" id="firstname5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Last Name:'); ?></label>
+                                                    <input class="required-entry" type="text" name="last_name" id="lasttname5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Job Title:'); ?></label>
+                                                    <input  type="text" name="job_title" id="jobtitle5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Telephone no:'); ?></label>
+                                                    <input class="validate-phoneStrict" type="text" name="telephone_no" id="telephoneno5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Cell phone:'); ?></label>
+                                                    <input class="validate-phoneStrict" type="text" name="job_title" id="jobtitle5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Fax Number:'); ?></label>
+                                                    <input class="validate-fax" type="text" name="fax_number" id="faxnumber5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Email Address:'); ?></label>
+                                                    <input class="validate-email" type="text" name="email_address" id="emailaddress5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Website URL:'); ?></label>
+                                                    <input class="validate-clean-url" type="text" name="website_url" id="vcardwebsiteurl5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Organization:'); ?></label>
+                                                    <input type="text" name="organization" id="organization5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Street Address:'); ?></label>
+                                                    <input type="text" name="street" id="street5"/>
+                                                </div>	
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('City:'); ?></label>
+                                                    <input type="text" name="city" id="city5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('State:'); ?></label>
+                                                    <input type="text" name="State" id="State5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Zip/Postcode:'); ?></label>
+                                                    <input class="validate-zip" type="text" name="zip" id="zip5"/>
+                                                </div>
+                                                <div class="inputfield">
+                                                    <label><?php echo $this->__('Country:'); ?></label>
+                                                    <input type="text" name="country" id="country5"/>
+                                                </div>									
+                                             </div>-->
+                        <div id="qr6">
+                          <div class="inputfield">
+                            <label id="telephoneCaption" class="caption"><?php echo $this->__('Telephone Number:'); ?></label>
+                            <input class="required-entry validate-phoneStrict" type="text" name="telephone_no" id="telephoneno6"/>
+                          </div>
+                        </div>
+                        <div id="qr7">
+                          <div class="inputfield">
+                            <label id="subjectCaption" class="caption"><?php echo $this->__('Subject:'); ?></label>
+                            <input class="required-entry" type="text" name="subject" id="subject7"/>
+                          </div>
+                          <div class="inputfield">
+                            <label id="bodyCaption" class="caption"><?php echo $this->__('Body:'); ?></label>
+                            <textarea class="required-entry" name="message" id="body7" ></textarea>
+                          </div>
+                        </div>
+                        <div id="qr8">
+                          <div class="inputfield">
+                            <label id="socialMediaCaption" class="caption"><?php echo $this->__('Social Media:'); ?></label>
+                            <select  name="socialmedia8" id="socialmedia8" onchange="changetheprofilename()">
+                              <option id="twitterProfileCaption" value="sm1"><?php echo $this->__('Twitter Profile'); ?></option>
+                              <option id="facebookProfileCaption" value="sm2"><?php echo $this->__('Facebook Profile'); ?></option>
+                              <option id="myspaceProfileCaption" value="sm3"><?php echo $this->__('Myspace Profile'); ?></option>
+                              <option id="linkedlinProfileCaption" value="sm4"><?php echo $this->__('LinkedIn Profile'); ?></option>
+                            </select>
+                          </div>
+                          <div class="inputfield">
+                            <label id="profileCaption" class="caption"><?php echo $this->__('Profile:'); ?></label>
+                            <input class="required-entry" type="text" name="Twitter Profile" id="profile8"/>
+                          </div>
+                        </div>
+                        <div id="qr9">
+                          <div class="inputfield">
+                            <label id="gmaplocationCaption" class="caption"><?php echo $this->__('Google Maps Location:'); ?></label>
+                            <input type="text" class="required-entry" name="google_map_location" id="googlemaplocation9"/>
+                          </div>
+                        </div>
+                      </ul>
+                    </form>
+                    <div class="inputfield">
+                      <label id="rqcodeColorCaption" class="caption"><?php echo $this->__('Color Code:'); ?></label>
+                      <input type="text" name="qrcolorcode" id="qrcolorcode" class="color" value="#000000" >
+                      <div class="color_tool" id="tool_qr_color">
+                        <div class="color_block">
+                          <div id="qr_stroke_bg"></div>
+                          <div id="qr_color" class="color_block" title="Change Qr color"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button id="tool_qrCode" onclick="qrcodeFormSubmit();"  type="button" class="login-button">Generate</button>
+                  <div>
+                    <ul id="QRcodeImage"/>
+                    
+                    <!--data will come from ajax--></div>
+                </div>
+              </div>
+              <!--<div class="tips"> 
+                                    <h4>Designer Tips!</h4>
+                                    To place QR code on your design just choose the type of information you wisht to input and fill the information and then click on generate button.to place it on canvas to left just  click on generated qrcode image.
+                                </div>--> 
+            </div>
+          </nav>
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="designidea-panel">
+            <div class="box-outer">
+              <label class="label">DESIGN IDEA</label>
+              <button id="tool_design_idea_close"></button>
+              <div class="input-area">
+                <div class="field-raw">
+                  <div class="product-type">
+                    <select class="select-small" id="designideaopt" autocomplete="off">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-area">
+                <div class="tshirt-product">
+                  <ul id="designideacontainer" class="t-shirt-list">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- common property panel -->
+          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="edit-panel">
+            <div class="box-outer">
+              <label class="label">Edit Panel</label>
+              <div class="inst" id="inst_edit_panel">i</div>
+              <div style="display:none;" id="design_tooltip_edit_panel" class="tooltip"> 1. <?php echo Mage::helper('design')->__('Ungroup does one level layering, so to do further layering, ungroup again until you can select the element you want to change color for. ');?><br>
+                <br>
+                2. <?php echo Mage::helper('design')->__('Select any layer to change color of complete layer.'); ?> </div>
+              <button id="tool_edit_close"></button>
+              
+              <!--<div id="images_loaded"  class="range-blocks listing scroll-area-uploadimage">
+                                <div class="range-blocks">
+                                    <div class="caption-section">
+                                        <div class="caption" id="borderCaption">Image Gallery</div>
+                                    </div>
+                                </div>
+                                <div class="listing scroll-area-uploadimage"><div class="tabcntent"><ul id="flickerresult"></ul></div></div>
+                            </div>--> 
+            </div>
+          </nav>
+          <!-- /common property panel --> 
+          <!-- common property -->
+          <nav class="ranger-panel cbp-spmenu-right" id="common-panel">
+		  <div class="box-outer">
+            <div class="range-blocks" style="overflow:hidden">
+			
+              <div class="co-tw-dl">
+                <ul>
+                  <li id="tool_fill" > <span id="objectColorCaption" class="label">color</span>
+                    <div class="color_tool" >
+                      <div class="color_block singleColor">
+					  &nbsp;
+                        <div id="fill_bg"></div>
+                        <div id="fill_color" class="color_block" title="Change fill color"></div>
+                      </div>
+                      <div class="multiColorBlock"></div>
+                    </div>
+                    
+                   
+                    
+                  </li>
+               
+                </ul>
+              </div>
+            </div>
+            <div class="range-blocks image_quality">
+                <div class="caption-section">
+	                 <div id="inst_image_format" class="inst_image">i</div>
+                     <div id="printQualityCaption" class="caption">PRINT QUALITY</div>                                                
+                </div>
+                <div class="upload-mathod">
+                    <ul class="active">
+                        <li id="printQualityPoorCaption" class="not-reco active"><i></i> Poor</li>
+                        <li id="printQualityFairCaption" class="fair"><i></i> Fair</li>
+                        <li id="printQualityGoodCaption" class="luk-gud"><i></i> Good</li>         
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="range-blocks" style="display:none">
+                                <div class="caption-section">
+                                    <div id="opacityCaption" class="caption">OPACITY</div>	
+                                    <input id="group_opacity" class="sliderValue" size="3" value="100" type="text" disabled="disabled"/>                 
+                                </div>					
+                                <div class="border-box opacity-ranger">
+                                        <div class="toolset_global">
+                                            <div class="size-global-area">
+                                            <div id="opacity_dropdown" class="dropdown">
+                                                <div id="opac_slider"></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                </div>
+                            </div>-->
+            <div id="sizeDiv" class="range-blocks">
+              <div class="caption-section">
+                <div id="objectSizeCaption" class="caption">SIZE</div>                
+              </div>
+              <!--<div id="sizeSlider"></div>-->
+              <div class="border-box">
+                  <div class="size-global-area">
+                      <div id="sizeSlider"></div>
+                  </div>
+              </div>
+            </div>
+            <div id="sizeDivPc" style="display:none;" class="range-blocks">
+              <div class="caption-section">
+                <div class="caption">SIZE</div>
+                <!--<input id="scaleValuePc" class="sliderValue" size="3" value="100" type="text" disabled="disabled"/>-->
+              </div>
+              <div class="border-box opacity-ranger">
+                <div class="toolset_global">
+                  <div class="size-global-area">
+                    <div id="opacity_dropdown" class="dropdown">
+                      <div id="sizeSliderPc"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="range-blocks" id="border_box">
+              <div class="caption-section">
+                <div id="objectborderCaption" class="caption">BORDER</div>
+                <input id="stroke_width" class="sliderValue" size="2" value="5" type="text" data-attr="Stroke Width" disabled="disabled"/>
+                <!--<div class="caption-icon">
+                                        <div class="default-icon">&nbsp;</div>
+                                        <div class="border-icon">&nbsp;</div>
+                                    </div>-->
+                <div class="color_tool" id="tool_stroke"> 
+                  <!--<label class="icon_label no-padding" title="Change stroke color" ></label>-->
+                  <div class="color_block">
+                    <div id="stroke_bg"></div>
+                    <div id="stroke_color" class="color_block" title="Change stroke color"></div>
+                  </div>
+                  <div id="toggle_stroke_tools" title="Show/hide more stroke tools" style="display:none;"></div>
+                </div>
+                <div class="right">
+                  <label class="stroke_tool" >
+                    <select id="stroke_style" title="Change stroke dash style">
+                      <option selected="selected" value="none">&mdash;</option>
+                      <option value="2,2">...</option>
+                      <option value="5,5">- -</option>
+                      <option value="5,2,2,2">- .</option>
+                      <option value="5,2,2,2,2,2">- ..</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+			  <div class="ranger-area">
+				<div id="stroke_slider"></div>
+			  </div>
+            </div>
+            <div id="rotationDiv" class="range-blocks">
+              <div class="caption-section">
+                <div id="objectRotateCaption" class="caption">ROTATE</div>
+                <input id="rotateAngle" class="sliderValue" size="3" value="100" type="text" disabled="disabled"/>
+              </div>
+              <div class="ranger-area">
+				<div id="rotationSlider"></div>
+			  </div>
+            </div>
+            <div id="rotationDivPc" style="display:none;" class="range-blocks">
+              <div class="caption-section">
+                <div class="caption">ROTATE</div>
+                <input id="rotateAnglePc" class="sliderValue" size="3" value="100" type="text" disabled="disabled"/>
+              </div>
+			  <div class="ranger-area">
+				<div id="rotationSliderPc"></div>
+			  </div>
+            </div>
+            <!--<div class="range-blocks" id="tool_blur" style="display:none">
+                                <div class="caption-section">
+                                    <div id="blurCaption" class="caption">BLUR</div>						
+                                    <input id="blur" class="sliderValue" size="2" value="0" type="text" disabled="disabled"/>                
+                                </div>
+								
+								
+                                <div class="border-box opacity-ranger">
+									<div class="toolset_global">
+										<div class="size-global-area">
+											<div id="blur_slider"></div>
+										</div>
+									</div>
+								</div>
+                            </div>-->
+            <div class="range-blocks" id="tool_curve">
+              <div class="caption-section">
+                <div id="objectCurveCaption" class="caption">CURVE</div>
+                <input id="curveAngle" class="sliderValue" size="2" value="0" type="text" disabled="disabled"/>
+                <div id="objectCurveReverseCaption" class="caption">REVERSE</div>
+                <input id="curveInvert" class="" size="2" value="0" type="checkbox" />
+              </div>
+			  <div class="ranger-area">
+				<div id="curve_slider"></div>
+			  </div>
+            </div>
+			
+            <div id="textShapeDiv" class="range-blocks" style="overflow:none;">
+              <div class="caption-section">
+                <div class="caption" id="objectTextShapeCaption">TEXT SHAPES</div>
+                <input type="text" disabled="disabled" value="100" size="3" class="sliderValue" id="shapeValue" autocomplete="off">
+                <div class="curve-division">
+                  <div class="curve-property"></div>
+					  <div id="textShapeDD" class="wrapper-dropdown-2" style="clear: left;position: relative;width: 105px;">
+						<span id="textShapeSelected"><img src="<?php echo $jspath.'images/shape-none.jpg'; ?> " /></span>
+					  </div>
+                </div>
+              </div>
+              <div class="ranger-area">
+                <div id="textShapeSlider"></div>
+              </div>
+            </div>
+            <div id="lineSpaceDiv" class="range-blocks">
+              <div class="caption-section">
+                <div id="objectLineSpaceCaptioon" class="caption">Line Spacing</div>
+                <input id="lineHeight" class="sliderValue" size="3" value="100" type="text" disabled="disabled"/>
+              </div>
+              <div class="ranger-area">
+				<div id="lineSpaceSlider"></div>
+			  </div>
+            </div>
+            <div class="range-blocks" id="tool_Move">
+              <div class="caption-section">
+                <div id="objectMoveCaption" class="caption">Move</div>
+              </div>
+              <div class="border-box opacity-ranger no-margin">
+                <div class="toolset_global">
+                  <div class="size-global-area">
+                    <div class="joystic-button">
+                      <div class="toward-up">
+                        <button id="upMove"><span>&nbsp;</span></button>
+                      </div>
+                      <div class="toward-left">
+                        <button id="leftMove"><span>&nbsp;</span></button>
+                      </div>
+                      <div class="toward-down">
+                        <button id="downMove"><span>&nbsp;</span></button>
+                      </div>
+                      <div class="toward-right">
+                        <button id="rightMove"><span>&nbsp;</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--<div class="range-blocks">    
+                                <div class="caption-section">
+                                    <div id="alignCaption" class="caption">ALIGN</div>
+                                    <div class="align_icons">
+                                    <div class="clear"></div>
+                                        <div>
+                                            <ul  class="optcols3">
+                                                <li class="push_button" id="tool_posleft" title="Align Left"></li>
+                                                <li class="push_button" id="tool_poscenter" title="Align Center"></li>
+                                                <li class="push_button" id="tool_posright" title="Align Right"></li>
+                                                <li class="push_button" id="tool_postop" title="Align Top"></li>
+                                                <li class="push_button" id="tool_posmiddle" title="Align Middle"></li>
+                                                <li class="push_button" id="tool_posbottom" title="Align Bottom"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>--> 
+          </div>
+		  </nav>
+          <!-- /common property -->
+          <div class="align_icons" style="display:none;">
+            <ul  class="optcols3">
+              <li class="push_button" id="tool_posleft" title="Align Left"></li>
+              <li class="push_button" id="tool_poscenter" title="Align Center"></li>
+              <li class="push_button" id="tool_posright" title="Align Right"></li>
+              <li class="push_button" id="tool_postop" title="Align Top"></li>
+              <li class="push_button" id="tool_posmiddle" title="Align Middle"></li>
+              <li class="push_button" id="tool_posbottom" title="Align Bottom"></li>
+            </ul>
+            <div id="tool_align_relative" style="margin: 0px 2px 0px 5px;"> <span id="relativeToLabel">relative to:</span>
+              <select title="Align relative to ..." id="align_relative_to" autocomplete="off">
+                <option value="selected" id="selected_objects">selected objects</option>
+                <option value="largest" id="largest_object">largest object</option>
+                <option value="smallest" id="smallest_object">smallest object</option>
+                <option value="page" id="page">page</option>
+              </select>
+            </div>
+          </div>
+          <div class="border-box" id="text_size_box" style="display:none">
+            <div class="size-bold-italic" >
+              <div class="left">
+                <div class="tool_button" id="tool_bold" title="Bold Text">B</div>
+              </div>
+              <div class="right">
+                <div class="tool_button" id="tool_italic" title="Italic Text">i</div>
+              </div>
+            </div>
+            <div class="text-align" >
+              <div class="left">
+                <div class="tool_button" id="text_align_left" title="Align Left"></div>
+              </div>
+              <div class="left">
+                <div class="tool_button" id="text_align_center" title="Align Center"></div>
+              </div>
+              <div class="right">
+                <div class="tool_button" id="text_align_right" title="Align Right"></div>
+              </div>
+            </div>
+          </div>
+          <div class="toolset_fontfamily" id="tool_font_family" style="display:none"><!-- Font family -->
+            <label id="chooseFontCaption">CHOOSE FONT</label>
+            <div tabindex="1" class="wrapper-dropdown-1" id="dd"> <span id="selectedFont"><?php echo Mage::helper('design')->__('CHOOSE');?> <strong><?php echo Mage::helper('design')->__('FONT'); ?> </strong></span> </div>
+          </div>
+          <div class="priceTag">
+            <div class="rate" id="price"></div>
+			<div id="priceAjaxLoader" class="ajax-loader"><img src="<?php echo $jspath.'images/ajax-loader.gif' ?>" height="31" width="31"/> </div>
+            <button id="addtocart_btn"  title="Add To Cart">
+            <div><span class="crt">&nbsp;</span><i></i></div>
+            </button>
+          </div>
+        </section>
+        <!-- right-panel-property --> 
+      </section>
+      <section class="left-panel">
+        <div class="button-area">
+          <ul>
+            <li><button id="layerPanel" title="Layer Panel"><div><i class="lt_layerPanel">&nbsp;</i></div></button></li>
+            <li>
+              <button id="alignPanel" class="disabled" title="Align Panel">
+              <div><i class="lt_alignPanel">&nbsp;</i></div>
+              </button>
+            </li>
+            <li> 
+              <!--<div id="multiselected_panel">-->
+              <button id="tool_group" class="disabled" title="Group">
+              <div><i class="lt_tool_group">&nbsp;</i></div>
+              </button>
+              <!--</div>
+							<div id="g_panel">-->
+              <button id="tool_ungroup" title="Ungroup" class="disabled" style="display:none">
+              <div><i class="lt_tool_ungroup">&nbsp;</i></div>
+              </button>
+              <!--</div>--> 
+              
+            </li>
+            
+            <!--<li><button id="addNote"  title="Add Note"><div><i class="lt_addNote">&nbsp;</i></div></button></li>--> 
+            <!--<li><button id="tool_move_b" title="Send to Back"><div><span class="icon-5">&nbsp;</span></div></button></li>
+							<li><button id="tool_move_t" title="Bring to Front"><div><span class="icon-6">&nbsp;</span></div></button></li>-->
+            
+            <li>
+              <button id="tool_undo_custom" title="Undo">
+              <div><i class="lt_tool_undo">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_redo_custom" title="Redo">
+              <div><i class="lt_tool_redo">&nbsp;</i></div>
+              </button>
+            </li>
+            
+            <!--<li>
+                                <div class="push_button" id="tool_clone" title="Duplicate"></div>
+                            </li>
+                            <li>
+                                <div class="color_tool" id="tool_opacity_delete" title="Delete">
+                                    <button title="Delete Element" id="tool_delete"><div><span class="icon-10">&nbsp;</span></div></button>
+                                </div>
+                            </li>-->
+            
+            <li>
+              <button id="tool_delete" class="disabled" title="Delete">
+              <div><i class="lt_tool_delete">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_clone" title="Duplicate" class="disabled">
+              <div><i class="lt_tool_clone">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_cut" title="Cut" class="disabled">
+              <div><i class="lt_tool_cut">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_copy" title="Copy" class="disabled">
+              <div><i class="lt_tool_copy">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_paste" title="Paste" class="disabled">
+              <div><i class="lt_tool_paste">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button id="tool_clear" title="Delete All">
+              <div><i class="lt_tool_clear">&nbsp;</i></div>
+              </button>
+            </li>
+            <li>
+              <button title="Studio Help" id="Help">
+              <div><i class="lt_tool_help">&nbsp;</i></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <!-- Object align Panel 
+					<div id="objectLayer" class="object-layer" align="center">
+                    	<ul>        
+							<li><span class="layer_top"></span></li>
+							<li><span class="layer_up"></span></li>
+							<li><div class="layer_sign">&nbsp;</div></li>
+							<li><span class="layer_down"></span></li>                      
+							<li><span class="layer_bottom"></span></li>                        
+                        </ul>
+                    </div>
+                     --> 
+      </section>
+      <div id="zoomOptions" style="display:none">
+        <input class="inputBoxMedium" id="zoom" size="3" value="100" type="text" style="display:none" />
+        <ul>
+          <li>400%</li>
+          <li>200%</li>
+          <li>100%</li>
+          <li>50%</li>
+          <li>25%</li>
+          <li id="fit_to_canvas" data-val="canvas">Fit to canvas</li>
+          <li id="fit_to_sel" data-val="selection">Fit to selection</li>
+          <!--<li id="fit_to_layer_content" data-val="layer">Fit to layer content</li>-->
+          <li id="fit_to_all" data-val="content">Fit to screen</li>
+        </ul>
+      </div>
+      <!--<section class="bottom-share-panel" style="display:none;">
+					<div class="button-area">
+						<ul><li><button id="tool_group" title="Group"></button></li></ul>
+					</div>
+				</section>-->
+      <div id="productName"></div>
+      <section class="product-area"> <!-- SVG Editor -->
+        <form id="manage_side" method="post">
+          <input type="hidden" value="2" id="number_of_pages" name="number_of_pages" autocomplete="off">
+          <!--<input type="hidden" value="1" id="current_page" name="current_page" autocomplete="off">-->
+          <div style="display:none;" title="" id="pages_data"> <?php echo $text_area; ?> </div>
+          <textarea id="svg_source_textarea" style="display:none;" spellcheck="false"></textarea>
+        </form>
+        <div id="svg_editor">
+          <div id="rulers" style="display:none"><!-- Ruler will display if showRulers is true in svgEditor.setConfig   -->
+            <div id="ruler_corner"></div>
+            <div id="ruler_x">
+              <div>
+                <canvas height="15"></canvas>
+              </div>
+            </div>
+            <div id="ruler_y">
+              <div>
+                <canvas width="15"></canvas>
+              </div>
+            </div>
+          </div>
+          <div id="workarea">
+            <style id="styleoverrides" type="text/css" media="screen" scoped="scoped">
+</style>
+            <div id="svgcanvas" style="position:relative">
+             <div id="product-image" >
+			 <svg id="productSvg" height="485" width="400" viewBox="0 0 400 485" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <filter id="colorMat" color-interpolation-filters="sRGB">
+                    <feColorMatrix values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" type="matrix" id="feColorMatrix"/>
+                  </filter>
+                </defs>			
+                <?php					
+					/*if($isMultiColor == 'yes'){				
+						$filter = '';
+					}else{
+						$filter = 'url(#colorMat)';
+					}
+					for($i=1; $i<=$no_of_side; $i++){
+						do{
+							if($Image[$i]!='')
+							{
+								list($imagewidth, $imageheight, $type, $attr) = getimagesize($Image[$i]);
+							}
+						}while($imagewidth == '');
+						$ratio = $imagewidth/$imageheight;
+						if($imagewidth >= $imageheight)	{
+							$imagewidth = 400; 
+							$imageheight = $imagewidth/$ratio;
+							if($imageheight > 485)	{
+								$imageheight = 485; 
+								$imagewidth = $ratio*$imageheight;
+							}
+						}
+						else
+						{
+							$imageheight= 485;	
+							$imagewidth = $ratio*$imageheight;
+							if($imagewidth > 400)	{
+								$imagewidth = 400; 
+								$imageheight = $imagewidth/$ratio;
+							}
+						}
+						$display_style = '';
+						if($i != 1) $display_style = "display:none;"*/ ?>
+                <!--<image  class="main_image" filter="<?php echo $filter; ?>" id="img_<?php echo $i;?>" xlink:href="<?php echo $Image[$i]; ?>" height="<?php echo $imageheight."px"?>" width="<?php echo $imagewidth."px"?>" style="position:relative;<?php echo $display_style;?>"/>-->
+                <?php //} ?>
+				
+                </svg>
+				</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clear"></div>
+      <nav class="" id="pickcolor-panel">
+        <div class="">
+          <?php /*?><label class="label"><?php echo Mage::helper('design')->__('PICK COLOR');?></label><?php */?>
+          <button id="tool_pick_color_close"></button>
+          <div id="prevColor" class="button">prev</div>
+          <div class="gallery">
+            <ul class="pickcolor-list">
+              <?php //echo $pickcolorarray;?>
+            </ul>
+            <!-- show colors -->
+            <input type="hidden" value="<?php //echo $colorId; ?>" name="current_product_colorid" id="current_product_colorid" />
+            <input type="hidden" value="<?php //echo $currentcolohash; ?>" name="current_product_colorhash" id="current_product_colorhash" />
+          </div>
+          <div id="nextColor" class="button">next</div>
+        </div>
+      </nav>
+      <!--<div id="transformPanel">
+						<div class="move-object-panel dragablePanel">
+							<div class="mop-heading"><span class="mop-close">x</span></div>
+							<div class="ranges-content">
+								<div class="moving-knob">
+									<input id="knobAngle" class="knob" data-step="1" data-displayprevious=true data-min="0" data-max="360" data-width="65" data-cursor=true  value="0">
+								</div>
+								<div class="joystic-button">
+									<div class="toward-up"><button id="upMove"><span>&nbsp;</span></button></div>
+									<div class="toward-left"><button id="leftMove"><span>&nbsp;</span></button></div>
+									<div class="toward-down"><button id="downMove"><span>&nbsp;</span></button></div>
+									<div class="toward-right"><button id="rightMove"><span>&nbsp;</span></button></div>
+								</div>
+							</div>
+					</div>
+				</div>--> 
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="footer-corner">
+  <div>
+    <div>&nbsp;</div>
+  </div>
+</div>
+<div id="use_panel" style="display:none">
+  <div class="push_button" id="tool_unlink_use" title="Break link to reference element (make unique)"></div>
+</div>
+<div id="svg_prefs">
+  <div id="svg_prefs_overlay"></div>
+  <div id="svg_prefs_container">
+    <div id="tool_prefs_back" class="toolbar_button">
+      <button id="tool_prefs_save"><?php echo Mage::helper('design')->__('OK'); ?></button>
+      <button id="tool_prefs_cancel"><?php echo Mage::helper('design')->__('Cancel'); ?></button>
+    </div>
+    <fieldset>
+      <legend id="svginfo_editor_prefs"><?php echo Mage::helper('design')->__('Editor Preferences'); ?></legend>
+      <fieldset id="change_background">
+        <legend id="svginfo_change_background"><?php echo Mage::helper('design')->__('Editor Background'); ?></legend>
+        <div id="bg_blocks"></div>
+        <label><span id="svginfo_bg_url"><?php echo Mage::helper('design')->__('URL');?>:</span>
+          <input type="text" id="canvas_bg_url"/>
+        </label>
+        <p id="svginfo_bg_note"><?php echo Mage::helper('design')->__('Note: Background will not be saved with image.');?></p>
+      </fieldset>
+      <fieldset id="change_grid">
+        <legend id="svginfo_grid_settings"><?php echo Mage::helper('design')->__('Grid'); ?></legend>
+        <label><span id="svginfo_snap_onoff">Snapping on/off</span>
+          <input type="checkbox" value="snapping_on" id="grid_snapping_on">
+        </label>
+        <label><span id="svginfo_snap_step">Snapping Step-Size:</span>
+          <input type="text" id="grid_snapping_step" size="3" value="10"/>
+        </label>
+      </fieldset>
+      <fieldset id="units_rulers">
+        <legend id="svginfo_units_rulers">Units & Rulers</legend>
+        <label><span id="svginfo_rulers_onoff">Show rulers</span>
+          <input type="checkbox" value="show_rulers" id="show_rulers">
+        </label>
+        <label> <span id="svginfo_unit">Base Unit:</span>
+          <select id="base_unit">
+            <option value="px">Pixels</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeters</option>
+            <option value="in">Inches</option>
+            <option value="pt">Points</option>
+            <option value="pc">Picas</option>
+            <option value="em">Ems</option>
+            <option value="ex">Exs</option>
+          </select>
+        </label>
+      </fieldset>
+    </fieldset>
+  </div>
+</div>
+<div id="dialog_box">
+  <div id="dialog_box_overlay"></div>
+  <div id="dialog_container">
+    <div id="dialog_content" align="center"></div>
+    <div id="dialog_buttons" align="center"></div>
+  </div>
+</div>
+<!--<ul id="cmenu_canvas" class="contextMenu">
+		<li><a href="#cut"><?php echo Mage::helper('design')->__('Cut');?></a></li>
+		<li><a href="#copy"><?php echo Mage::helper('design')->__('Copy'); ?></a></li>
+		<li><a href="#paste"><?php echo Mage::helper('design')->__('Paste');?></a></li>
+		<li><a href="#paste_in_place"><?php echo Mage::helper('design')->__('Paste in Place');?></a></li>
+		<li class="separator"><a href="#delete"><?php echo Mage::helper('design')->__('Delete');?></a></li>
+		<li class="separator"><a href="#group"><?php echo Mage::helper('design')->__('Group');?></a></li>
+		<li><a href="#ungroup"><?php echo Mage::helper('design')->__('Ungroup');?></a></li>
+		<li class="separator"><a href="#move_front"><?php echo Mage::helper('design')->__('Bring to Front');?></a></li>
+		<li><a href="#move_up"><?php echo Mage::helper('design')->__('Bring Forward');?></a></li>
+		<li><a href="#move_down"><?php echo Mage::helper('design')->__('Send Backward');?></a></li>
+		<li><a href="#move_back"><?php echo Mage::helper('design')->__('Send to Back');?></a></li>
+	</ul>-->
+<div id="svg_docprops" style="display:none;">
+  <div id="svg_docprops_overlay"></div>
+  <div id="svg_docprops_container" class="ui-draggable">
+    <div id="tool_docprops_back" class="toolbar_button">
+      <button id="tool_docprops_cancel"></button>
+    </div>
+    <p id="productNameInfo" class="headingtwo"></p>
+    <div class="proimage">
+      <p id="productColor" class="popupheading clr p5">Colors</p>
+      <div align="center" style="margin:auto; overflow:hidden; width:260px;">
+        <ul class="colorpalet">
+          <?php //echo $pickcolor_multi; ?>
+        </ul>
+      </div>
+    </div>
+    <div class="prodescription">
+      <p id="productInformation" class="popupheading">Detail Information</p>
+      <p id="productSku" class="cotxt"><strong>SKU :</strong></p>
+      <p id="productShortDesc" class="cotxt"><strong>Short Description :</strong></p>
+      <p id="productDesc" class="cotxt"><strong>Long Description :</strong></p>
+    </div>
+  </div>
+</div>
+<div id="svg_image_upload" style="display:none;">
+  <div id="svg_image_upload_overlay"></div>
+  <div id="svg_image_upload_container" >
+    <div id="tool_image_upload_back" class="toolbar_button">
+      <button id="tool_image_upload_cancel"></button>
+    </div>
+    <p id="addImagePopupcaption" class="headingtwo">ADD IMAGE</p>
+    <div id="uploader">
+      <div id="filelist" class="panel">No runtime found.</div>
+      <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+    </div>
+  </div>
+</div>
+<!--<div id="svg_add_note">
+		<div id="svg_add_note_overlay"></div>
+		<div id="svg_add_note_container" class="ui-draggable">
+			<div id="tool_addnote_back" class="toolbar_button"><button id="tool_addnote_cancel"></button></div>
+			<p class="headingtwo"><?php //echo Mage::helper('design')->__('Add Note');?></p>
+			<fieldset>
+				<textarea name="addnote" id="addnote"></textarea>
+				<input type="hidden" name="addnotehidden" id="addnotehidden"/>
+				<button type="button" class="cobutton addnotebutton right" onclick="addnote()"><span><?php //echo Mage::helper('design')->__('Add Note'); ?></span></button>
+				<span id="addnoteresults"></span>
+			</fieldset>
+		</div>
+	</div>-->
+<div id="svg_beforeaddtocart">
+  <div id="svg_beforeaddtocart_overlay"></div>
+  <div id="svg_beforeaddtocart_container" class="ui-draggable">
+    <div id="tool_beforeaddtocart_back" class="toolbar_button">
+      <button id="tool_beforeaddtocart_cancel"></button>
+    </div>
+    <p id="addToCartCaption" class="headingtwo"><?php echo Mage::helper('design')->__('ADD TO CART');?></p>
+    <div class="search">
+      <div class="message" id="addtocartmessage"></div>
+      <div class="proceedbtn">
+        <button class="cobutton proceedto prcadcart" type="button" id="cartProceed" onclick="$j('#svg_beforeaddtocart').hide();addtocart();">Proceed</button>
+        <!--<input class="cobutton proceedto prcadcart" type="button"  value="<?php echo Mage::helper('design')->__('Proceed'); ?>" onclick="$j('#svg_beforeaddtocart').hide();addtocart();"/>--> 
+      </div>
+    </div>
+  </div>
+</div>
+<div id="image_quality_window" style="display:none;">
+	<div class="window_overlay"></div>
+    <div class="window_container">
+    <div class="toolbar_button" >
+    <button onclick="closeMe(this);">
+    X
+	</button>
+    </div>
+    <p class="headingtwo" id="imageQualityInfoCaption">About Your Image Print Quality</p>
+    <div class="window_content">
+      <div id="imageQualityInfoContent"> 
+        <!--content goes here--> 
+        The image quality indicator lets you know if the image you have loaded has the right resolution for printing. If your image quality is poor we recommend that you upload a new image with higher resolution.
+    
+    Our graphics team checks every image submitted for resolution and quality requirements
+      </div>
+    </div>
+    </div>
+</div>
+<div id="upload_info_hd_window" style="display:none;">
+	<div class="window_overlay"></div>
+    <div class="window_container">
+    <div class="toolbar_button" >
+    <button onclick="closeMe(this);">
+    X
+	</button>
+    </div>
+    <p class="headingtwo" id="imageGalleryPopupInfoCaption">Shows images uploaded by user</p>
+    <div class="window_content">
+      <div id="imageGalleryPopupInfoContent" style="font-size:16px; text-align:left;"> 
+        <!--content goes here--> 
+       <B>For anonymous users:</B> The list is maintained for current session of design studio only.<br /><br />
+        <B>For registered users after login:</B> It maintains the list of all images uploaded by user in several logged-in sessions. User can also attach a high resolution vector source file in allowed formats CDR/PSD/AI/PDF/EPS along with the raster image by clicking on “HD” button. You can see a right symbol with “Upload image” button to indicate images who already have the high resolution image uploaded, which can be further replaced is needed. The high resolution source file is sent to the admin once an order is placed for reference.<br />   <br />     
+        PLEASE LOG-IN TO MAINTAIN YOUR IMAGE GALLERY AND ATTACH HIGH RESOLUTION SOURCE FILES WITH UPLOADED IMAGES.
+
+      </div>
+    </div>
+    </div>
+</div>
+<div id="upload_info_window" style="display:none;">
+    <div class="window_overlay"></div>
+    <div class="window_container">
+        <div class="toolbar_button" ><button onclick="closeMe(this);">X</button></div>
+        <p class="headingtwo" id="uploadImageInfoPopupCaption">Upload Info</p>
+        <div class="window_content">
+            <div>
+                <!--content goes here-->
+                 
+<div class="buttons">
+  <div class="image-upload-image" align="left"></div>
+  <div class="image-upload-section" align="left">
+    <div class="image-upload-block">
+      <div id="supportedFormatCaption"><b class="image-instruction-heading">Supported formats</b> 1) jpeg 2) jpg 3) png </div>
+    </div>
+    <div class="image-upload-block">
+      <div id="optimalResolutionCaption"><b class="image-instruction-heading">Optimal resolution</b>1500 x 1500 Pixel</div>
+    </div>
+    <div class="image-upload-block">
+      <div id="recommendedSizeCaption"><b class="image-instruction-heading">Recommended size</b> Less than 5 mb</div>
+    </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+</div>
+</div>
+<div id="svg_login_window">
+  <div id="svg_login_window_overlay"></div>
+  <div id="svg_login_window_container" class="ui-draggable">
+    <div id="tool_login_window_back" class="toolbar_button">
+      <button id="tool_login_window_cancel"></button>
+    </div>
+    <p id="loginRegisterPopupCaption" class="headingtwo">Login/Register</p>
+    <div id="error_msg"></div>
+    <div class="login-table">
+      <div class="login" style="width:48%; float:left;">
+        <label id="loginCaption" class="table-hd-cap">Log In</label>
+		<form>
+			<fieldset>
+			  <div class="div-table">
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="lEmailCaption">E-mail Address</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="text" name="email_id" id="email_id" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="lPasswordCaption">Password</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="password" name="password" id="password" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label><a id="forgetPasswordCaption" href="<?php echo Mage::getUrl('customer/account/forgotpassword/'); ?>" target="_blank" >Forget Password?</a></label>
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">&nbsp;</div>
+				  <div class="div-table-cell">
+					<div class="proceedbtn">
+					  <input type="button" class="cobutton login-button" id="btn_login" name="btn_login" value="Login" />
+					  <input type="button" class="cobutton login-button" id="btn_cancel" name="btn_cancel" value="Cancel" />
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</fieldset>
+		</form>
+      </div>
+      <div class="register" style="width:48%; float:left;">
+        <label id="registerCaption" class="table-hd-cap">Create an account</label>
+		<form>
+			<fieldset>
+			  <div class="div-table">
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="fNameCaption">First Name</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="text" name="first_name" id="first_name" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="lNameCaption">Last Name</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="text" name="last_name" id="last_name" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="rEmailCaption">E-mail Address</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="text" name="reg_email_id" id="reg_email_id" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="rPasswordCaption">Password</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="password" name="reg_password" id="reg_password" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">
+					<label id="rConfirmPasswordCaption">Confirm Password</label>
+				  </div>
+				  <div class="div-table-cell">
+					<input type="password" name="conf_password" id="conf_password" />
+				  </div>
+				</div>
+				<div class="div-table-row">
+				  <div class="div-table-cell">&nbsp;</div>
+				  <div class="div-table-cell">
+					<div class="proceedbtn">
+					  <input type="button" id="btn_submit" name="btn_submit" value="Submit" class="login-button"/>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</fieldset>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="svg_save_design_window">
+  <div id="svg_save_design_window_overlay"></div>
+  <div id="svg_save_design_window_container" class="ui-draggable">
+    <div id="tool_save_design_window_back" class="toolbar_button">
+      <button id="tool_save_design_window_cancel"></button>
+    </div>
+    <p id="saveDesignCaption" class="headingtwo">Save Your Design</p>
+    <div class="save-design-table">
+      <div class="save-design" style="width:48%; float:left;">
+        <label id="designDetailsCaption" class="table-hd-cap">Design Details</label>
+        <fieldset>
+          <div class="div-table">
+            <div class="div-table-row">
+              <div class="div-table-cell">
+                <label id="designNameCaption">Design Name</label>
+              </div>
+              <div class="div-table-cell">
+                <input type="text" name="design_name" id="design_name" />
+              </div>
+            </div>
+          </div>
+          <div class="div-table-row">
+            <div class="div-table-cell">&nbsp;</div>
+            <div class="div-table-cell">
+              <div class="proceedbtn">
+                <button name="btn_save_design" class="login-button" name="btn_save_design" type="button" id="btn_save_design">
+                Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="facebook_window">
+  <div id="facebook_window_overlay"></div>
+  <div id="facebook_window_container" class="ui-draggable">
+    <div id="tool_save_design_window_back" class="toolbar_button">
+      <button id="tool_facebook_window_cancel"></button>
+    </div>
+    <p id="facebookUploadCaption" class="headingtwo">upload your facebook photos</p>
+    <div class="save-design-table">
+      <select id="facebook_select">
+      </select>
+      <div class="fb_holder"></div>
+    </div>
+  </div>
+</div>
+<div id="flickr_window">
+  <div id="flickr_window_overlay"></div>
+  <div id="flickr_window_container" class="ui-draggable">
+    <div id="tool_save_design_window_back" class="toolbar_button">
+      <button id="tool_flickr_window_cancel"></button>
+    </div>
+    <p id="flickrUploadCaption" class="headingtwo">upload your flickr photos</p>
+    <div class="save-design-table">
+      <input type="text" size="25" id="flicker_import" autocomplete="off">
+      <input type="button" value="GO!" class="enter" id="flicker_go">
+      <!--<div id="import_error"></div>-->
+      <div id="flickr_pager"></div>
+      <div class="flickr_holder"></div>
+    </div>
+  </div>
+</div>
+<div id="picasa_window">
+  <div id="picasa_window_overlay"></div>
+  <div id="picasa_window_container" class="ui-draggable">
+    <div id="tool_save_design_window_back" class="toolbar_button">
+      <button id="tool_picasa_window_cancel"></button>
+    </div>
+    <p id="picasaUploadCaption" class="headingtwo">upload your picasa photos</p>
+    <div class="save-design-table">
+      <input type="text" size="25" id="picasa_import" autocomplete="off">
+      <input type="button" value="GO!" class="enter" id="picasa_go">
+      <!--<div id="import_error"></div>-->
+      <div class="picasa_holder"></div>
+    </div>
+  </div>
+</div>
+<div id="instagram_window" style="display:none">
+  <div id="instagram_window_overlay"></div>
+  <div id="instagram_window_container" class="">
+    <div id="tool_save_design_window_back" class="toolbar_button">
+      <button id="tool_instagram_window_cancel"></button>
+    </div>
+    <p id="instagramUploadCaption" class="headingtwo">upload your Instagram photos</p>
+    <div class="save-design-table"> 
+      <!--<a class="prev srbutton2">prev</a>
+					<a class="next srbutton2">next</a>-->
+      <div class="pager"> <a class="prev start-page">&larr; prev</a> <a class="next end-page">next &rarr;</a> </div>
+      <!--<div id="import_error"></div>-->
+      <div class="instagram_holder"></div>
+    </div>
+  </div>
+</div>
+<div id="preview_window">
+  <div id="preview_window_overlay"></div>
+  <div id="preview_window_container" class="ui-draggable">
+    <div id="tool_save_design_window_back" class="toolbar_button"><a href="#" onclick="javascript:downloadPreview(); void(0);" id="downloadPreviewCaption" class="download-preview">Download Preview </a>
+      <button id="tool_preview_window_cancel"></button>
+    </div>
+    <p id="previewPopupCaption" class="headingtwo">Preview</p>
+    <div class="save-design-table">
+      <div class="preview_holder"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	var pos_x = new Array();
+	var pos_y = new Array();
+	var design_area_width = new Array();
+	var design_area_height = new Array();
+	var outputWidth = new Array();
+	var outputHeight = new Array();
+	for(var i=1; i<=no_of_side; i++)
+	{
+		if(i == 1)
+		{
+			<?php if(array_key_exists('front',$design_area_arr)) {?>
+			   pos_x[i] = <?php echo $design_area_arr['front'][0]*15; ?>;
+			   pos_y[i] = <?php echo $design_area_arr['front'][1]*15; ?>;
+			   design_area_width[i] = <?php echo $design_area_arr['front'][2]*15;?>;
+			   design_area_height[i] = <?php echo $design_area_arr['front'][3]*15;?>;
+			   outputWidth[i] = '<?php echo $design_area_arr['front'][4];?>';
+			   outputHeight[i] = '<?php echo $design_area_arr['front'][5];?>';
+			<?php }?>				
+		}
+		else if(i == 2)
+		{
+			<?php if(array_key_exists('back',$design_area_arr)) {?>
+			   pos_x[i] = <?php echo $design_area_arr['back'][0]*15; ?>;
+			   pos_y[i] = <?php echo $design_area_arr['back'][1]*15; ?>;
+			   design_area_width[i] = <?php echo $design_area_arr['back'][2]*15;?>;
+			   design_area_height[i] = <?php echo $design_area_arr['back'][3]*15;?>;
+			   outputWidth[i] = '<?php echo $design_area_arr['back'][4];?>';
+			   outputHeight[i] = '<?php echo $design_area_arr['back'][5];?>';
+			<?php }?>						
+		}		
+		else if(i == 3)
+		{		
+			<?php if(array_key_exists('left',$design_area_arr)) {?>
+			   pos_x[i] = <?php echo $design_area_arr['left'][0]*15; ?>;
+			   pos_y[i] = <?php echo $design_area_arr['left'][1]*15; ?>;
+			   design_area_width[i] = <?php echo $design_area_arr['left'][2]*15;?>;
+			   design_area_height[i] = <?php echo $design_area_arr['left'][3]*15;?>;
+			   outputWidth[i] = '<?php echo $design_area_arr['left'][4];?>';
+			   outputHeight[i] = '<?php echo $design_area_arr['left'][5];?>';
+			<?php }?>			
+		}
+		else if(i == 4)
+		{			
+			<?php if(array_key_exists('right',$design_area_arr)) {?>
+			   pos_x[i] = <?php echo $design_area_arr['right'][0]*15; ?>;
+			   pos_y[i] = <?php echo $design_area_arr['right'][1]*15; ?>;
+			   design_area_width[i] = <?php echo $design_area_arr['right'][2]*15;?>;
+			   design_area_height[i] = <?php echo $design_area_arr['right'][3]*15;?>;
+			   outputWidth[i] = '<?php echo $design_area_arr['right'][4];?>';
+			   outputHeight[i] = '<?php echo $design_area_arr['right'][5];?>';
+			<?php }?>			
+		}
+	}
+	
+	
+
+	var qrcodeform =  new VarienForm('qrcodeform', false);
+	svgEditor.setConfig({
+		dimensions: [design_area_width[1], design_area_height[1]],
+		position: [parseFloat(pos_x[1]),parseFloat(pos_y[1])],
+		canvas_expansion: 0,
+		showRulers: false,
+		initFill: {color:'0000FF'},
+		initStroke: {width: 1, color:'#000000'},
+		initBorder: {color:'#000000'},
+		bkgd_color:'none',
+		no_save_warning:true,
+		extensions:extensionArray,
+		show_outside_canvas:0,
+		lang:currentStore
+	});
+</script> 
+<!-- load facebook plugin --> 
+<!--<script src="//connect.facebook.net/en_US/all.js"></script> -->
+<script type="text/javascript" src="//connect.facebook.net/<?php echo $locale; ?>/all.js"></script>
+<script type="text/javascript" src="<?php echo $jspath.'facebook.js'; ?>"></script>

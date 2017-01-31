@@ -1,0 +1,77 @@
+<!-- Image Upload Start-->
+<script type="text/javascript" src="../jquery.js"></script>
+<script type="text/javascript" src="moxie.js"></script>
+<link rel="stylesheet" href="jquery.plupload.queue.css" type="text/css" />
+<script type="text/javascript" src="plupload.dev.js"></script>
+
+
+<!-- Image Upload End-->
+
+<div id="container">
+	<button id="Add" type="button">Add</button>
+
+	<!--<div id="unique_id" class="gallery">
+		<a href="" id="unique_id_uploader">Upload</a>
+	</div>
+
+	<div id="unique_id2" class="gallery">
+		<a href="" id="unique_id2_uploader">Upload</a>
+	</div>-->
+</div>
+<br />
+<pre id="console"></pre>
+ 
+ 
+<script type="text/javascript">
+var counter = 0;
+jQuery("#Add").click(function () {
+	//var id = 'uploader_'+counter;
+	jQuery("#container").append('<a href="" id="uploader_'+counter+'">Upload</a>');
+	initUploaders(counter);
+	counter++;
+	return false;
+});
+
+
+initUploaders = function(buttonId) {    
+	
+	//var button = el.attr("id") + "_uploader";
+	//var button = el.attr("id") + "_uploader";
+	//console.log("Init uploader id:" + el.attr("id"));
+	var HDuploader = new plupload.Uploader({
+		//container : 'windows',
+		runtimes: 'html5',
+		browse_button: 'uploader_'+buttonId,
+		max_file_size: '10mb',
+		url: 'upload.php',
+		//flash_swf_url: 'plupload.flash.swf',
+		//silverlight_xap_url: 'plupload.silverlight.xap',
+		filters: [
+			{
+			title: "Image files",
+			extensions: "jpg,gif,png,pdf,zip,svg"}
+		],
+		multipart_params : {
+		"isFront" : 1,
+		"imageId" : buttonId,
+		},
+	});
+
+	HDuploader.bind('FilesAdded', function(up, files) {
+		HDuploader.start();
+	});
+	
+	HDuploader.bind('QueueChanged', function (up, files) {
+		 HDuploader.start();
+		 up.refresh();
+	});
+
+	HDuploader.init();
+
+	//uploaders.push(HDuploader);
+   
+};               
+
+//initUploaders(uploaders);
+ 
+</script>

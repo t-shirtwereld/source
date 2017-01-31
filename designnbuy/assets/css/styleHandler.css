@@ -1,0 +1,15 @@
+/*body{width:750px; margin:auto;}*/
+.resize-drag {color: grey;font-size: 20px;font-family: sans-serif;border:1px solid black;  width: 120px; position: absolute; box-sizing: border-box;}
+.resize-container {width: 440px;height: 480px;position: absolute;}
+.resize-container img{position:absolute;}
+.sidepositions {display:block; margin:20px 0;}
+#btnCon {float: left;}
+#savebtnCon {float: right;}
+#savebtnCon3d {float: right;}
+#inputCon {border-bottom: 1px solid #cccccc;  border-top: 1px solid #cccccc; clear: both; font-family: arial;font-size: 12px; padding: 10px;}
+
+button{font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #050505; padding: 5px; margin-right:10px;background: -moz-linear-gradient(top, #ffffff 0%, #ebebeb 50%, #dbdbdb 50%,#b5b5b5);background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(0.50, #ebebeb), color-stop(0.50, #dbdbdb), to(#b5b5b5));	border: 1px solid #949494;-moz-box-shadow:0px 1px 3px rgba(000,000,000,0),inset 0px 0px 2px rgba(255,255,255,0);-webkit-box-shadow:	0px 1px 3px rgba(000,000,000,0),inset 0px 0px 2px rgba(255,255,255,0);	box-shadow:	0px 1px 3px rgba(000,000,000,0), inset 0px 0px 2px rgba(255,255,255,0);text-shadow: 0px 0px 0px rgba(000,000,000,0), 0px 0px 0px rgba(255,255,255,0);	cursor: pointer;}
+button:last-child{}
+
+
+#inputCon input[type="text"] {font-size: 11px;margin: 3px 20px 3px 3px;padding: 3px;text-align: center;width: 33px;}

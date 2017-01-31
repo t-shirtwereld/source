@@ -1,0 +1,135 @@
+#transformPanel {position: relative;z-index: 1;}
+.moveDown {
+	background: url(../images/lay_down.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+	border: 0;
+	margin-top: -1px
+}
+.layer-control .right-button-section .layer-duplicate {
+	background: url(../images/lay_dup.png) no-repeat;
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	border: 0
+}
+.layer-control .right-button-section .layer-delete {
+	background: url(../images/lay_delete.png) no-repeat; 
+	width: 22px;
+	height: 22px;
+	border: 0
+}
+.move-object-panel {
+	border: none;
+	width: 63px;
+	box-shadow: none;
+	background: url("../images/joystick_bg.png") no-repeat #484848
+}
+.move-object-panel .mop-heading {
+	cursor: move;
+	background: #0d9ed9;
+	color: #fff;
+	font-family: lato;
+	font-size: 16px;
+	line-height: 23px;
+	font-weight: 300;
+	height: 23px;
+	padding-left: 0px;
+	text-align: left;
+	display:none;
+}
+.move-object-panel .mop-heading .mop-close {
+	color: #FFF;
+	text-decoration: none;
+	float: right;
+	margin-right: 15px;
+	font-weight: 700;
+	cursor: pointer;
+	line-height: 19px
+}
+.ranges-content {
+	padding: 0px;
+	overflow: hidden
+}
+.ranges-content .moving-knob {
+	float: left;
+	cursor: pointer
+}
+.joystic-button {
+    position: relative;
+	height: 63px;
+}
+.joystic-button button {border: 0px; margin:0px;font-size: 22px;background:none;width: 20px; height: 20px; cursor: pointer; float: left; color:#fff;text-shadow: 1px 1px 1px #000000;}
+.joystic-button button:hover { color: #ccc; cursor: pointer;}
+/*.joystic-button .toward-up {	width: 30px;}*/
+
+/*
+.joystic-button .toward-up button {background: url(../images/j_up.png) no-repeat;		margin-left:0px;}
+.joystic-button .toward-left button {background: url(../images/j_left.png) no-repeat;	margin-top: 0px}
+.joystic-button .toward-down button {background: url(../images/j_down.png) no-repeat;	margin-top: 0px;margin-left: 0px}
+.joystic-button .toward-right button {	background: url(../images/j_right.png) no-repeat;margin-left: 0px}
+*/
+
+.joystic-button .toward-up { margin: auto;overflow: hidden;width: 20px;}
+.toward-right {float: right;}
+.toward-down {clear: both;margin: auto;overflow: hidden;width: 20px;}
+
+.first-cross-line {
+    border: 1px solid #000000;
+    height: 1px;
+    position: absolute;
+    top: 70px;
+    transform: rotate(45deg);
+    width: 100%;
+}
+.second-cross-line {
+	border: 1px solid #000000;
+    height: 1px;
+    position: absolute;
+    top: 70px;
+    transform: rotate(-45deg);
+    width: 100%;
+}
+
+.upload-mathod {	margin: 15px 0;width: 425px; text-align: center}
+.upload-mathod ul li {
+	width: 65px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	display: inline-block;
+	padding: 0;
+	text-align: left;
+	line-height: 22px;
+	padding-left:17px;
+}
+.upload-mathod ul.inactive li {
+	border-top: 5px solid #999
+}
+.upload-mathod ul.inactive li i {
+	display: none
+}
+.upload-mathod ul.active li.not-reco {
+	color: #ff0203;
+	border-top: 5px solid #ff0203
+}
+.upload-mathod ul.active li.fair {
+	color: #f5942f;
+	border-top: 5px solid #f5942f
+}
+.upload-mathod ul.active li.luk-gud {
+	color: #007f2f;
+	border-top: 5px solid #007f2f
+}
+.not-reco.active {
+	background: url(../images/red_tick.png) no-repeat;
+	display: inline-block
+}
+.fair.active {
+	background: url(../images/yellow_tick.png) no-repeat;
+	display: inline-block
+}
+.luk-gud.active {
+	background: url(../images/green_tick.png) no-repeat;
+	display: inline-block
+}

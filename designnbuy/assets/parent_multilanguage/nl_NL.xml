@@ -1,0 +1,2152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<printcommerce_multilanguage>
+  <productsettingCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Settings</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>productinstellingen</pc_text>
+    <pc_help>productinstellingen</pc_help>
+  </productsettingCaption>
+  <clipCat_label>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Browse By Category (Clipart)</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Blader door Categorie (Illustraties)</pc_text>
+    <pc_help>Blader door Categorie (Illustraties)</pc_help>
+  </clipCat_label>
+  <cart_next_save>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Save Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Voeg ontwerp</pc_text>
+    <pc_help>Voeg ontwerp</pc_help>
+  </cart_next_save>
+  <cart_next>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Next</pc_label>
+    <pc_maxlength>5</pc_maxlength>
+    <pc_text>volgende</pc_text>
+    <pc_help>volgende</pc_help>
+  </cart_next>
+  <back_to_cart>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Terug</pc_text>
+    <pc_help>Terug</pc_help>
+  </back_to_cart>
+  <previewPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Preview</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Voorbeschouwing</pc_text>
+    <pc_help>Voorbeschouwing</pc_help>
+  </previewPopupCaption>
+  <changeproductCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Product</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>wijzigen </pc_text>
+    <pc_help>wijzigen </pc_help>
+  </changeproductCaption>
+  <prodCat_label>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Browse By Category (Product)</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Blader door Categorie (Product)</pc_text>
+    <pc_help>Blader door Categorie (Product)</pc_help>
+  </prodCat_label>
+  <chooseProductCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Artikel</pc_text>
+    <pc_help>Artikel</pc_help>
+  </chooseProductCaption>
+  <chooseArtCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Art</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Kies Art</pc_text>
+    <pc_help>Kies Art</pc_help>
+  </chooseArtCaption>
+  <addTextCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Text</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Tekst</pc_text>
+    <pc_help>Tekst</pc_help>
+  </addTextCaption>
+  <addTextPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text - Popup</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Tekst toevoegen - Popup</pc_text>
+    <pc_help>Tekst toevoegen - Popup</pc_help>
+  </addTextPopupCaption>
+  <addTextBtnCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Voeg tekst toe</pc_text>
+    <pc_help>Voeg tekst toe</pc_help>
+  </addTextBtnCaption>
+  <addchangecolor>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Color</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Verander kleur</pc_text>
+    <pc_help>Verander kleur</pc_help>
+  </addchangecolor>
+  <addImageCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Image</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Voeg afbeelding toe</pc_text>
+    <pc_help>Voeg afbeelding toe</pc_help>
+  </addImageCaption>
+  <rightsCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>rights</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ik heb de rechten op deze afbeeldingen te gebruiken</pc_text>
+    <pc_help>Ik heb de rechten op deze afbeeldingen te gebruiken</pc_help>
+  </rightsCaption>
+  <uploadImageInfoPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Upload Info</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Upload Info</pc_text>
+    <pc_help>Upload Info</pc_help>
+  </uploadImageInfoPopupCaption>
+  <printQualityCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Print Quality</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Print kwaliteit</pc_text>
+    <pc_help>Print kwaliteit</pc_help>
+  </printQualityCaption>
+  <printQualityPoorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Poor</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>arm</pc_text>
+    <pc_help>arm</pc_help>
+  </printQualityPoorCaption>
+  <printQualityFairCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fair</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Eerlijk</pc_text>
+    <pc_help>Eerlijk</pc_help>
+  </printQualityFairCaption>
+  <printQualityGoodCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Good</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Goed</pc_text>
+    <pc_help>Goed</pc_help>
+  </printQualityGoodCaption>
+  <productInfoCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Info</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>info</pc_text>
+    <pc_help>info</pc_help>
+  </productInfoCaption>
+  <printingMethodCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Printing Method</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>afdrukmethode</pc_text>
+    <pc_help>afdrukmethode</pc_help>
+  </printingMethodCaption>
+  <sizeQtyCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Size/Quantity</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Size / Hoeveelheid</pc_text>
+    <pc_help>Size / Hoeveelheid</pc_help>
+  </sizeQtyCaption>
+  <addNoteCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Note</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Notitie</pc_text>
+    <pc_help>Notitie</pc_help>
+  </addNoteCaption>
+  <addcart>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ADD TO CART </pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>VOEG TOE AAN WINKELMANDJE</pc_text>
+    <pc_help>VOEG TOE AAN WINKELMANDJE</pc_help>
+  </addcart>
+  <YES>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Yes</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Ja</pc_text>
+    <pc_help>Ja</pc_help>
+  </YES>
+  <NO>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>No</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Nee</pc_text>
+    <pc_help>Nee</pc_help>
+  </NO>
+  <OK>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Ok</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>OK</pc_text>
+    <pc_help>OK</pc_help>
+  </OK>
+  <CANCEL>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Cancel</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Annuleer</pc_text>
+    <pc_help>Annuleer</pc_help>
+  </CANCEL>
+  <SUBMIT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Submit</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>voorleggen</pc_text>
+    <pc_help>voorleggen</pc_help>
+  </SUBMIT>
+  <path>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>path</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>pad</pc_text>
+    <pc_help>pad</pc_help>
+  </path>
+  <line>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>line</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>lijn</pc_text>
+    <pc_help>lijn</pc_help>
+  </line>
+  <rect>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>rect</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>rect</pc_text>
+    <pc_help>rect</pc_help>
+  </rect>
+  <ellipse>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>ellips</pc_text>
+    <pc_help>ellips</pc_help>
+  </ellipse>
+  <circle>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>circle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>cirkel</pc_text>
+    <pc_help>cirkel</pc_help>
+  </circle>
+  <supportedFormatCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Supported Formats</pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Ondersteunde formaten: 1) jpeg 2) jpg 3) png</pc_text>
+    <pc_help>Ondersteunde formaten: 1) jpeg 2) jpg 3) png</pc_help>
+  </supportedFormatCaption>
+  <optimalResolutionCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Optimal Resolution</pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Optimale resolutie: 1500 X 1500 pixels</pc_text>
+    <pc_help>Optimale resolutie: 1500 X 1500 pixels</pc_help>
+  </optimalResolutionCaption>
+  <recommendedSizeCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Recommended Size </pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Aanbevolen Grootte: Minder dan 5 mb</pc_text>
+    <pc_help>Aanbevolen Grootte: Minder dan 5 mb</pc_help>
+  </recommendedSizeCaption>
+  <imageGalleryPopupInfoContent>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Gallery Popup Info</pc_label>
+    <pc_maxlength>500</pc_maxlength>
+    <pc_text>Voor anonieme gebruikers: De lijst wordt bijgehouden voor de huidige sessie van slechts design studio. \ N \ Nfor geregistreerde gebruikers na het inloggen: Het handhaaft de lijst met alle foto's geüpload door de gebruiker in een aantal aangemelde sessies. De gebruiker kan ook een hoge resolutie vector bron bestand als bijlage in toegestaan ​​formats CDR / PSD / AI / PDF / EPS langs de raster afbeelding door te klikken op Upload HD knop met. U kunt een juiste symbool met afbeelding uploaden knop om foto's die al imago van de hoge resolutie geüpload aangeven zien, dat kan</pc_text>
+    <pc_help>Voor anonieme gebruikers: De lijst wordt bijgehouden voor de huidige sessie van slechts design studio. \ N \ Nfor geregistreerde gebruikers na het inloggen: Het handhaaft de lijst met alle foto's geüpload door de gebruiker in een aantal aangemelde sessies. De gebruiker kan ook een hoge resolutie vector bron bestand als bijlage in toegestaan ​​formats CDR / PSD / AI / PDF / EPS langs de raster afbeelding door te klikken op Upload HD knop met. U kunt een juiste symbool met afbeelding uploaden knop om foto's die al imago van de hoge resolutie geüpload aangeven zien, dat kan</pc_help>
+  </imageGalleryPopupInfoContent>
+  <saveDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Save Your Design</pc_label>
+    <pc_maxlength>19</pc_maxlength>
+    <pc_text>Save Your Design</pc_text>
+    <pc_help>Save Your Design</pc_help>
+  </saveDesignCaption>
+  <designDetailsCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Design Details</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>informatie over het ontwerp</pc_text>
+    <pc_help>informatie over het ontwerp</pc_help>
+  </designDetailsCaption>
+  <loginRegisterPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Login/Register</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Inloggen / Registreren</pc_text>
+    <pc_help>Inloggen / Registreren</pc_help>
+  </loginRegisterPopupCaption>
+  <loginCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Login</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Log in</pc_text>
+    <pc_help>Log in</pc_help>
+  </loginCaption>
+  <EmailCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>E-mailadres</pc_text>
+    <pc_help>E-mailadres</pc_help>
+  </EmailCaption>
+  <PasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Password</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Wachtwoord</pc_text>
+    <pc_help>Wachtwoord</pc_help>
+  </PasswordCaption>
+  <forgetPasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Forgot Password?</pc_label>
+    <pc_maxlength>16</pc_maxlength>
+    <pc_text>Wachtwoord vergeten?</pc_text>
+    <pc_help>Wachtwoord vergeten?</pc_help>
+  </forgetPasswordCaption>
+  <registerCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Register</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Registreren</pc_text>
+    <pc_help>Registreren</pc_help>
+  </registerCaption>
+  <fNameCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>First Name </pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Voornaam</pc_text>
+    <pc_help>Voornaam</pc_help>
+  </fNameCaption>
+  <lNameCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Last Name</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Achternaam</pc_text>
+    <pc_help>Achternaam</pc_help>
+  </lNameCaption>
+  <ConfirmPasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Confirm Password</pc_label>
+    <pc_maxlength>16</pc_maxlength>
+    <pc_text>bevestig wachtwoord</pc_text>
+    <pc_help>bevestig wachtwoord</pc_help>
+  </ConfirmPasswordCaption>
+  <productColorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Colors</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>kleuren</pc_text>
+    <pc_help>kleuren</pc_help>
+  </productColorCaption>
+  <productSkuCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>SKU</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>SKU</pc_text>
+    <pc_help>SKU</pc_help>
+  </productSkuCaption>
+  <productDescCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Short Description</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>korte beschrijving</pc_text>
+    <pc_help>korte beschrijving</pc_help>
+  </productDescCaption>
+  <flickrUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your flickr photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Importeer uw Flickr-foto's</pc_text>
+    <pc_help>Importeer uw Flickr-foto's</pc_help>
+  </flickrUploadCaption>
+  <picasaUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your picasa photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Importeer je picasa foto's</pc_text>
+    <pc_help>Importeer je picasa foto's</pc_help>
+  </picasaUploadCaption>
+  <instagramUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your Instagram photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Importeer je Instagram foto's</pc_text>
+    <pc_help>Importeer je Instagram foto's</pc_help>
+  </instagramUploadCaption>
+  <fitToAll>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Screen</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Screen</pc_text>
+    <pc_help>Fit to Screen</pc_help>
+  </fitToAll>
+  <fitToCanvas>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Canvas</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Canvas</pc_text>
+    <pc_help>Fit to Canvas</pc_help>
+  </fitToCanvas>
+  <fitToSel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Selection</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Selection</pc_text>
+    <pc_help>Fit to Selection</pc_help>
+  </fitToSel>
+  <BOLD>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Bold Text</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Vetgedrukte tekst</pc_text>
+    <pc_help>Vetgedrukte tekst</pc_help>
+  </BOLD>
+  <ITALIC>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Italic Text</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>cursief tekst</pc_text>
+    <pc_help>cursief tekst</pc_help>
+  </ITALIC>
+  <ALIGN_LEFT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Left</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Links uitlijnen</pc_text>
+    <pc_help>Links uitlijnen</pc_help>
+  </ALIGN_LEFT>
+  <ALIGN_CENTER>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Center</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Centreren</pc_text>
+    <pc_help>Centreren</pc_help>
+  </ALIGN_CENTER>
+  <ALIGN_RIGHT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Right</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Rechts uitlijnen</pc_text>
+    <pc_help>Rechts uitlijnen</pc_help>
+  </ALIGN_RIGHT>
+  <ALIGN_TOP>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Top</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>boven uitlijnen</pc_text>
+    <pc_help>boven uitlijnen</pc_help>
+  </ALIGN_TOP>
+  <ALIGN_MIDDLE>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Middle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>align Midden</pc_text>
+    <pc_help>align Midden</pc_help>
+  </ALIGN_MIDDLE>
+  <ALIGN_BOTTOM>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Bottom</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Onder uitlijnen</pc_text>
+    <pc_help>Onder uitlijnen</pc_help>
+  </ALIGN_BOTTOM>
+  <FILL_COLOR>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Fill Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Wijziging Opvulkleur</pc_text>
+    <pc_help>Wijziging Opvulkleur</pc_help>
+  </FILL_COLOR>
+  <STROKE_COLOR>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Stroke Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Change Lijnkleur</pc_text>
+    <pc_help>Change Lijnkleur</pc_help>
+  </STROKE_COLOR>
+  <PROCEED>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Proceed</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Doorgaan</pc_text>
+    <pc_help>Doorgaan</pc_help>
+  </PROCEED>
+  <relativeToLabel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Relative to:</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Betrekking tot:</pc_text>
+    <pc_help>Betrekking tot:</pc_help>
+  </relativeToLabel>
+  <selected_objects>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Objects</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>geselecteerde objecten</pc_text>
+    <pc_help>geselecteerde objecten</pc_help>
+  </selected_objects>
+  <largest_object>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Largest Object</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>grootste Object</pc_text>
+    <pc_help>grootste Object</pc_help>
+  </largest_object>
+  <smallest_object>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Smallest Object</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>kleinste Object</pc_text>
+    <pc_help>kleinste Object</pc_help>
+  </smallest_object>
+  <page>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Page</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Pagina</pc_text>
+    <pc_help>Pagina</pc_help>
+  </page>
+  <fitToScreen>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit To Screen</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit To Screen</pc_text>
+    <pc_help>Fit To Screen</pc_help>
+  </fitToScreen>
+  <downloadPreviewCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Download Preview</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Download voorbeeld</pc_text>
+    <pc_help>Download voorbeeld</pc_help>
+  </downloadPreviewCaption>
+  <GO>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>GO</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>GAAN</pc_text>
+    <pc_help>GAAN</pc_help>
+  </GO>
+  <PICASA_ALBUM_HERE>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PICASA ALBUM HERE</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>PICASA ALBUM HIER</pc_text>
+    <pc_help>PICASA ALBUM HIER</pc_help>
+  </PICASA_ALBUM_HERE>
+  <PICASA_REQUEST_FAILED>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PICASA REQUEST FAILED</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Picasa mislukt</pc_text>
+    <pc_help>Picasa mislukt</pc_help>
+  </PICASA_REQUEST_FAILED>
+  <USER_NOT_FOUND>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>USER NOT FOUND</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Gebruiker niet gevonden</pc_text>
+    <pc_help>Gebruiker niet gevonden</pc_help>
+  </USER_NOT_FOUND>
+  <NO_IMAGE_FOUND>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>NO IMAGE FOUND</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Geen afbeelding gevonden</pc_text>
+    <pc_help>Geen afbeelding gevonden</pc_help>
+  </NO_IMAGE_FOUND>
+  <manageLayersCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Manage Layers</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>beheren Lagen</pc_text>
+    <pc_help>beheren Lagen</pc_help>
+  </manageLayersCaption>
+  <SELECT_ITEM>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Select Item</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Selecteer item</pc_text>
+    <pc_help>Selecteer item</pc_help>
+  </SELECT_ITEM>
+  <tool_group>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Group</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Groep</pc_text>
+    <pc_help>Groep</pc_help>
+  </tool_group>
+  <tool_ungroup>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Ungroup</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>degroeperen</pc_text>
+    <pc_help>degroeperen</pc_help>
+  </tool_ungroup>
+  <tool_undo_custom>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Undo</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>ongedaan maken</pc_text>
+    <pc_help>ongedaan maken</pc_help>
+  </tool_undo_custom>
+  <tool_redo_custom>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Redo</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>opnieuw</pc_text>
+    <pc_help>opnieuw</pc_help>
+  </tool_redo_custom>
+  <tool_delete>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Delete</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Verwijder</pc_text>
+    <pc_help>Verwijder</pc_help>
+  </tool_delete>
+  <tool_clone>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Duplicate</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Duplicaat</pc_text>
+    <pc_help>Duplicaat</pc_help>
+  </tool_clone>
+  <tool_cut>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Cut</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Besnoeiing</pc_text>
+    <pc_help>Besnoeiing</pc_help>
+  </tool_cut>
+  <tool_copy>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Copy</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Kopiëren</pc_text>
+    <pc_help>Kopiëren</pc_help>
+  </tool_copy>
+  <tool_paste>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Paste</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Plakken</pc_text>
+    <pc_help>Plakken</pc_help>
+  </tool_paste>
+  <tool_clear>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Delete All </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Verwijder alles</pc_text>
+    <pc_help>Verwijder alles</pc_help>
+  </tool_clear>
+  <Help>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Studio Help</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>studio Help</pc_text>
+    <pc_help>studio Help</pc_help>
+  </Help>
+  <PENCIL_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Pencil Tool</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>potlood</pc_text>
+    <pc_help>potlood</pc_help>
+  </PENCIL_TOOL>
+  <LINE_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Line Tool</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Line Tool</pc_text>
+    <pc_help>Line Tool</pc_help>
+  </LINE_TOOL>
+  <RECT_GROUP_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>RECT GROUP TOOL</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Rechthoek / Plein</pc_text>
+    <pc_help>Rechthoek / Plein</pc_help>
+  </RECT_GROUP_TOOL>
+  <RECT>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Rectangle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Rechthoek</pc_text>
+    <pc_help>Rechthoek</pc_help>
+  </RECT>
+  <SQUARE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Square</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Plein</pc_text>
+    <pc_help>Plein</pc_help>
+  </SQUARE>
+  <FHRECT>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Free-Hand Rectangle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text></pc_text>
+    <pc_help></pc_help>
+  </FHRECT>
+  <ELLIPSE_GROUP_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>ELLIPSE GROUP TOOL</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ellipse / Circle </pc_text>
+    <pc_help>Ellipse / Circle </pc_help>
+  </ELLIPSE_GROUP_TOOL>
+  <ELLIPSE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ellips</pc_text>
+    <pc_help>Ellips</pc_help>
+  </ELLIPSE>
+  <CIRCLE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Circle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Cirkel</pc_text>
+    <pc_help>Cirkel</pc_help>
+  </CIRCLE>
+  <FHELLIPSE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Free-Hand Ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text></pc_text>
+    <pc_help></pc_help>
+  </FHELLIPSE>
+  <QR_FILL_COLOR>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change QR Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Verander QR Color</pc_text>
+    <pc_help>Verander QR Color</pc_help>
+  </QR_FILL_COLOR>
+  <BG_FILL_COLOR>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change Background Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Veranderings achtergrondkleur</pc_text>
+    <pc_help>Veranderings achtergrondkleur</pc_help>
+  </BG_FILL_COLOR>
+  <REMOVE_BG_IMAGE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Remove Background Image</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Achtergrond verwijderen Afbeelding</pc_text>
+    <pc_help>Achtergrond verwijderen Afbeelding</pc_help>
+  </REMOVE_BG_IMAGE>
+  <productZoomCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Zoom</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Zoom</pc_text>
+    <pc_help>Zoom</pc_help>
+  </productZoomCaption>
+  <productPreviewCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Preview</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Voorbeschouwing</pc_text>
+    <pc_help>Voorbeschouwing</pc_help>
+  </productPreviewCaption>
+  <productSaveCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Save</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Save</pc_text>
+    <pc_help>Save</pc_help>
+  </productSaveCaption>
+  <fbShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Share on Facebook </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Delen op Facebook</pc_text>
+    <pc_help>Delen op Facebook</pc_help>
+  </fbShareCaption>
+  <twitterShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Tweet on Twitter</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Tweet op Twitter</pc_text>
+    <pc_help>Tweet op Twitter</pc_help>
+  </twitterShareCaption>
+  <pinitShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Pin Design on Pinterest</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Pin Design op Pinterest</pc_text>
+    <pc_help>Pin Design op Pinterest</pc_help>
+  </pinitShareCaption>
+  <qrcodeDataTypeCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Select Data Type</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Selecteer Data Type</pc_text>
+    <pc_help>Selecteer Data Type</pc_help>
+  </qrcodeDataTypeCaption>
+  <websiteUrl>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Website URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Website URL</pc_text>
+    <pc_help>Website URL</pc_help>
+  </websiteUrl>
+  <youtubeVideo>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>YouTube Video</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Youtube video</pc_text>
+    <pc_help>Youtube video</pc_help>
+  </youtubeVideo>
+  <plaintext>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Plain Text</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Platte tekst</pc_text>
+    <pc_help>Platte tekst</pc_help>
+  </plaintext>
+  <emailAdd>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-mailadres</pc_text>
+    <pc_help>E-mailadres</pc_help>
+  </emailAdd>
+  <telephone>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Telephone Number</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Telefonnummer</pc_text>
+    <pc_help>Telefonnummer</pc_help>
+  </telephone>
+  <emailMsg>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Message</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-Mail Nachricht</pc_text>
+    <pc_help>E-Mail Nachricht</pc_help>
+  </emailMsg>
+  <socialMedia>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Social Media</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Sociale media</pc_text>
+    <pc_help>Sociale media</pc_help>
+  </socialMedia>
+  <gmap>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Google Maps Location</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Google Maps Location</pc_text>
+    <pc_help>Google Maps Location</pc_help>
+  </gmap>
+  <websiteCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Website URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Website URL</pc_text>
+    <pc_help>Website URL</pc_help>
+  </websiteCaption>
+  <videoIdCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Video ID</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>video ID</pc_text>
+    <pc_help>video ID</pc_help>
+  </videoIdCaption>
+  <videoUrlCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Video URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>video-URL</pc_text>
+    <pc_help>video-URL</pc_help>
+  </videoUrlCaption>
+  <textCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>TEXT</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>TEKST</pc_text>
+    <pc_help>TEKST</pc_help>
+  </textCaption>
+  <emailaddreCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-mailadres</pc_text>
+    <pc_help>E-mailadres</pc_help>
+  </emailaddreCaption>
+  <telephoneCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Telephone Number</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Telefoon nummer</pc_text>
+    <pc_help>Telefoon nummer</pc_help>
+  </telephoneCaption>
+  <subjectCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Subject</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Onderwerpen</pc_text>
+    <pc_help>Onderwerpen</pc_help>
+  </subjectCaption>
+  <bodyCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Body</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Lichaam</pc_text>
+    <pc_help>Lichaam</pc_help>
+  </bodyCaption>
+  <socialMediaCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Social Media</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Sociale media</pc_text>
+    <pc_help>Sociale media</pc_help>
+  </socialMediaCaption>
+  <twitterProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Twitter Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Twitter Profiel</pc_text>
+    <pc_help>Twitter Profiel</pc_help>
+  </twitterProfileCaption>
+  <facebookProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Facebook Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Facebook profiel</pc_text>
+    <pc_help>Facebook profiel</pc_help>
+  </facebookProfileCaption>
+  <myspaceProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Myspace Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>MySpace-profiel</pc_text>
+    <pc_help>MySpace-profiel</pc_help>
+  </myspaceProfileCaption>
+  <linkedlinProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>LinkedIn Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>LinkedIn profiel</pc_text>
+    <pc_help>LinkedIn profiel</pc_help>
+  </linkedlinProfileCaption>
+  <profileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Profiel</pc_text>
+    <pc_help>Profiel</pc_help>
+  </profileCaption>
+  <gmaplocationCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Google Maps Location</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Google Maps Location</pc_text>
+    <pc_help>Google Maps Location</pc_help>
+  </gmaplocationCaption>
+  <rqcodeColorCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Color Code</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Kleurcode</pc_text>
+    <pc_help>Kleurcode</pc_help>
+  </rqcodeColorCaption>
+  <tool_qrCode>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Generate</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Genereer</pc_text>
+    <pc_help>Genereer</pc_help>
+  </tool_qrCode>
+  <invalidAttrValGiven>
+    <pc_type>notification</pc_type>
+    <pc_label>Invalid Attribute Value</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ongeldige attribuut Waarde</pc_text>
+    <pc_help>Ongeldige attribuut Waarde</pc_help>
+  </invalidAttrValGiven>
+  <noContentToFitTo>
+    <pc_type>notification</pc_type>
+    <pc_label>No content to fit</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Geen inhoud te passen</pc_text>
+    <pc_help>Geen inhoud te passen</pc_help>
+  </noContentToFitTo>
+  <dupeLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Duplicate Layer Name</pc_label>
+    <pc_maxlength>80</pc_maxlength>
+    <pc_text>Duplicate Layer Name</pc_text>
+    <pc_help>Duplicate Layer Name</pc_help>
+  </dupeLayerName>
+  <enterUniqueLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter unique layer name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Voer unieke laagnaam</pc_text>
+    <pc_help>Voer unieke laagnaam</pc_help>
+  </enterUniqueLayerName>
+  <enterNewLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter new layer name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Voer nieuwe laag naam</pc_text>
+    <pc_help>Voer nieuwe laag naam</pc_help>
+  </enterNewLayerName>
+  <layerHasThatName>
+    <pc_type>notification</pc_type>
+    <pc_label>Layer has the name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Laag heeft de naam</pc_text>
+    <pc_help>Laag heeft de naam</pc_help>
+  </layerHasThatName>
+  <QmoveElemsToLayer>
+    <pc_type>notification</pc_type>
+    <pc_label>Move element to layer</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Verplaats element aan laag</pc_text>
+    <pc_help>Verplaats element aan laag</pc_help>
+  </QmoveElemsToLayer>
+  <QwantToClear>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Clear</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Wilt wissen</pc_text>
+    <pc_help>Wilt wissen</pc_help>
+  </QwantToClear>
+  <QwantToDelete>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Delete</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Wilt verwijderen</pc_text>
+    <pc_help>Wilt verwijderen</pc_help>
+  </QwantToDelete>
+  <QwantToOpen>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Open</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Wilt openen</pc_text>
+    <pc_help>Wilt openen</pc_help>
+  </QwantToOpen>
+  <errors_revert_to_source>
+    <pc_type>notification</pc_type>
+    <pc_label>Revert Source</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Revert Source</pc_text>
+    <pc_help>Revert Source</pc_help>
+  </errors_revert_to_source>
+  <QerrorsRevertToSource>
+    <pc_type>notification</pc_type>
+    <pc_label>Ignore Source Chages</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Negeer Bron chages</pc_text>
+    <pc_help>Negeer Bron chages</pc_help>
+  </QerrorsRevertToSource>
+  <featNotSupported>
+    <pc_type>notification</pc_type>
+    <pc_label>Feature not supported</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Functie niet ondersteund</pc_text>
+    <pc_help>Functie niet ondersteund</pc_help>
+  </featNotSupported>
+  <enterNewImgURL>
+    <pc_type>notification</pc_type>
+    <pc_label>New Img Url</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Nieuwe Img Url</pc_text>
+    <pc_help>Nieuwe Img Url</pc_help>
+  </enterNewImgURL>
+  <defsFailOnSave>
+    <pc_type>notification</pc_type>
+    <pc_label>Fail On Save</pc_label>
+    <pc_maxlength>250</pc_maxlength>
+    <pc_text>Fail On Save</pc_text>
+    <pc_help>Fail On Save</pc_help>
+  </defsFailOnSave>
+  <loadingImage>
+    <pc_type>notification</pc_type>
+    <pc_label>Loading Image</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>De afbeelding wordt geladen</pc_text>
+    <pc_help>De afbeelding wordt geladen</pc_help>
+  </loadingImage>
+  <saveFromBrowser>
+    <pc_type>notification</pc_type>
+    <pc_label>Save From Browser</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Save Van Browser</pc_text>
+    <pc_help>Save Van Browser</pc_help>
+  </saveFromBrowser>
+  <noteTheseIssues>
+    <pc_type>notification</pc_type>
+    <pc_label>Note These Issues</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Opmerking Deze problemen</pc_text>
+    <pc_help>Opmerking Deze problemen</pc_help>
+  </noteTheseIssues>
+  <unsavedChanges>
+    <pc_type>notification</pc_type>
+    <pc_label>Unsaved Changes</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Niet-opgeslagen Veranderingen</pc_text>
+    <pc_help>Niet-opgeslagen Veranderingen</pc_help>
+  </unsavedChanges>
+  <enterNewLinkURL>
+    <pc_type>notification</pc_type>
+    <pc_label>New Link Url</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Nieuwe Link Url</pc_text>
+    <pc_help>Nieuwe Link Url</pc_help>
+  </enterNewLinkURL>
+  <errorLoadingSVG>
+    <pc_type>notification</pc_type>
+    <pc_label>Error Loading SVG</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Fout bij het laden SVG</pc_text>
+    <pc_help>Fout bij het laden SVG</pc_help>
+  </errorLoadingSVG>
+  <URLloadFail>
+    <pc_type>notification</pc_type>
+    <pc_label>Url Load Fail</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Url Load Fail</pc_text>
+    <pc_help>Url Load Fail</pc_help>
+  </URLloadFail>
+  <retrieving>
+    <pc_type>notification</pc_type>
+    <pc_label>retrieving</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>ophalen</pc_text>
+    <pc_help>ophalen</pc_help>
+  </retrieving>
+  <design_saved>
+    <pc_type>notification</pc_type>
+    <pc_label>Design Saved</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>ontwerp Opgeslagen</pc_text>
+    <pc_help>ontwerp Opgeslagen</pc_help>
+  </design_saved>
+  <templateSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Template Saved</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>sjabloon Opgeslagen</pc_text>
+    <pc_help>sjabloon Opgeslagen</pc_help>
+  </templateSaved>
+  <designSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter Keyword</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Voer het trefwoord in</pc_text>
+    <pc_help>Voer het trefwoord in</pc_help>
+  </designSaved>
+  <designdesignSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter Keyword</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Voer het trefwoord in</pc_text>
+    <pc_help>Voer het trefwoord in</pc_help>
+  </designdesignSaved>
+  <specifyDesignName>
+    <pc_type>notification</pc_type>
+    <pc_label>Specify Design Name</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Specify Design Name</pc_text>
+    <pc_help>Specify Design Name</pc_help>
+  </specifyDesignName>
+  <srcapDesign>
+    <pc_type>notification</pc_type>
+    <pc_label>Scrap Design</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Scrap ontwerp</pc_text>
+    <pc_help>Scrap ontwerp</pc_help>
+  </srcapDesign>
+  <changeProduct>
+    <pc_type>notification</pc_type>
+    <pc_label>Change Product</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>wijzigen Product</pc_text>
+    <pc_help>wijzigen Product</pc_help>
+  </changeProduct>
+  <designExit>
+    <pc_type>notification</pc_type>
+    <pc_label>Design Exit</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>ontwerp Exit</pc_text>
+    <pc_help>ontwerp Exit</pc_help>
+  </designExit>
+  <ADDTEXT_ALERT>
+    <pc_type>notification</pc_type>
+    <pc_label>Text Alert</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>text Alert</pc_text>
+    <pc_help>text Alert</pc_help>
+  </ADDTEXT_ALERT>
+  <printingMethod_LessQty_1>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method Less Qty 1</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Afdrukmethode Minder aantal 1</pc_text>
+    <pc_help>Afdrukmethode Minder aantal 1</pc_help>
+  </printingMethod_LessQty_1>
+  <printingMethod_LessQty_2>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method Less Qty 2</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Afdrukmethode Minder Aantal 2</pc_text>
+    <pc_help>Afdrukmethode Minder Aantal 2</pc_help>
+  </printingMethod_LessQty_2>
+  <printingMethod_MoreQty_1>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method More Qty 1</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Afdrukmethode Meer Aantal 1</pc_text>
+    <pc_help>Afdrukmethode Meer Aantal 1</pc_help>
+  </printingMethod_MoreQty_1>
+  <printingMethod_MoreQty_2>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method More Qty 2</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Afdrukmethode Meer Aantal 2</pc_text>
+    <pc_help>Afdrukmethode Meer Aantal 2</pc_help>
+  </printingMethod_MoreQty_2>
+  <requiredDetailsAlert>
+    <pc_type>notification</pc_type>
+    <pc_label>Required Details Alert</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Vereiste Details Alert</pc_text>
+    <pc_help>Vereiste Details Alert</pc_help>
+  </requiredDetailsAlert>
+  <FillAtleastOneAlert>
+    <pc_type>notification</pc_type>
+    <pc_label>Fill Atleast One Field</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Vul Minstens één veld</pc_text>
+    <pc_help>Vul Minstens één veld</pc_help>
+  </FillAtleastOneAlert>
+  <tryAgain>
+    <pc_type>notification</pc_type>
+    <pc_label>Try Again</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Probeer het nog eens</pc_text>
+    <pc_help>Probeer het nog eens</pc_help>
+  </tryAgain>
+  <designOverwriteWarn>
+    <pc_type>notification</pc_type>
+    <pc_label>Overwrite Design</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>overschrijven Ontwerp</pc_text>
+    <pc_help>overschrijven Ontwerp</pc_help>
+  </designOverwriteWarn>
+  <errorSaving>
+    <pc_type>notification</pc_type>
+    <pc_label>Error in saving</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Fout bij het opslaan</pc_text>
+    <pc_help>Fout bij het opslaan</pc_help>
+  </errorSaving>
+  <gallery_warn_msg>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gallery Warn Msg</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Gallery Waarschuw Msg</pc_text>
+    <pc_help>Gallery Waarschuw Msg</pc_help>
+  </gallery_warn_msg>
+  <uploadBtnPopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Upload</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Uploaden</pc_text>
+    <pc_help>Uploaden</pc_help>
+  </uploadBtnPopup>
+  <galleryBtnPopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gallery</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Galerij</pc_text>
+    <pc_help>Galerij</pc_help>
+  </galleryBtnPopup>
+  <selectedSizeCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>geselecteerde Maat</pc_text>
+    <pc_help>geselecteerde Maat</pc_help>
+  </selectedSizeCaption>
+  <QuantityCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Quantity</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Hoeveelheid</pc_text>
+    <pc_help>Hoeveelheid</pc_help>
+  </QuantityCaption>
+  <totalPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Total Price</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Totale prijs</pc_text>
+    <pc_help>Totale prijs</pc_help>
+  </totalPriceCaption>
+  <ClipArt>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ClipArt</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Clip art</pc_text>
+    <pc_help>Clip art</pc_help>
+  </ClipArt>
+  <Image>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Beeld</pc_text>
+    <pc_help>Beeld</pc_help>
+  </Image>
+  <DesignAreaLabel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Design Area</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>ontwerp Area</pc_text>
+    <pc_help>ontwerp Area</pc_help>
+  </DesignAreaLabel>
+  <productInformation>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Info</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Product informatie</pc_text>
+    <pc_help>Product informatie</pc_help>
+  </productInformation>
+  <borderstyle>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>BORDER STYLE</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>GRENS VAN DE STIJL</pc_text>
+    <pc_help>GRENS VAN DE STIJL</pc_help>
+  </borderstyle>
+  <bordersize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>BORDER SIZE</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>BORDER SIZE</pc_text>
+    <pc_help>BORDER SIZE</pc_help>
+  </bordersize>
+  <imageUploadPrecaution1>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution1</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>We zullen de opslag van maximaal 150 foto's voor u in uw galerie</pc_text>
+    <pc_help>We zullen de opslag van maximaal 150 foto's voor u in uw galerie</pc_help>
+  </imageUploadPrecaution1>
+  <imageUploadPrecaution2>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution2</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Optimale beeldresolutie: 1500 x 1500 pixels</pc_text>
+    <pc_help>Optimale beeldresolutie: 1500 x 1500 pixels</pc_help>
+  </imageUploadPrecaution2>
+  <imageUploadPrecaution3>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution3</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Ondersteunde formaten: jpeg, jpg, png - tot 30 MB per</pc_text>
+    <pc_help>Ondersteunde formaten: jpeg, jpg, png - tot 30 MB per</pc_help>
+  </imageUploadPrecaution3>
+  <tool_qrCode>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Qr Generate Button</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Qr knop Genereren</pc_text>
+    <pc_help>Qr knop Genereren</pc_help>
+  </tool_qrCode>
+  <productnotfound>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>productnotfound</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Geen product is gevonden</pc_text>
+    <pc_help>Geen product is gevonden</pc_help>
+  </productnotfound>
+  <clipnotfound>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>clipnotfound</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Geen clipart gevonden</pc_text>
+    <pc_help>Geen clipart gevonden</pc_help>
+  </clipnotfound>
+  <name_control_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Naam</pc_text>
+    <pc_help>Naam</pc_help>
+  </name_control_btn>
+  <num_control_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Number</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Aantal</pc_text>
+    <pc_help>Aantal</pc_help>
+  </num_control_btn>
+  <name_num_close>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Close</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Dichtbij</pc_text>
+    <pc_help>Dichtbij</pc_help>
+  </name_num_close>
+  <enter_custom_list_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Enter Custom List</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Voer Aangepaste lijst</pc_text>
+    <pc_help>Voer Aangepaste lijst</pc_help>
+  </enter_custom_list_btn>
+  <sizeTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Size</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Grootte</pc_text>
+    <pc_help>Grootte</pc_help>
+  </sizeTableCaption>
+  <nameTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Naam</pc_text>
+    <pc_help>Naam</pc_help>
+  </nameTableCaption>
+  <numberTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>#</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>#</pc_text>
+    <pc_help>#</pc_help>
+  </numberTableCaption>
+  <addNewNameNumber>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add New</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Nieuwe toevoegen</pc_text>
+    <pc_help>Nieuwe toevoegen</pc_help>
+  </addNewNameNumber>
+  <name_num_backBtn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Terug</pc_text>
+    <pc_help>Terug</pc_help>
+  </name_num_backBtn>
+  <nameNumberCloseButton>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Close</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Dichtbij</pc_text>
+    <pc_help>Dichtbij</pc_help>
+  </nameNumberCloseButton>
+  <clipartPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Clip Art Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>clipart Cost</pc_text>
+    <pc_help>clipart Cost</pc_help>
+  </clipartPriceCaption>
+  <chooseartpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Art</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Kies Art</pc_text>
+    <pc_help>Kies Art</pc_help>
+  </chooseartpopup>
+  <choosedesignpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Kies een ontwerp</pc_text>
+    <pc_help>Kies een ontwerp</pc_help>
+  </choosedesignpopup>
+  <shapeToolCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Shape Tool</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>shape Tool</pc_text>
+    <pc_help>shape Tool</pc_help>
+  </shapeToolCaption>
+  <loadDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Load Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>load Ontwerp</pc_text>
+    <pc_help>load Ontwerp</pc_help>
+  </loadDesignCaption>
+  <PREV>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Previous</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>voorgaand</pc_text>
+    <pc_help>voorgaand</pc_help>
+  </PREV>
+  <NEXT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Next</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>volgende</pc_text>
+    <pc_help>volgende</pc_help>
+  </NEXT>
+  <uploadHDCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>uploadHD</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Upload HD</pc_text>
+    <pc_help>Upload HD</pc_help>
+  </uploadHDCaption>
+  <selectedColorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Color</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>geselecteerde kleur</pc_text>
+    <pc_help>geselecteerde kleur</pc_help>
+  </selectedColorCaption>
+  <imageDeleteWarn>
+    <pc_type>notification</pc_type>
+    <pc_label>Image Delete Warning</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Afbeelding Delete Waarschuwing</pc_text>
+    <pc_help>Afbeelding Delete Waarschuwing</pc_help>
+  </imageDeleteWarn>
+  <missingImagesInDesignEdit>
+    <pc_type>notification</pc_type>
+    <pc_label>Missing Image in Design Edit</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Ontbrekende Afbeelding in Design bewerken</pc_text>
+    <pc_help>Ontbrekende Afbeelding in Design bewerken</pc_help>
+  </missingImagesInDesignEdit>
+  <errorInConnection>
+    <pc_type>notification</pc_type>
+    <pc_label>Error In connection</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Ooops! Er ging iets mis.</pc_text>
+    <pc_help>Ooops! Er ging iets mis.</pc_help>
+  </errorInConnection>
+  <namePriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>naam Cost</pc_text>
+    <pc_help>naam Cost</pc_help>
+  </namePriceCaption>
+  <numberPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Number Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>nummer Cost</pc_text>
+    <pc_help>nummer Cost</pc_help>
+  </numberPriceCaption>
+  <artWorkSetupPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Artwork Setup Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Artwork Setup Cost</pc_text>
+    <pc_help>Artwork Setup Cost</pc_help>
+  </artWorkSetupPriceCaption>
+  <avgPrintPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Avg Print Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Gem Print Cost</pc_text>
+    <pc_help>Gem Print Cost</pc_help>
+  </avgPrintPriceCaption>
+  <productPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>product Cost</pc_text>
+    <pc_help>product Cost</pc_help>
+  </productPriceCaption>
+  <imageUploadPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Upload Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Upload Cost</pc_text>
+    <pc_help>Upload Cost</pc_help>
+  </imageUploadPriceCaption>
+  <printingPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Printing Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Printing Cost</pc_text>
+    <pc_help>Printing Cost</pc_help>
+  </printingPriceCaption>
+  <uploadImageInstructionCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image upload Instruction</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Afbeelding uploaden Instructie</pc_text>
+    <pc_help>Afbeelding uploaden Instructie</pc_help>
+  </uploadImageInstructionCaption>
+  <fontSizeCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Font size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Lettertypegrootte</pc_text>
+    <pc_help>Lettertypegrootte</pc_help>
+  </fontSizeCaption>
+  <currentFontSize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Current Font Size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Huidige lettergrootte</pc_text>
+    <pc_help>Huidige lettergrootte</pc_help>
+  </currentFontSize>
+  <PhotoBox>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PhotoBox</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>PhotoBox</pc_text>
+    <pc_help>PhotoBox</pc_help>
+  </PhotoBox>
+  <changeImageCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change Image</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Change Image</pc_text>
+    <pc_help>Change Image</pc_help>
+  </changeImageCaption>
+  <removeImageCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Remove Image</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Verwijder Afbeelding</pc_text>
+    <pc_help>Verwijder Afbeelding</pc_help>
+  </removeImageCaption>
+  <WrongImageWarning>
+    <pc_type>notification</pc_type>
+    <pc_label>Wrong Image Warning</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Verkeerde Afbeelding Waarschuwing</pc_text>
+    <pc_help>Verkeerde Afbeelding Waarschuwing</pc_help>
+  </WrongImageWarning>
+  <fontSizeInstruction>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Font Size Instruction</pc_label>
+    <pc_maxlength>70</pc_maxlength>
+    <pc_text>Kies standaard lettertype of gebruik resize handvatten voor aangepaste lettergrootte</pc_text>
+    <pc_help>Kies standaard lettertype of gebruik resize handvatten voor aangepaste lettergrootte</pc_help>
+  </fontSizeInstruction>
+  <addNameNumberCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name / #</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Naam / #</pc_text>
+    <pc_help>Naam / #</pc_help>
+  </addNameNumberCaption>
+  <addtextCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Voeg tekst toe</pc_text>
+    <pc_help>Voeg tekst toe</pc_help>
+  </addtextCaption>
+  <choosedesignpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Kies een ontwerp</pc_text>
+    <pc_help>Kies een ontwerp</pc_help>
+  </choosedesignpopup>
+  <noDataFound>
+    <pc_type>notification</pc_type>
+    <pc_label>Item Not Found </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Item niet gevonden</pc_text>
+    <pc_help>Item niet gevonden</pc_help>
+  </noDataFound>
+  <chooseDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Kies een ontwerp</pc_text>
+    <pc_help>Kies een ontwerp</pc_help>
+  </chooseDesignCaption>
+  <verySmall>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Very Small</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Heel klein</pc_text>
+    <pc_help>Heel klein</pc_help>
+  </verySmall>
+  <small>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Small</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Klein</pc_text>
+    <pc_help>Klein</pc_help>
+  </small>
+  <medium>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Medium</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Medium</pc_text>
+    <pc_help>Medium</pc_help>
+  </medium>
+  <large>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Large</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Groot</pc_text>
+    <pc_help>Groot</pc_help>
+  </large>
+  <extraLarge>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Extra Large</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Extra groot</pc_text>
+    <pc_help>Extra groot</pc_help>
+  </extraLarge>
+  <frontSide>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Front side</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Voorkant</pc_text>
+    <pc_help>Voorkant</pc_help>
+  </frontSide>
+  <backSide>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back Side</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>back Side</pc_text>
+    <pc_help>back Side</pc_help>
+  </backSide>
+  <mydesign>
+    <pc_type>others</pc_type>
+    <pc_label>My design</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Mijn ontwerp</pc_text>
+    <pc_help>Mijn ontwerp</pc_help>
+  </mydesign>
+  <mymedia>
+    <pc_type>others</pc_type>
+    <pc_label>My Media</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>mijn media</pc_text>
+    <pc_help>mijn media</pc_help>
+  </mymedia>
+  <areyousure>
+    <pc_type>others</pc_type>
+    <pc_label>Are You Sure?</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Weet je het zeker?</pc_text>
+    <pc_help>Weet je het zeker?</pc_help>
+  </areyousure>
+  <errodeleterecord>
+    <pc_type>others</pc_type>
+    <pc_label>Error deleting record</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Fout bij het verwijderen plaat ...!</pc_text>
+    <pc_help>Fout bij het verwijderen plaat ...!</pc_help>
+  </errodeleterecord>
+  <uploadimage>
+    <pc_type>others</pc_type>
+    <pc_label>Upload Image</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Afbeelding uploaden</pc_text>
+    <pc_help>Afbeelding uploaden</pc_help>
+  </uploadimage>
+  <deleteimagenotavailable>
+    <pc_type>others</pc_type>
+    <pc_label>Deleted Image from Mymedia</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Verwijderde beeld kan niet beschikbaar in de nieuwe orders zijn. Heeft u wilt verwijderen?</pc_text>
+    <pc_help>Verwijderde beeld kan niet beschikbaar in de nieuwe orders zijn. Heeft u wilt verwijderen?</pc_help>
+  </deleteimagenotavailable>
+  <messageboard>
+    <pc_type>others</pc_type>
+    <pc_label>Message Board</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Prikbord</pc_text>
+    <pc_help>Prikbord</pc_help>
+  </messageboard>
+  <orderdetails>
+    <pc_type>others</pc_type>
+    <pc_label>Order Details</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Bestel Details</pc_text>
+    <pc_help>Bestel Details</pc_help>
+  </orderdetails>
+  <date>
+    <pc_type>others</pc_type>
+    <pc_label>Date</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Datum</pc_text>
+    <pc_help>Datum</pc_help>
+  </date>
+  <customer>
+    <pc_type>others</pc_type>
+    <pc_label>Customer</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Klant</pc_text>
+    <pc_help>Klant</pc_help>
+  </customer>
+  <noofitems>
+    <pc_type>others</pc_type>
+    <pc_label>No of Items</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Aantal producten</pc_text>
+    <pc_help>Aantal producten</pc_help>
+  </noofitems>
+  <totalamount>
+    <pc_type>others</pc_type>
+    <pc_label>Total Amount</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Totaalbedrag</pc_text>
+    <pc_help>Totaalbedrag</pc_help>
+  </totalamount>
+  <notes>
+    <pc_type>others</pc_type>
+    <pc_label>Notes</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Notes</pc_text>
+    <pc_help>Notes</pc_help>
+  </notes>
+  <leaveacomment>
+    <pc_type>others</pc_type>
+    <pc_label>Leave a Comment</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Laat een reactie achter</pc_text>
+    <pc_help>Laat een reactie achter</pc_help>
+  </leaveacomment>
+  <addthiscomment>
+    <pc_type>others</pc_type>
+    <pc_label>Add This Comment</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Add This Comment</pc_text>
+    <pc_help>Add This Comment</pc_help>
+  </addthiscomment>
+  <emailnotifications>
+    <pc_type>others</pc_type>
+    <pc_label>Email Notifications</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>E-mail notificaties</pc_text>
+    <pc_help>E-mail notificaties</pc_help>
+  </emailnotifications>
+  <emailnotificationmessage>
+    <pc_type>others</pc_type>
+    <pc_label>Email Notification Message</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Deze e-mailadressen worden aangemeld voor e-meldingen ontvangen wanneer er nieuwe reacties worden.</pc_text>
+    <pc_help>Deze e-mailadressen worden aangemeld voor e-meldingen ontvangen wanneer er nieuwe reacties worden.</pc_help>
+  </emailnotificationmessage>
+  <subscribeemail>
+    <pc_type>others</pc_type>
+    <pc_label>Subscribe Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Abonneer je nieuwe e-mailadres</pc_text>
+    <pc_help>Abonneer je nieuwe e-mailadres</pc_help>
+  </subscribeemail>
+  <previewdesign>
+    <pc_type>others</pc_type>
+    <pc_label>Preview Designs</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Voorbeschouwing Designs</pc_text>
+    <pc_help>Voorbeschouwing Designs</pc_help>
+  </previewdesign>
+  <remove>
+    <pc_type>others</pc_type>
+    <pc_label>Remove</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Verwijderen</pc_text>
+    <pc_help>Verwijderen</pc_help>
+  </remove>
+  <add>
+    <pc_type>others</pc_type>
+    <pc_label>Add</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Toevoegen</pc_text>
+    <pc_help>Toevoegen</pc_help>
+  </add>
+  <invalidemail>
+    <pc_type>others</pc_type>
+    <pc_label>Invalid Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ongeldig e-mail...!</pc_text>
+    <pc_help>Ongeldig e-mail...!</pc_help>
+  </invalidemail>
+  <uploadhd>
+    <pc_type>others</pc_type>
+    <pc_label>Upload HD</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Upload HD</pc_text>
+    <pc_help>Upload HD</pc_help>
+  </uploadhd>
+  <erroconvertingpdf>
+    <pc_type>others</pc_type>
+    <pc_label>Error Converting Pdf</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Er is een fout opgetreden het omzetten pdf pagina thumnail:</pc_text>
+    <pc_help>Er is een fout opgetreden het omzetten pdf pagina thumnail:</pc_help>
+  </erroconvertingpdf>
+  <somethingwentwrong>
+    <pc_type>others</pc_type>
+    <pc_label>Something Went Wrong</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Er is iets misgegaan bij het opslaan van het bestand, probeer het opnieuw.</pc_text>
+    <pc_help>Er is iets misgegaan bij het opslaan van het bestand, probeer het opnieuw.</pc_help>
+  </somethingwentwrong>
+  <filetypenotallowed>
+    <pc_type>others</pc_type>
+    <pc_label>File Type Not Allowed</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Bijgevoegde File Type is niet toegestaan ​​...!</pc_text>
+    <pc_help>Bijgevoegde File Type is niet toegestaan ​​...!</pc_help>
+  </filetypenotallowed>
+  <emailalreadyexists>
+    <pc_type>others</pc_type>
+    <pc_label>Email Already Exists</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Emailadres bestaat al...!</pc_text>
+    <pc_help>Emailadres bestaat al...!</pc_help>
+  </emailalreadyexists>
+  <errorsavingemail>
+    <pc_type>others</pc_type>
+    <pc_label>Error Saving Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Fout bij het opslaan Email ...!</pc_text>
+    <pc_help>Fout bij het opslaan Email ...!</pc_help>
+  </errorsavingemail>
+  <errordeletingemail>
+    <pc_type>others</pc_type>
+    <pc_label>Error Deleting Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Fout verwijderen Email ...!</pc_text>
+    <pc_help>Fout verwijderen Email ...!</pc_help>
+  </errordeletingemail>
+  <errorcomment>
+    <pc_type>others</pc_type>
+    <pc_label>Error Adding Comment</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Er is een fout toe te voegen reactie!</pc_text>
+    <pc_help>Er is een fout toe te voegen reactie!</pc_help>
+  </errorcomment>
+  <blankcommment>
+    <pc_type>others</pc_type>
+    <pc_label>Comment can not be blank!</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Commentaar kan niet leeg zijn!</pc_text>
+    <pc_help>Commentaar kan niet leeg zijn!</pc_help>
+  </blankcommment>
+  <imageEffectBtnCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Edit Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Edit Effect</pc_text>
+    <pc_help>Edit Effect</pc_help>
+  </imageEffectBtnCaption>
+  <imageEffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>afbeelding Effect</pc_text>
+    <pc_help>afbeelding Effect</pc_help>
+  </imageEffectCaption>
+  <MaskCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Mask</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Masker</pc_text>
+    <pc_help>Masker</pc_help>
+  </MaskCaption>
+  <EffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Effect</pc_text>
+    <pc_help>Effect</pc_help>
+  </EffectCaption>
+  <CustomEffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Custom Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Custom Effect</pc_text>
+    <pc_help>Custom Effect</pc_help>
+  </CustomEffectCaption>
+  <posterize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Posterize</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Posterize</pc_text>
+    <pc_help>Posterize</pc_help>
+  </posterize>
+  <css_brightness>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Brightness</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Helderheid</pc_text>
+    <pc_help>Helderheid</pc_help>
+  </css_brightness>
+  <brightness_threshold>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Threshold</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Drempel</pc_text>
+    <pc_help>Drempel</pc_help>
+  </brightness_threshold>
+  <css_invert>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Invert</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Omkeren</pc_text>
+    <pc_help>Omkeren</pc_help>
+  </css_invert>
+  <gamma_correct>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Color Correct</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>color Correct</pc_text>
+    <pc_help>color Correct</pc_help>
+  </gamma_correct>
+  <gamma_correct2>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gamma Correct</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Gamma Correct</pc_text>
+    <pc_help>Gamma Correct</pc_help>
+  </gamma_correct2>
+  <css_grayscale>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Grayscale</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>grijstinten</pc_text>
+    <pc_help>grijstinten</pc_help>
+  </css_grayscale>
+  <css_sharpen>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Sharpen</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>verscherpen</pc_text>
+    <pc_help>verscherpen</pc_help>
+  </css_sharpen>
+  <css_hue_rotate>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Hue</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Tint</pc_text>
+    <pc_help>Tint</pc_help>
+  </css_hue_rotate>
+  <luminance_mask>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Luminance</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Luminance</pc_text>
+    <pc_help>Luminance</pc_help>
+  </luminance_mask>
+  <css_sepia>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Sepia</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Sepia</pc_text>
+    <pc_help>Sepia</pc_help>
+  </css_sepia>
+  <dusk>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Dusk</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Schemer</pc_text>
+    <pc_help>Schemer</pc_help>
+  </dusk>
+  <oneColor>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Monotone</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Monotoon</pc_text>
+    <pc_help>Monotoon</pc_help>
+  </oneColor>
+  <twoColor>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Duotone</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>duotone</pc_text>
+    <pc_help>duotone</pc_help>
+  </twoColor>
+  <original>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>None</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Geen</pc_text>
+    <pc_help>Geen</pc_help>
+  </original>
+  <alignmentCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Alignment</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Opstelling</pc_text>
+    <pc_help>Opstelling</pc_help>
+  </alignmentCaption>
+  <font_type_caption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Font</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Doopvont</pc_text>
+    <pc_help>Doopvont</pc_help>
+  </font_type_caption>
+  <color_caption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Color</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Kleur</pc_text>
+    <pc_help>Kleur</pc_help>
+  </color_caption>
+  <font_style_caption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Style</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Stijl</pc_text>
+    <pc_help>Stijl</pc_help>
+  </font_style_caption>
+  <border_style_caption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Border</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Grens</pc_text>
+    <pc_help>Grens</pc_help>
+  </border_style_caption>
+  <font_shape_caption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Font Shape</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>font Shape</pc_text>
+    <pc_help>font Shape</pc_help>
+  </font_shape_caption>
+  <pickColorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Pick Color</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Pick Color</pc_text>
+    <pc_help>Pick Color</pc_help>
+  </pickColorCaption>
+</printcommerce_multilanguage>

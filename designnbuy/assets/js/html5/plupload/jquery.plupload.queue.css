@@ -1,0 +1,47 @@
+.plupload_wrapper{letter-spacing:0px; font-family:montserratregular,Arial;border: 1px solid #f1f1f1;}
+.plupload_wrapper *{box-sizing:content-box}
+.plupload_button{position:relative; background:#fff;border: 1px solid #0695d1;color:#0695d1;display:inline-block;font: 9px/23px montserratregular,Arial; letter-spacing: 0; margin-right:4px;margin-top:4px;outline:none;padding:3px 15px 3px 30px;text-align:center;text-decoration:none;text-transform: uppercase;letter-spacing: 1px;}
+.plupload_button:hover{color:#444;text-decoration:none;border:1px solid #444}
+.plupload_disabled,a.plupload_disabled:hover{color:#737373;border-color:#c5c5c5;background:#ededed url('img/buttons-disabled.png') no-repeat 0 center;cursor:default}
+.plupload_add{background-position:-181px center}
+.plupload_wrapper{font:normal 11px Verdana,sans-serif;width:100%}
+.plupload_container{padding:0;background:url('img/transp50.png')}
+.plupload_container input{border:1px solid #DDD;font:normal 11px Verdana,sans-serif;width:98%}
+.plupload_header{position:relative}.plupload_header_title{font:normal 18px sans-serif;padding:6px 0 3px}
+.plupload_header_text{font:11px/21px Montserratregular, Arial}.plupload_filelist{margin:0;padding:0;list-style:none}
+.plupload_scroll .plupload_filelist{height:185px;background:#f5f5f5;overflow-y:scroll}
+.plupload_filelist li{padding:10px 8px;background:#f5f5f5 url('img/backgrounds.gif') repeat-x 0 -156px;border-bottom:1px solid #DDD}
+.plupload_filelist_header,.plupload_filelist_footer{background:#dfdfdf;padding:8px 8px;color:#42454a}
+.plupload_filelist_header{border-top:1px solid #EEE;border-bottom:1px solid #cdcdcd}
+.plupload_filelist_footer{border-top:1px solid #FFF;height:22px;line-height:20px;vertical-align:middle}
+.plupload_file_status{color:#777}.plupload_file_status span{color:#42454a}
+.plupload_file_size,.plupload_file_status,.plupload_progress{width:80px}
+.plupload_file_size,.plupload_file_status,.plupload_file_action{text-align:left}
+.plupload_filelist .plupload_file_name{width:205px;white-space:nowrap;text-overflow:ellipsis;font-size:9px;}
+.plupload_file_action{float:right;width:16px;height:16px;margin-left:15px}
+.plupload_file_action *{width:16px;height:16px}
+li.plupload_done{color:#AAA}li.plupload_failed a{background:url('img/error.gif');cursor:default}
+li.plupload_done a{background:url('img/done.gif');cursor:default}.plupload_hidden{display:none !important}
+.plupload_progress,.plupload_upload_status{color:blue}
+.ui-progressbar .ui-progressbar-value{height:100%;margin:-1px}
+.plupload_scroll .plupload_filelist_header .plupload_file_action,.plupload_scroll .plupload_filelist_footer .plupload_file_action{margin-right:17px}
+.plupload_clear,.plupload_clearer{clear:both}.plupload_clearer,.plupload_progress_bar{display:block;font-size:0;line-height:0}
+li.plupload_droptext{background:transparent;text-align:center;vertical-align:middle;border:0;line-height:165px}
+.plupload_view_thumbs .plupload_filelist_header{display:none}.plupload_button{cursor:pointer}
+.plupload_buttons{background:#f1f1f1;padding:10px;min-height:35px}
+.plupload_add{z-index:9999}.plupload_dropbox{height:222px;overflow:auto;color:gray;background:#fff}
+.plupload_view_thumbs .plupload_file{border:1px solid lightgray;float:left;margin-bottom: 5px;margin-right: 5px;padding:6px}
+.plupload_view_thumbs div.plupload_file_action{right:0;top:0}.ui-icon-circle-minus{background:url('img/delete.gif')}
+.plupload_message{height:30;left:-1px;top:-1px;width:100%;background:url("img/error.png") repeat-x scroll 50% 50% #fef1ec;border:1px solid #cd0a0a;color:#cd0a0a}
+.ui-progressbar{height:2em;text-align:left}.plupload_progress_container{background:#fff;border:1px solid #aaa;color:#222}
+.ui-progressbar .ui-progressbar-value{height:100%;margin:-1px;background:url("./img/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #ccc;border:1px solid #aaa;color:#222;font-weight:bold}
+.ui-corner-left{border-bottom-left-radius:4px;border-top-left-radius:4px}
+.plupload_content{min-height:170px}.plupload_file_name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.plupload_started{float:right}.plupload_total_status{margin-left:13px;background:none!important;}
+.plupload_total_file_size{margin-left:10px;background:none!important;}
+.plupload_cell .plupload_upload_status{background:none!important;}#uploader_start{z-index:1;position:relative}
+
+
+#uploader_browse:before {content:"\f1c5";font-family:fontawesome;font-size:14px;left:8px;position:absolute;}
+.mobile #uploader_browse:before{left:20px;}
+#uploader_start:before 	{content:"\f093";font-family:fontawesome;font-size:14px;left:8px;position:absolute;}

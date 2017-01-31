@@ -1,0 +1,27 @@
+#transformPanel{position:absolute;z-index:10;right:0;top:132px;}
+.moveDown{background:url(../images/lay_down.png) no-repeat;width:25px;height:25px;margin-right:5px;border:0;margin-top:-1px}
+.layer-control .right-button-section .layer-duplicate{background:url(../images/lay_dup.png) no-repeat;width:22px;height:22px;margin-right:5px;border:0}
+.layer-control .right-button-section .layer-delete{background:url(../images/lay_delete.png) no-repeat;width:22px;height:22px;border:0}
+.move-object-panel{border:1px solid #b6e2f4;width:146px;box-shadow:1px 1px 3px 0 #bdbdbd;background:#fff}
+.move-object-panel .mop-heading{cursor:move;background:#0d9ed9;color:#fff;font-family:lato;font-size:16px;line-height:23px;font-weight:300;height:23px;padding-left:12px;text-align:left}
+.move-object-panel .mop-heading .mop-close{color:#FFF;text-decoration:none;float:right;margin-right:15px;font-weight:700;cursor:pointer;line-height:19px}
+.ranges-content{padding:6px;overflow:hidden}
+.ranges-content .moving-knob{float:left;cursor:pointer}
+.joystic-button{left:65px;top:-20px;position:absolute;width:101px}
+.joystic-button button{border:0;width:30px;height:30px;cursor:pointer;float:left;margin:2px}
+.joystic-button .toward-up{height:30px;left:0;margin:auto;position:absolute;right:0;width:35px;margin-top:2px}
+.joystic-button .toward-up button{background:url(../images/j_up.png) no-repeat}
+.joystic-button .toward-left button{background:url(../images/j_left.png) no-repeat;margin-top:36px}
+.joystic-button .toward-down button{background:url(../images/j_down.png) no-repeat;margin-top:36px;margin-left:1px}
+.joystic-button .toward-right button{background:url(../images/j_right.png) no-repeat;margin-top:36px;margin-left:1px}
+.upload-mathod{margin:10px auto;width:222px;text-align:center}
+.upload-mathod ul li{width:65px;font-family:Arial,Helvetica,sans-serif;font-size:11px;display:inline-block;padding:0;text-align:left;line-height:22px;padding-left:17px;}
+.upload-mathod ul.inactive li{border-top:5px solid #999}
+.upload-mathod ul.inactive li i{display:none}
+.upload-mathod ul.active li.not-reco{color:#ff0203;border-top:5px solid #ff0203}
+.upload-mathod ul.active li.fair{color:#f5942f;border-top:5px solid #f5942f}
+.upload-mathod ul.active li.luk-gud{color:#007f2f;border-top:5px solid #007f2f}
+.not-reco.active{background:url(../images/red_tick.png) no-repeat;display:inline-block}
+.fair.active{background:url(../images/yellow_tick.png) no-repeat;display:inline-block}
+.luk-gud.active{background:url(../images/green_tick.png) no-repeat;display:inline-block}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	  <tabs>
+		<dnb_admin translate="label" module="dnbadmin">
+            <label>DNB Admin</label>
+            <sort_order>0</sort_order>
+        </dnb_admin>
+	  </tabs>
+</config>

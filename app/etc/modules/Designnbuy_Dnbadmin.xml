@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Designnbuy_Dnbadmin>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Designnbuy_Dnbadmin>
+  </modules>
+</config>

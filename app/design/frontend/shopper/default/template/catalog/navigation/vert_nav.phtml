@@ -1,0 +1,99 @@
+
+	
+	<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') . 'kupmanduk/jquery-accordion-menu.js'; ?>"></script>
+	
+	<link 	rel='stylesheet' type='text/css' href='<?php echo Mage::getBaseUrl('js') . 'kupmanduk/jquery-accordion-menu.css' ?>'>
+	<link 	rel='stylesheet' type='text/css' href='<?php echo Mage::getBaseUrl('js') . 'kupmanduk/font-awesome.css' ?>'>
+	
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function () {jQuery("#jquery-accordion-menu").jqueryAccordionMenu();});
+
+		jQuery(function(){		
+			jQuery("#demo-list li").click(function(){
+				jQuery("#demo-list li.active").removeClass("active")
+				jQuery(this).addClass("active");
+			})	
+		})	
+	</script>	
+	<style type="text/css">
+		.filterinput {background-color: rgba(249, 244, 244, 0);border-radius: 15px;width: 90%;height: 30px;border: thin solid #FFF;text-indent: 0.5em;font-weight: bold;color: #FFF;}
+		#demo-list a {overflow: hidden;text-overflow: ellipsis;	-o-text-overflow: ellipsis;	white-space: nowrap;width: 100%;color:#000}
+	</style>
+	<div class="block block-subscribe">
+	<div class="block-title" style="text-align: left;padding-left: 23px;"><h3><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;&nbsp;categorieën</h3>	</div>
+		<div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+			<!--<ul id="demo-list">
+				<li class="active"><a href="#">Home </a></li>
+				<li><a href="#">Events </a></li>
+				<li><a href="#">Gallery </a></li>
+				<li><a href="#">Services </a>
+					<ul class="submenu">
+						<li><a href="#">Web Design </a></li>
+						<li><a href="#">Hosting </a></li>
+						<li><a href="#">Design </a>
+							<ul class="submenu">
+								<li><a href="#">Graphics </a></li>
+								<li><a href="#">Vectors </a></li>
+								<li><a href="#">Photoshop </a></li>
+								<li><a href="#">Fonts </a></li>
+							</ul>
+						</li>
+						<li><a href="#">Consulting </a></li>
+					</ul>
+				</li>
+				<li><a href="#">Portfolios </a></li>
+				<li><a href="#">Portfolio </a>
+					<ul class="submenu">
+						<li><a href="#">Web Design </a></li>
+						<li><a href="#">Graphics </a></li>
+						<li><a href="#">Photoshop </a></li>
+						<li><a href="#">Programming </a></li>
+					</ul>
+				</li>
+				<li><a href="#">About </a></li>
+				<li><a href="#">Contact </a></li>
+			</ul>-->
+		
+
+<ul id="demo-list">
+    <?php
+        $obj = new Mage_Catalog_Block_Navigation();
+        $storeCategories = $obj->getStoreCategories();
+        Mage::registry('current_category') ? $currentCategoryId = Mage::registry('current_category')->getId() : $currentCategoryId='';
+        foreach ($storeCategories as $_category):
+    ?>
+            <li>
+               <a href="javascript:;"> <strong><?php echo $_category->getName(); ?></strong></a>
+                <?php $categoryChildren = $_category->getChildren(); ?>
+                <?php if($categoryChildren->count()) : ?>
+                    <ul class="submenu">
+ 
+                        <?php foreach($categoryChildren as $_categoryChild) : ?>
+                            <?php $_categoryChildModel = Mage::getModel('catalog/category')->load($_categoryChild->getId());?>
+                            <?php $categoryGrandchildren=$_categoryChild->getChildren(); ?>
+                            <li>
+                                <?php
+                                    $currentCategoryId===$_categoryChild->getId() ? $bold="style=\"font-weight:bold\"" : $bold='';
+                                    echo '<a href="' . $_categoryChildModel->getUrl() . '"' . $bold . '>' .  $_categoryChild->getName().'</a><span class="jquery-accordion-menu-label">'.$_categoryChildModel->getProductCollection()->count().'</span>';
+                                ?>
+                            </li>
+                            <?php if($categoryGrandchildren->count()) : ?>
+                                <?php foreach($categoryGrandchildren as $_categoryGrandchild) : ?>
+                                    <?php $_categoryGrandchildModel = Mage::getModel('catalog/category')->load($_categoryGrandchild->getId());?>
+                                    <li>
+                                        <?php
+                                            $currentCategoryId===$_categoryChild->getId() ? $bold="style=\"font-weight:bold\"" : $bold='';
+                                            echo '<a href="' . $_categoryGrandchildModel->getUrl() . '"' . $bold . '>' .  $_categoryGrandchild->getName() . '</a><span class="jquery-accordion-menu-label">'.$_categoryGrandchildModel->getProductCount().'</span>'; 							
+                                        ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
+        <?php endforeach ?>
+</ul>
+</div>
+</div>

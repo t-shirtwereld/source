@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Clearandfizzy
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
+ * COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY
+ * COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
+ * AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+
+ * BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE
+ * TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY
+ * BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS
+ * CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND
+ * CONDITIONS.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * versions in the future. If you wish to customize this extension for your
+ * needs please refer to http://www.clearandfizzy.com for more information.
+ *
+ * @category    Community
+ * @package     Clearandfizzy_EnhancedCMS
+ * @copyright   Copyright (c) 2015 Clearandfizzy Ltd. (http://www.clearandfizzy.com)
+ * @license     http://www.clearandfizzy.com/licence.txt
+ * @author		Gareth Price <gareth@clearandfizzy.com>
+ * @description This file configures the Clearandfizzy tab and any default menus in the magento admin
+ */
+-->
+<config>     
+ 
+	<modules>
+		<Clearandfizzy_EnhancedCMS>
+			<version>1.2.0</version>
+		</Clearandfizzy_EnhancedCMS>
+	</modules>
+ 
+    <global>
+        <blocks>
+            <adminhtml>
+
+                <rewrite>
+                    <cms_page>Clearandfizzy_EnhancedCMS_Block_Adminhtml_Cms_Page</cms_page>                   
+                    <cms_page_grid>Clearandfizzy_EnhancedCMS_Block_Adminhtml_Cms_Page_Grid</cms_page_grid>                   
+                    <cms_block>Clearandfizzy_EnhancedCMS_Block_Adminhtml_Cms_Block</cms_block>                   
+                    <cms_block_grid>Clearandfizzy_EnhancedCMS_Block_Adminhtml_Cms_Block_Grid</cms_block_grid>                   
+                </rewrite>
+
+            </adminhtml>
+
+			<clearandfizzy_enhancedcms>
+                <class>Clearandfizzy_EnhancedCMS_Block_Adminhtml</class>
+             </clearandfizzy_enhancedcms>
+             
+        </blocks>
+
+		<helpers>
+			<clearandfizzy_enhancedcms>
+                <class>Clearandfizzy_EnhancedCMS_Helper</class>
+             </clearandfizzy_enhancedcms>
+		</helpers>
+		
+		<models>
+			<clearandfizzy_enhancedcms>
+                <class>Clearandfizzy_EnhancedCMS_Model</class>
+             </clearandfizzy_enhancedcms>
+		</models>
+
+     </global> 
+     
+     <adminhtml>
+
+		<layout>
+			<updates>
+				<clearandfizzy_enhancedcms>
+					<file>clearandfizzy/enhancedcms/enhancedcms.xml</file>	
+				</clearandfizzy_enhancedcms>
+			</updates>
+		</layout>  
+		
+		<events>
+            <controller_action_predispatch>
+                <observers>
+                    <clearandfizzy_enhancedcms_feed>
+                        <class>clearandfizzy_enhancedcms/observer_notification_feed</class>
+                        <method>preDispatch</method>
+                    </clearandfizzy_enhancedcms_feed>
+                </observers>
+            </controller_action_predispatch>
+        </events>   		   
+
+     </adminhtml>       
+
+	<admin>
+		<routers>
+			<adminhtml>
+		    	<args>
+		        	<modules>
+		            	<clearandfizzy_enhancedcms before="Mage_Adminhtml">Clearandfizzy_EnhancedCMS_Adminhtml</clearandfizzy_enhancedcms>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+
+	</admin>
+
+	<default>
+		<clearandfizzy_enhancedcms_settings>
+			<adminnotification>
+		    	<feed_url>magento.clearandfizzy.com/community/enhancedcms-free.xml</feed_url>
+		        <frequency>1</frequency>
+			</adminnotification>
+		</clearandfizzy_enhancedcms_settings>
+	</default>
+	 
+</config>

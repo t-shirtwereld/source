@@ -1,0 +1,45 @@
+<!--@subject {{var store.getFrontendName()}}: Update verzending # {{var shipment.increment_id}} @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"var logo_url":"Email Logo Image Url",
+"var logo_alt":"Email Logo Image Alt",
+"htmlescape var=$billing.getName()":"Guest Customer Name",
+"var order.increment_id":"Order Id",
+"var order.getStatusLabel()":"Order Status",
+"var comment":"Order Comment",
+"var store.getFrontendName()":"Store Name"}
+@-->
+<!--@styles
+@-->
+
+{{template config_path="design/email/header"}}
+{{inlinecss file="email-inline.css"}}
+
+<table cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td class="action-content">
+                        <h1>Beste {{htmlescape var=$billing.getName()}},</h1>
+                        <p>Uw bestelling met bestelnummer <span class="no-link">#{{var order.increment_id}}</span> staat nu op status: <strong>{{var order.getStatusLabel()}}</strong></p>
+                        {{if comment}}
+                        <table cellspacing="0" cellpadding="0" class="message-container">
+                            <tr>
+                                <td>{{var comment}}</td>
+                            </tr>
+                        </table>
+                        {{/if}}
+                        <p>U kunt de status van uw bestelling controleren door in te loggen op <a href="{{store url="customer/account/"}}">uw account</a>.</p>
+						<p>
+							Indien u nog vragen heeft, kunt u contact met ons opnemen via email door een bericht te sturen naar <a href="mailto:{{var store_email}}">{{var store_email}}</a>
+							{{depend store_phone}} of telefonisch via <a href="tel:{{var phone}}">{{var store_phone}}</a>{{/depend}}.
+						</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+{{template config_path="design/email/footer"}}

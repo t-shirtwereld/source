@@ -1,0 +1,9 @@
+<?php $this->setPriceDataObject($this->getSource()) ?>
+<?php if ((float) $this->getSource()->getSetupfeeAmount()): ?>
+    <tr>
+        <td class="label"><?php echo Mage::helper('design')->formatFee($this->getSource()->getSetupfeeAmount()) ?></td>
+        <td>
+            <?php echo $this->displayPrices($this->getSource()->getBaseSetupfeeAmount(), $this->getSource()->getSetupfeeAmount()); ?>
+        </td>
+    </tr>
+<?php endif; ?>

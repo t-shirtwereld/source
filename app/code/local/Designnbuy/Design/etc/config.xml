@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Designnbuynto
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Designnbuynto to newer
+ * versions in the future. If you wish to customize Designnbuynto for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   Designnbuy
+ * @package    Designnbuy_Design
+ * @copyright  Copyright (c) 2008 Irubin Consulting Inc. DBA Varien (http://www.varien.com)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+
+<config>
+    <modules>
+	<Designnbuy_Design>
+	    <version>0.2</version>
+	</Designnbuy_Design>
+    </modules>
+
+    <frontend>
+	<routers>
+	    <design>
+		<use>standard</use>
+		<args>
+		    <module>Designnbuy_Design</module>
+		    <frontName>design</frontName>
+		</args>
+	    </design>
+	</routers>
+	<layout>
+	    <updates>
+		<design>
+		    <file>designnbuy/design.xml</file>
+		</design>
+	    </updates>
+	</layout>
+    </frontend>   
+    <global>		
+	<models>
+	    <design>
+		<class>Designnbuy_Design_Model</class>
+		<resourceModel>design_mysql4</resourceModel>
+	    </design>
+	    <design_mysql4>
+		<class>Designnbuy_Design_Model_Mysql4</class>                
+		<entities>
+		</entities>
+	    </design_mysql4>
+	</models>
+	<resources>          
+	    <design_setup>
+		<setup>
+		    <module>Designnbuy_Design</module>
+		    <class>Designnbuy_Design_Model_Resource_Mysql4_Setup</class>
+		</setup>
+		<connection>
+		    <use>core_setup</use>
+		</connection>
+	    </design_setup>
+			
+	    <design_write>
+		<connection>
+		    <use>core_write</use>
+		</connection>
+	    </design_write>
+	    <design_read>
+		<connection>
+		    <use>core_read</use>
+		</connection>
+	    </design_read>
+	</resources>
+	<blocks>
+	    <adminhtml>
+		<rewrite>
+		    <sales_order_grid>Designnbuy_Design_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+		</rewrite>
+	    </adminhtml>
+	    <design>
+		<class>Designnbuy_Design_Block</class>
+	    </design>
+	</blocks>
+	<helpers>
+	    <design>
+		<class>Designnbuy_Design_Helper</class>
+	    </design>
+	</helpers>
+	<sales>
+	    <quote>
+		<totals>
+		    <setupfee>
+			<class>design/sales_quote_address_total_setupfee</class>                        
+		    </setupfee>
+		</totals>
+	    </quote>
+	    <order_invoice>
+		<totals>
+		    <setupfee>
+			<class>design/sales_order_total_invoice_setupfee</class>
+		    </setupfee>
+		</totals>
+	    </order_invoice>
+	    <order_creditmemo>
+		<totals>
+		    <setupfee>
+			<class>design/sales_order_total_creditmemo_setupfee</class>
+		    </setupfee>
+		</totals>
+	    </order_creditmemo>
+	</sales>
+	<events>
+	    <paypal_prepare_line_items>
+		<observers>
+		    <paypal_prepare_line_items>
+			<class>design/observer</class>
+			<method>updatePaypalTotal</method>
+		    </paypal_prepare_line_items>
+		</observers>
+	    </paypal_prepare_line_items>
+	    <sales_order_invoice_save_after>
+		<observers>
+		    <sales_order_invoice_save_after>
+			<class>design/observer</class>
+			<method>invoiceSaveAfter</method>
+		    </sales_order_invoice_save_after>
+		</observers>
+	    </sales_order_invoice_save_after>
+	    <sales_order_creditmemo_save_after>
+		<observers>
+		    <sales_order_creditmemo_save_after>
+			<class>design/observer</class>
+			<method>creditmemoSaveAfter</method>
+		    </sales_order_creditmemo_save_after>
+		</observers>
+	    </sales_order_creditmemo_save_after>
+	    <sales_order_place_after>
+		<observers>
+		    <save_after>
+			<class>design/observer</class>
+			<method>saveOrderAfter</method>
+		    </save_after>
+		</observers>
+	    </sales_order_place_after>
+	</events>
+	<fieldsets>
+	    <sales_convert_quote_address>
+		<setupfee_amount>
+		    <to_order>*</to_order>
+		</setupfee_amount>
+		<base_setupfee_amount>
+		    <to_order>*</to_order>
+		</base_setupfee_amount>
+	    </sales_convert_quote_address>
+	</fieldsets>
+	<pdf>
+            <totals>
+                <setupfee translate="title">
+                    <title>Setup Fee</title>
+                    <source_field>setupfee_amount</source_field>
+                    <font_size>7</font_size>
+                    <display_zero>0</display_zero>
+                    <sort_order>650</sort_order>
+                    <amount_prefix>-</amount_prefix>
+                </setupfee>
+            </totals>
+        </pdf>
+    </global>
+</config>

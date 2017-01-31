@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Designnbuy_Dnbadmin>
+      <version>0.1.0</version>
+    </Designnbuy_Dnbadmin>
+  </modules>
+  <global>
+    <helpers>
+      <dnbadmin>
+        <class>Designnbuy_Dnbadmin_Helper</class>
+      </dnbadmin>
+    </helpers>
+	<blocks>
+	  <dnbadmin>
+		<class>Designnbuy_Dnbadmin_Block</class>
+	  </dnbadmin>
+	</blocks>
+  </global>
+  <admin>
+	<routers>
+	  <dnbadmin>
+	    <use>admin</use>
+		<args>
+		  <module>Designnbuy_Dnbadmin</module>
+		  <frontName>admin_dnbadmin</frontName>
+		</args>
+	  </dnbadmin>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <dnbadmin module="dnbadmin">
+		<title>W2P Admin</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <dnbadminbackend module="dnbadmin">
+			<title>W2P Admin</title>
+			<sort_order>0</sort_order>
+			<action>admin_dnbadmin/adminhtml_dnbadminbackend</action>
+		  </dnbadminbackend>
+		</children>
+	  </dnbadmin>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<dnbadmin translate="title" module="dnbadmin">
+			  <title>W2P Admin</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <dnbadminbackend translate="title">
+			<title>W2P Admin</title>
+		  </dnbadminbackend>
+			  </children>
+			</dnbadmin>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<dnbadmin>
+		  <file>dnbadmin.xml</file>
+		</dnbadmin>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

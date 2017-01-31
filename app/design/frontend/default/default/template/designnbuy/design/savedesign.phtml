@@ -1,0 +1,102 @@
+
+<?php
+	$design = $this->getDesign();
+	$path  = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB).'media/';
+	$imgpath = $path.'saveimg/';
+	$imageDir = Mage::getBaseDir(). DS .'media' . DS .'saveimg'. DS;
+	$customCanvasAttributeSetId = Mage::helper('configuration')->getCustomCanvasAttributeSetId();	
+?>
+<div class="page-title">
+    <h1><?php echo $this->__('Save Designs'); ?></h1>
+</div>
+<?php echo $this->getPagerHtml(); ?>
+<?php if($design->getSize()): ?>
+<table class="data-table" id="my-orders-table" >
+    <thead>
+        <tr>
+			<th><?php echo $this->__('Design Name') ?></th>
+			<th><?php echo $this->__('Front Image') ?></th>
+			<th><?php echo $this->__('Back Image') ?></th>
+			<th><?php echo $this->__('Left Image') ?></th>
+			<th><?php echo $this->__('Right Image') ?></th>
+			<th><?php echo $this->__('Edit') ?></th>
+			<th><?php echo $this->__('Action') ?></th>
+		</tr>
+    </thead>
+        <?php foreach($design as $item):?>
+		<?php
+			$_product =  Mage::getModel('catalog/product')->load($item->getProductsId());	
+			
+		?>
+		<?php if ($_product->getType_id()== 'simple' && $_product->getAttributeSetId()== $customCanvasAttributeSetId): ?>  
+			<?php $isWeb2PrintTool = true; ?>
+		<?php endif; ?>
+    <tr>
+		<td>			
+			<?php echo $item->getDesign_name(); ?>
+			
+		</td>	
+		<td>		
+			<?php if ($isWeb2PrintTool == true): ?>  					
+					<?php if ($item->getFrontImage()!='' && file_exists($imageDir.$item->getFrontImage())): ?>
+					<?php list($width, $height, $type, $attr) = getimagesize($imageDir.$item->getFrontImage());?>					
+					<img src="<?php echo $imgpath.$item->getFrontImage() ?>" <?php echo ($width>$height)? "width=100" : "height=100"; ?>  />
+					<?php endif;?>
+			<?php else: ?>				
+				<?php if ($item->getFrontImage()!='' && file_exists($imageDir.$item->getFrontImage())): ?>
+				<?php list($width, $height, $type, $attr) = getimagesize($imageDir.$item->getFrontImage());?>
+				<?php $frontImage = explode('.svg',$item->getFrontImage())?>
+				<img src="<?php echo $imgpath.$frontImage[0].'.png' ?>" <?php echo ($width>$height)? "width=100" : "height=100"; ?>  />
+				<?php endif;?>
+			<?php endif; ?>			
+		</td>
+		<td>
+		
+			<?php if ($item->getBackImage()!='' && file_exists($imageDir.$item->getBackImage())): ?>
+			<?php list($width, $height, $type, $attr) = getimagesize($imageDir.$item->getBackImage());?>
+			<?php $backImage = explode('.svg',$item->getBackImage())?>
+			<img src="<?php echo $imgpath.$backImage[0].'.png' ?>" <?php echo ($width>$height)? "width=100" : "height=100"; ?>  />
+			<?php endif;?>
+			
+		</td>
+		<td>
+			<?php if ($item->getLeftImage()!='' && file_exists($imageDir.$item->getLeftImage())): ?>
+			<?php list($width, $height, $type, $attr) = getimagesize($imageDir.$item->getLeftImage());?>		
+			<?php $leftImage = explode('.svg',$item->getLeftImage())?>
+			<img src="<?php echo $imgpath.$leftImage[0].'.png' ?>" <?php echo ($width>$height)? "width=100" : "height=100"; ?>  />
+			<?php endif;?>
+		</td>
+		<td>
+			<?php if ($item->getRightImage()!='' && file_exists($imageDir.$item->getRightImage())): ?>
+			<?php list($width, $height, $type, $attr) = getimagesize($imageDir.$item->getRightImage());?>			
+			<?php $rightImage = explode('.svg',$item->getRightImage())?>
+			<img src="<?php echo $imgpath.$rightImage[0].'.png' ?>" <?php echo ($width>$height)? "width=100" : "height=100"; ?>  />
+			<?php endif;?>		
+		</td>
+		<td>			
+			<?php if (($_product->getType_id()== 'simple') && ($_product->getAttributeSetId()== $customCanvasAttributeSetId) && ($_product->getIsSalable()==1 && $_product->getStatus()==1)): ?>  					
+			<a href="<?php echo Mage::getBaseUrl().'web2print/index/index/design_id/'.$item->getDesign_id()?>"><?php echo $this->__('Edit') ?></a>		
+			<?php endif; ?>
+			<?php if ($_product->getIsCustomizable()): ?>    	
+			<a href="<?php echo Mage::getBaseUrl().'design/index/index/design_id/'.$item->getDesign_id()?>"><?php echo $this->__('Edit') ?></a>
+			<?php endif; ?>
+			
+		</td>
+		<td>
+			<a href="#" onclick="return deleteDesign('<?php echo $item->getDesign_id() ?>')" class="red-link"><?php echo $this->__('Remove') ?></a>
+		</td>
+	</tr>
+ <?php endforeach ?>
+ </table>
+<?php else: ?>
+    <p><?php echo $this->__('No Design Available'); ?>.</p>
+<?php endif; ?>
+<script type="text/javascript">
+    function deleteDesign(designId) {
+        if(confirm('<?php echo $this->__('Are you sure you want to delete this design?') ?>')) {
+            window.location='<?php echo $this->getUrl("design/index/designdelete") ?>id/'+designId;
+        }
+        return false;
+    }
+</script>
+<?php echo $this->getPagerHtml(); ?>

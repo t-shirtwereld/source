@@ -1,0 +1,2096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<printcommerce_multilanguage>
+  <productsettingCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Settings</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Product Settings</pc_text>
+    <pc_help>Product Settings</pc_help>
+  </productsettingCaption>
+  <clipCat_label>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Browse By Category (Clipart)</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Browse By Category</pc_text>
+    <pc_help>Browse By Category</pc_help>
+  </clipCat_label>
+  <cart_next_save>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Save Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Save Design</pc_text>
+    <pc_help>Save Design</pc_help>
+  </cart_next_save>
+  <cart_next>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Next</pc_label>
+    <pc_maxlength>5</pc_maxlength>
+    <pc_text>Next</pc_text>
+    <pc_help>Next</pc_help>
+  </cart_next>
+  <back_to_cart>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Back</pc_text>
+    <pc_help>Back</pc_help>
+  </back_to_cart>
+  <previewPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Preview</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Preview</pc_text>
+    <pc_help>Preview</pc_help>
+  </previewPopupCaption>
+  <changeproductCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Product</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Change Product</pc_text>
+    <pc_help>Change Product</pc_help>
+  </changeproductCaption>
+  <prodCat_label>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Browse By Category (Product)</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Browse By Category</pc_text>
+    <pc_help>Browse By Category</pc_help>
+  </prodCat_label>
+  <chooseProductCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Product</pc_text>
+    <pc_help>Product</pc_help>
+  </chooseProductCaption>
+  <chooseArtCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Art</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Choose Art</pc_text>
+    <pc_help>Choose Art</pc_help>
+  </chooseArtCaption>
+  <addTextCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Text</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Text</pc_text>
+    <pc_help>Text</pc_help>
+  </addTextCaption>
+  <addTextPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text - Popup</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Add Text</pc_text>
+    <pc_help>Text</pc_help>
+  </addTextPopupCaption>
+  <addTextBtnCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Add Text</pc_text>
+    <pc_help>Text</pc_help>
+  </addTextBtnCaption>
+  <addImageCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Image</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Add Image</pc_text>
+    <pc_help>Add Image</pc_help>
+  </addImageCaption>
+  <rightsCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>rights</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>I have the rights to use these mages</pc_text>
+    <pc_help>I have the rights to use these images</pc_help>
+  </rightsCaption>
+  <uploadImageInfoPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Upload Info</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Upload Info</pc_text>
+    <pc_help>Upload Info</pc_help>
+  </uploadImageInfoPopupCaption>
+  <printQualityCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Print Quality</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Print Quality</pc_text>
+    <pc_help>Print Quality</pc_help>
+  </printQualityCaption>
+  <printQualityPoorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Poor</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Poor</pc_text>
+    <pc_help>Poor</pc_help>
+  </printQualityPoorCaption>
+  <printQualityFairCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fair</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Fair</pc_text>
+    <pc_help>Fair</pc_help>
+  </printQualityFairCaption>
+  <printQualityGoodCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Good</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Good</pc_text>
+    <pc_help>Good</pc_help>
+  </printQualityGoodCaption>
+  <productInfoCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Info</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Info</pc_text>
+    <pc_help>Info</pc_help>
+  </productInfoCaption>
+  <printingMethodCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Printing Method</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Printing Method</pc_text>
+    <pc_help>Printing Method</pc_help>
+  </printingMethodCaption>
+  <sizeQtyCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Size/Quantity</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Size/Quantity</pc_text>
+    <pc_help>Size/Quantity</pc_help>
+  </sizeQtyCaption>
+  <addNoteCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Note</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Add Note</pc_text>
+    <pc_help>Add Note</pc_help>
+  </addNoteCaption>
+  <addcart>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ADD TO CART </pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>ADD TO CART </pc_text>
+    <pc_help>ADD TO CART </pc_help>
+  </addcart>
+  <YES>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Yes</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Yes</pc_text>
+    <pc_help>Yes</pc_help>
+  </YES>
+  <NO>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>No</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>No</pc_text>
+    <pc_help>No</pc_help>
+  </NO>
+  <OK>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Ok</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Ok</pc_text>
+    <pc_help>Ok</pc_help>
+  </OK>
+  <CANCEL>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Cancel</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Cancel</pc_text>
+    <pc_help>Cancel</pc_help>
+  </CANCEL>
+  <SUBMIT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Submit</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Submit</pc_text>
+    <pc_help>Submit</pc_help>
+  </SUBMIT>
+  <path>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>path</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>path</pc_text>
+    <pc_help>path</pc_help>
+  </path>
+  <line>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>line</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>line</pc_text>
+    <pc_help>line</pc_help>
+  </line>
+  <rect>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>rect</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>rect</pc_text>
+    <pc_help>rect</pc_help>
+  </rect>
+  <ellipse>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>ellipse</pc_text>
+    <pc_help>ellipse</pc_help>
+  </ellipse>
+  <circle>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>circle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>circle</pc_text>
+    <pc_help>circle</pc_help>
+  </circle>
+  <supportedFormatCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Supported Formats</pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Supported Formats:  1) jpeg 2) jpg 3) png</pc_text>
+    <pc_help>Supported Formats:  1) jpeg 2) jpg 3) png</pc_help>
+  </supportedFormatCaption>
+  <optimalResolutionCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Optimal Resolution</pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Optimal Resolution: 1500 X 1500 pixels</pc_text>
+    <pc_help>Optimal Resolution: 1500 X 1500 pixels</pc_help>
+  </optimalResolutionCaption>
+  <recommendedSizeCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Recommended Size </pc_label>
+    <pc_maxlength>40</pc_maxlength>
+    <pc_text>Recommended Size: Less than 5 mb</pc_text>
+    <pc_help>Recommended Size: Less than 5 mb</pc_help>
+  </recommendedSizeCaption>
+  <imageGalleryPopupInfoContent>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Gallery Popup Info</pc_label>
+    <pc_maxlength>500</pc_maxlength>
+    <pc_text>For anonymous users: The list is maintained for current session of design studio only. \n\nFor registered users after login: It maintains the list of all images uploaded by user in several logged-in sessions. User can also attach a high resolution vector source file in allowed formats CDR/PSD/AI/PDF/EPS along with the raster image by clicking on Upload HD button. You can see a right symbol with Upload image button to indicate images who already have the high resolution image uploaded, which can be further replaced is needed. The high resolution source file is sent to the admin once an order is placed for reference.\n\nPLEASE LOG-IN TO MAINTAIN YOUR IMAGE GALLERY AND ATTACH HIGH RESOLUTION SOURCE FILES WITH UPLOADED IMAGES.</pc_text>
+    <pc_help>For anonymous users: The list is maintained for current session of design studio only. \n\nFor registered users after login: It maintains the list of all images uploaded by user in several logged-in sessions. User can also attach a high resolution vector source file in allowed formats CDR/PSD/AI/PDF/EPS along with the raster image by clicking on Upload HD button. You can see a right symbol with Upload image button to indicate images who already have the high resolution image uploaded, which can be further replaced is needed. The high resolution source file is sent to the admin once an order is placed for reference.\n\nPLEASE LOG-IN TO MAINTAIN YOUR IMAGE GALLERY AND ATTACH HIGH RESOLUTION SOURCE FILES WITH UPLOADED IMAGES.</pc_help>
+  </imageGalleryPopupInfoContent>
+  <saveDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Save Your Design</pc_label>
+    <pc_maxlength>19</pc_maxlength>
+    <pc_text>Save Your Design</pc_text>
+    <pc_help>Save Your Design</pc_help>
+  </saveDesignCaption>
+  <designDetailsCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Design Details</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Design Details</pc_text>
+    <pc_help>Design Details</pc_help>
+  </designDetailsCaption>
+  <loginRegisterPopupCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Login/Register</pc_label>
+    <pc_maxlength>30</pc_maxlength>
+    <pc_text>Login/Register</pc_text>
+    <pc_help>Login/Register</pc_help>
+  </loginRegisterPopupCaption>
+  <loginCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Login</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Login</pc_text>
+    <pc_help>Login</pc_help>
+  </loginCaption>
+  <EmailCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>E-mail Address</pc_text>
+    <pc_help>E-mail Address</pc_help>
+  </EmailCaption>
+  <PasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Password</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Password</pc_text>
+    <pc_help>Password</pc_help>
+  </PasswordCaption>
+  <forgetPasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Forgot Password?</pc_label>
+    <pc_maxlength>16</pc_maxlength>
+    <pc_text>Forgot Password?</pc_text>
+    <pc_help>Forgot Password?</pc_help>
+  </forgetPasswordCaption>
+  <registerCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Register</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Register</pc_text>
+    <pc_help>Register</pc_help>
+  </registerCaption>
+  <fNameCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>First Name </pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>First Name </pc_text>
+    <pc_help>First Name </pc_help>
+  </fNameCaption>
+  <lNameCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Last Name</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Last Name</pc_text>
+    <pc_help>Last Name</pc_help>
+  </lNameCaption>
+  <ConfirmPasswordCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Confirm Password</pc_label>
+    <pc_maxlength>16</pc_maxlength>
+    <pc_text>Confirm Password</pc_text>
+    <pc_help>Confirm Password</pc_help>
+  </ConfirmPasswordCaption>
+  <productColorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Colors</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Colors</pc_text>
+    <pc_help>Colors</pc_help>
+  </productColorCaption>
+  <productSkuCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>SKU</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>SKU</pc_text>
+    <pc_help>SKU</pc_help>
+  </productSkuCaption>
+  <productDescCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Short Description</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Short Description</pc_text>
+    <pc_help>Short Description</pc_help>
+  </productDescCaption>
+  <flickrUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your flickr photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Import your flickr photos</pc_text>
+    <pc_help>Import your flickr photos</pc_help>
+  </flickrUploadCaption>
+  <picasaUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your picasa photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Import your picasa photos</pc_text>
+    <pc_help>Import your picasa photos</pc_help>
+  </picasaUploadCaption>
+  <instagramUploadCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Import your Instagram photos</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Import your Instagram photos</pc_text>
+    <pc_help>Import your Instagram photos</pc_help>
+  </instagramUploadCaption>
+  <fitToAll>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Screen</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Screen</pc_text>
+    <pc_help>Fit to Screen</pc_help>
+  </fitToAll>
+  <fitToCanvas>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Canvas</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Canvas</pc_text>
+    <pc_help>Fit to Canvas</pc_help>
+  </fitToCanvas>
+  <fitToSel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit to Selection</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit to Selection</pc_text>
+    <pc_help>Fit to Selection</pc_help>
+  </fitToSel>
+  <BOLD>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Bold Text</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Bold Text</pc_text>
+    <pc_help>Bold Text</pc_help>
+  </BOLD>
+  <ITALIC>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Italic Text</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Italic Text</pc_text>
+    <pc_help>Italic Text</pc_help>
+  </ITALIC>
+  <ALIGN_LEFT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Left</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Left</pc_text>
+    <pc_help>Align Left</pc_help>
+  </ALIGN_LEFT>
+  <ALIGN_CENTER>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Center</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Center</pc_text>
+    <pc_help>Align Center</pc_help>
+  </ALIGN_CENTER>
+  <ALIGN_RIGHT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Right</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Right</pc_text>
+    <pc_help>Align Right</pc_help>
+  </ALIGN_RIGHT>
+  <ALIGN_TOP>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Top</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Top</pc_text>
+    <pc_help>Align Top</pc_help>
+  </ALIGN_TOP>
+  <ALIGN_MIDDLE>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Middle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Middle</pc_text>
+    <pc_help>Align Middle</pc_help>
+  </ALIGN_MIDDLE>
+  <ALIGN_BOTTOM>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Align Bottom</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Align Bottom</pc_text>
+    <pc_help>Align Bottom</pc_help>
+  </ALIGN_BOTTOM>
+  <FILL_COLOR>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Fill Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Change Fill Color</pc_text>
+    <pc_help>Change Fill Color</pc_help>
+  </FILL_COLOR>
+  <STROKE_COLOR>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Change Stroke Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Change Stroke Color</pc_text>
+    <pc_help>Change Stroke Color</pc_help>
+  </STROKE_COLOR>
+  <PROCEED>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Proceed</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Proceed</pc_text>
+    <pc_help>Proceed</pc_help>
+  </PROCEED>
+  <relativeToLabel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Relative to:</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Relative to:</pc_text>
+    <pc_help>Relative to:</pc_help>
+  </relativeToLabel>
+  <selected_objects>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Objects</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Selected Objects </pc_text>
+    <pc_help>Selected Objects </pc_help>
+  </selected_objects>
+  <largest_object>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Largest Object</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Largest Object</pc_text>
+    <pc_help>Largest Object</pc_help>
+  </largest_object>
+  <smallest_object>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Smallest Object</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Smallest Object</pc_text>
+    <pc_help>Smallest Object</pc_help>
+  </smallest_object>
+  <page>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Page</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Page</pc_text>
+    <pc_help>Page</pc_help>
+  </page>
+  <fitToScreen>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Fit To Screen</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Fit To Screen</pc_text>
+    <pc_help>Fit To Screen</pc_help>
+  </fitToScreen>
+  <downloadPreviewCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Download Preview</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Download Preview</pc_text>
+    <pc_help>Download Preview</pc_help>
+  </downloadPreviewCaption>
+  <GO>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>GO</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>GO</pc_text>
+    <pc_help>GO</pc_help>
+  </GO>
+  <PICASA_ALBUM_HERE>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PICASA ALBUM HERE</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Images in your album will be here</pc_text>
+    <pc_help>Images in your album will be here</pc_help>
+  </PICASA_ALBUM_HERE>
+  <PICASA_REQUEST_FAILED>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PICASA REQUEST FAILED</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Picasa request failed</pc_text>
+    <pc_help>Picasa request failed</pc_help>
+  </PICASA_REQUEST_FAILED>
+  <USER_NOT_FOUND>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>USER NOT FOUND</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>User not found</pc_text>
+    <pc_help>User not found</pc_help>
+  </USER_NOT_FOUND>
+  <NO_IMAGE_FOUND>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>NO IMAGE FOUND</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>No image found</pc_text>
+    <pc_help>No image found</pc_help>
+  </NO_IMAGE_FOUND>
+  <manageLayersCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Manage Layers</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Manage Layers</pc_text>
+    <pc_help>Manage Layers</pc_help>
+  </manageLayersCaption>
+  <SELECT_ITEM>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Select Item</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Select Item</pc_text>
+    <pc_help>Select Item</pc_help>
+  </SELECT_ITEM>
+  <tool_group>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Group</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Group</pc_text>
+    <pc_help>Group</pc_help>
+  </tool_group>
+  <tool_ungroup>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Ungroup</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ungroup</pc_text>
+    <pc_help>Ungroup</pc_help>
+  </tool_ungroup>
+  <tool_undo_custom>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Undo</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Undo</pc_text>
+    <pc_help>Undo</pc_help>
+  </tool_undo_custom>
+  <tool_redo_custom>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Redo</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Redo</pc_text>
+    <pc_help>Redo</pc_help>
+  </tool_redo_custom>
+  <tool_delete>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Delete</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Delete</pc_text>
+    <pc_help>Delete</pc_help>
+  </tool_delete>
+  <tool_clone>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Duplicate</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Duplicate</pc_text>
+    <pc_help>Duplicate</pc_help>
+  </tool_clone>
+  <tool_cut>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Cut</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Cut</pc_text>
+    <pc_help>Cut</pc_help>
+  </tool_cut>
+  <tool_copy>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Copy</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Copy</pc_text>
+    <pc_help>Copy</pc_help>
+  </tool_copy>
+  <tool_paste>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Paste</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Paste</pc_text>
+    <pc_help>Paste</pc_help>
+  </tool_paste>
+  <tool_clear>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Delete All </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Delete All </pc_text>
+    <pc_help>Delete All </pc_help>
+  </tool_clear>
+  <Help>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Studio Help</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Studio Help</pc_text>
+    <pc_help>Studio Help</pc_help>
+  </Help>
+  <PENCIL_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Pencil Tool</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Pencil Tool</pc_text>
+    <pc_help>Pencil Tool</pc_help>
+  </PENCIL_TOOL>
+  <LINE_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Line Tool</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Line Tool</pc_text>
+    <pc_help>Line Tool</pc_help>
+  </LINE_TOOL>
+  <RECT_GROUP_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>RECT GROUP TOOL</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Rectangle / Square / Free-Hand Rectangle</pc_text>
+    <pc_help>Rectangle / Square / Free-Hand Rectangle</pc_help>
+  </RECT_GROUP_TOOL>
+  <RECT>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Rectangle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Rectangle</pc_text>
+    <pc_help>Rectangle</pc_help>
+  </RECT>
+  <SQUARE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Square</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Square</pc_text>
+    <pc_help>Square</pc_help>
+  </SQUARE>
+  <FHRECT>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Free-Hand Rectangle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Free-Hand Rectangle</pc_text>
+    <pc_help>Free-Hand Rectangle</pc_help>
+  </FHRECT>
+  <ELLIPSE_GROUP_TOOL>
+    <pc_type>rollOver</pc_type>
+    <pc_label>ELLIPSE GROUP TOOL</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ellipse / Circle / Free-Hand Ellipse</pc_text>
+    <pc_help>Ellipse / Circle / Free-Hand Ellipse</pc_help>
+  </ELLIPSE_GROUP_TOOL>
+  <ELLIPSE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Ellipse</pc_text>
+    <pc_help>Ellipse</pc_help>
+  </ELLIPSE>
+  <CIRCLE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Circle</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Circle</pc_text>
+    <pc_help>Circle</pc_help>
+  </CIRCLE>
+  <FHELLIPSE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Free-Hand Ellipse</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Free-Hand Ellipse</pc_text>
+    <pc_help>Free-Hand Ellipse</pc_help>
+  </FHELLIPSE>
+  <QR_FILL_COLOR>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change QR Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Change QR Color</pc_text>
+    <pc_help>Change QR Color</pc_help>
+  </QR_FILL_COLOR>
+  <BG_FILL_COLOR>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change Background Color</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Change Background Color</pc_text>
+    <pc_help>Change Background Color</pc_help>
+  </BG_FILL_COLOR>
+  <REMOVE_BG_IMAGE>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Remove Background Image</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Remove Background Image</pc_text>
+    <pc_help>Remove Background Image</pc_help>
+  </REMOVE_BG_IMAGE>
+  <productZoomCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Zoom</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Zoom</pc_text>
+    <pc_help>Zoom</pc_help>
+  </productZoomCaption>
+  <productPreviewCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Preview</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Preview</pc_text>
+    <pc_help>Preview</pc_help>
+  </productPreviewCaption>
+  <productSaveCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Save</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Save</pc_text>
+    <pc_help>Save</pc_help>
+  </productSaveCaption>
+  <fbShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Share on Facebook </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Share on Facebook </pc_text>
+    <pc_help>Share on Facebook </pc_help>
+  </fbShareCaption>
+  <twitterShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Tweet on Twitter</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Tweet on Twitter</pc_text>
+    <pc_help>Tweet on Twitter</pc_help>
+  </twitterShareCaption>
+  <pinitShareCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Pin Design on Pinterest</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Pin Design on Pinterest</pc_text>
+    <pc_help>Pin Design on Pinterest</pc_help>
+  </pinitShareCaption>
+  <qrcodeDataTypeCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Select Data Type</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Select Data Type</pc_text>
+    <pc_help>Select Data Type</pc_help>
+  </qrcodeDataTypeCaption>
+  <websiteUrl>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Website URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Website URL</pc_text>
+    <pc_help>Website URL</pc_help>
+  </websiteUrl>
+  <youtubeVideo>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>YouTube Video</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>YouTube Video</pc_text>
+    <pc_help>YouTube Video</pc_help>
+  </youtubeVideo>
+  <plaintext>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Plain Text</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Plain Text</pc_text>
+    <pc_help>Plain Text</pc_help>
+  </plaintext>
+  <emailAdd>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-mail Address</pc_text>
+    <pc_help>E-mail Address</pc_help>
+  </emailAdd>
+  <telephone>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Telephone Number</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Telephone Number</pc_text>
+    <pc_help>Telephone Number</pc_help>
+  </telephone>
+  <emailMsg>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Message</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-mail Message</pc_text>
+    <pc_help>E-mail Message</pc_help>
+  </emailMsg>
+  <socialMedia>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Social Media</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Social Media</pc_text>
+    <pc_help>Social Media</pc_help>
+  </socialMedia>
+  <gmap>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Google Maps Location</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Google Maps Location</pc_text>
+    <pc_help>Google Maps Location</pc_help>
+  </gmap>
+  <websiteCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Website URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Website URL:</pc_text>
+    <pc_help>Website URL:</pc_help>
+  </websiteCaption>
+  <videoIdCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Video ID</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Video ID:</pc_text>
+    <pc_help>Video ID:</pc_help>
+  </videoIdCaption>
+  <videoUrlCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Video URL</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Video URL:</pc_text>
+    <pc_help>Video URL:</pc_help>
+  </videoUrlCaption>
+  <textCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>TEXT</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>TEXT:</pc_text>
+    <pc_help>TEXT:</pc_help>
+  </textCaption>
+  <emailaddreCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>E-mail Address</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>E-mail Address</pc_text>
+    <pc_help>E-mail Address</pc_help>
+  </emailaddreCaption>
+  <telephoneCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Telephone Number</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Telephone Number:</pc_text>
+    <pc_help>Telephone Number:</pc_help>
+  </telephoneCaption>
+  <subjectCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Subject</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Subject:</pc_text>
+    <pc_help>Subject:</pc_help>
+  </subjectCaption>
+  <bodyCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Body</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Body:</pc_text>
+    <pc_help>Body:</pc_help>
+  </bodyCaption>
+  <socialMediaCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Social Media</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Social Media:</pc_text>
+    <pc_help>Social Media:</pc_help>
+  </socialMediaCaption>
+  <twitterProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Twitter Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Twitter Profile</pc_text>
+    <pc_help>Twitter Profile</pc_help>
+  </twitterProfileCaption>
+  <facebookProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Facebook Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Facebook Profile</pc_text>
+    <pc_help>Facebook Profile</pc_help>
+  </facebookProfileCaption>
+  <myspaceProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Myspace Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Myspace Profile</pc_text>
+    <pc_help>Myspace Profile</pc_help>
+  </myspaceProfileCaption>
+  <linkedlinProfileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>LinkedIn Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>LinkedIn Profile</pc_text>
+    <pc_help>LinkedIn Profile</pc_help>
+  </linkedlinProfileCaption>
+  <profileCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Profile</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Profile:</pc_text>
+    <pc_help>Profile:</pc_help>
+  </profileCaption>
+  <gmaplocationCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Google Maps Location</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Google Maps Location:</pc_text>
+    <pc_help>Google Maps Location:</pc_help>
+  </gmaplocationCaption>
+  <rqcodeColorCaption>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Color Code</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Color Code:</pc_text>
+    <pc_help>Color Code:</pc_help>
+  </rqcodeColorCaption>
+  <tool_qrCode>
+    <pc_type>qrCodePanel</pc_type>
+    <pc_label>Generate</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Generate</pc_text>
+    <pc_help>Generate</pc_help>
+  </tool_qrCode>
+  <invalidAttrValGiven>
+    <pc_type>notification</pc_type>
+    <pc_label>Invalid Attribute Value</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Invalid value provided</pc_text>
+    <pc_help>Invalid value provided</pc_help>
+  </invalidAttrValGiven>
+  <noContentToFitTo>
+    <pc_type>notification</pc_type>
+    <pc_label>No content to fit</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>No content to fit to!</pc_text>
+    <pc_help>No content to fit to!</pc_help>
+  </noContentToFitTo>
+  <dupeLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Duplicate Layer Name</pc_label>
+    <pc_maxlength>80</pc_maxlength>
+    <pc_text>There is already a layer in design with same name!</pc_text>
+    <pc_help>There is already a layer in design with same name!</pc_help>
+  </dupeLayerName>
+  <enterUniqueLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter unique layer name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Please enter a unique layer name.</pc_text>
+    <pc_help>Please enter a unique layer name.</pc_help>
+  </enterUniqueLayerName>
+  <enterNewLayerName>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter new layer name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Please enter the new layer name.</pc_text>
+    <pc_help>Please enter the new layer name.</pc_help>
+  </enterNewLayerName>
+  <layerHasThatName>
+    <pc_type>notification</pc_type>
+    <pc_label>Layer has the name</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Layer already has that name</pc_text>
+    <pc_help>Layer already has that name</pc_help>
+  </layerHasThatName>
+  <QmoveElemsToLayer>
+    <pc_type>notification</pc_type>
+    <pc_label>Move element to layer</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Move selected elements to layer</pc_text>
+    <pc_help>Move selected elements to layer</pc_help>
+  </QmoveElemsToLayer>
+  <QwantToClear>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Clear</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Do you want to clear the design?</pc_text>
+    <pc_help>Do you want to clear the design?</pc_help>
+  </QwantToClear>
+  <QwantToDelete>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Delete</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Do you want to delete selected artwork?</pc_text>
+    <pc_help>Do you want to delete selected artwork?</pc_help>
+  </QwantToDelete>
+  <QwantToOpen>
+    <pc_type>notification</pc_type>
+    <pc_label>Want to Open</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Do you want to open a new file?\nThis will also erase your undo history!</pc_text>
+    <pc_help>Do you want to open a new file?\nThis will also erase your undo history!</pc_help>
+  </QwantToOpen>
+  <errors_revert_to_source>
+    <pc_type>notification</pc_type>
+    <pc_label>Revert Source</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>There were parsing errors in your SVG file source.\nRevert back to original SVG source?</pc_text>
+    <pc_help>There were parsing errors in your SVG file source.\nRevert back to original SVG source?</pc_help>
+  </errors_revert_to_source>
+  <QerrorsRevertToSource>
+    <pc_type>notification</pc_type>
+    <pc_label>Ignore Source Chages</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Ignore changes made to SVG source?</pc_text>
+    <pc_help>Ignore changes made to SVG source?</pc_help>
+  </QerrorsRevertToSource>
+  <featNotSupported>
+    <pc_type>notification</pc_type>
+    <pc_label>Feature not supported</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Feature not supported</pc_text>
+    <pc_help>Feature not supported</pc_help>
+  </featNotSupported>
+  <enterNewImgURL>
+    <pc_type>notification</pc_type>
+    <pc_label>New Img Url</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Enter the new image URL</pc_text>
+    <pc_help>Enter the new image URL</pc_help>
+  </enterNewImgURL>
+  <defsFailOnSave>
+    <pc_type>notification</pc_type>
+    <pc_label>Fail On Save</pc_label>
+    <pc_maxlength>250</pc_maxlength>
+    <pc_text>NOTE: Due to compatibility issues in your current browser, this image may appear wrong (missing gradients or elements). It will however appear correct once actually saved.</pc_text>
+    <pc_help>NOTE: Due to compatibility issues in your current browser, this image may appear wrong (missing gradients or elements). It will however appear correct once actually saved.</pc_help>
+  </defsFailOnSave>
+  <loadingImage>
+    <pc_type>notification</pc_type>
+    <pc_label>Loading Image</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Loading image, please wait</pc_text>
+    <pc_help>Loading image, please wait</pc_help>
+  </loadingImage>
+  <saveFromBrowser>
+    <pc_type>notification</pc_type>
+    <pc_label>Save From Browser</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Select Save As in your browser to save this image as a file</pc_text>
+    <pc_help>Select Save As in your browser to save this image as a file</pc_help>
+  </saveFromBrowser>
+  <noteTheseIssues>
+    <pc_type>notification</pc_type>
+    <pc_label>Note These Issues</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Also note the following issues:</pc_text>
+    <pc_help>Also note the following issues:</pc_help>
+  </noteTheseIssues>
+  <unsavedChanges>
+    <pc_type>notification</pc_type>
+    <pc_label>Unsaved Changes</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>There are unsaved changes.</pc_text>
+    <pc_help>There are unsaved changes.</pc_help>
+  </unsavedChanges>
+  <enterNewLinkURL>
+    <pc_type>notification</pc_type>
+    <pc_label>New Link Url</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Enter the new hyperlink URL</pc_text>
+    <pc_help>Enter the new hyperlink URL</pc_help>
+  </enterNewLinkURL>
+  <errorLoadingSVG>
+    <pc_type>notification</pc_type>
+    <pc_label>Error Loading SVG</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Error: Unable to load SVG data</pc_text>
+    <pc_help>Error: Unable to load SVG data</pc_help>
+  </errorLoadingSVG>
+  <URLloadFail>
+    <pc_type>notification</pc_type>
+    <pc_label>Url Load Fail</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Unable to load from URL</pc_text>
+    <pc_help>Unable to load from URL</pc_help>
+  </URLloadFail>
+  <retrieving>
+    <pc_type>notification</pc_type>
+    <pc_label>retrieving</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Retrieving </pc_text>
+    <pc_help>Retrieving </pc_help>
+  </retrieving>
+  <design_saved>
+    <pc_type>notification</pc_type>
+    <pc_label>Design Saved</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Design Saved!</pc_text>
+    <pc_help>Design Saved!</pc_help>
+  </design_saved>
+  <templateSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Template Saved</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Design saved successfully! Do you want to exit the template builder?</pc_text>
+    <pc_help>Design saved successfully! Do you want to exit the template builder?</pc_help>
+  </templateSaved>
+  <designSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter Keyword</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Design saved successfully!</pc_text>
+    <pc_help>Design saved successfully!</pc_help>
+  </designSaved>
+  <designdesignSaved>
+    <pc_type>notification</pc_type>
+    <pc_label>Enter Keyword</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Design saved successfully! Do you want to exit the design tool?</pc_text>
+    <pc_help>Design saved successfully! Do you want to exit the design tool?</pc_help>
+  </designdesignSaved>
+  <specifyDesignName>
+    <pc_type>notification</pc_type>
+    <pc_label>Specify Design Name</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Please specify a design name.</pc_text>
+    <pc_help>Please specify a design name.</pc_help>
+  </specifyDesignName>
+  <srcapDesign>
+    <pc_type>notification</pc_type>
+    <pc_label>Scrap Design</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Do you want to scrap your existing design in design area?</pc_text>
+    <pc_help>Do you want to scrap your existing design in design area?</pc_help>
+  </srcapDesign>
+  <changeProduct>
+    <pc_type>notification</pc_type>
+    <pc_label>Change Product</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Choosing new product will scrap your existing design in design area. Do you want to proceed?</pc_text>
+    <pc_help>Choosing new product will scrap your existing design in design area. Do you want to proceed?</pc_help>
+  </changeProduct>
+  <designExit>
+    <pc_type>notification</pc_type>
+    <pc_label>Design Exit</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Do you really want to exit?</pc_text>
+    <pc_help>Do you really want to exit?</pc_help>
+  </designExit>
+  <ADDTEXT_ALERT>
+    <pc_type>notification</pc_type>
+    <pc_label>Text Alert</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Please enter text</pc_text>
+    <pc_help>Please enter text</pc_help>
+  </ADDTEXT_ALERT>
+  <printingMethod_LessQty_1>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method Less Qty 1</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>You have to purchase atleast</pc_text>
+    <pc_help>You have to purchase atleast</pc_help>
+  </printingMethod_LessQty_1>
+  <printingMethod_LessQty_2>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method Less Qty 2</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>items for the selected printing method.</pc_text>
+    <pc_help>items for the selected printing method.</pc_help>
+  </printingMethod_LessQty_2>
+  <printingMethod_MoreQty_1>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method More Qty 1</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>You cannot purchase more than</pc_text>
+    <pc_help>You cannot purchase more than</pc_help>
+  </printingMethod_MoreQty_1>
+  <printingMethod_MoreQty_2>
+    <pc_type>notification</pc_type>
+    <pc_label>Printing Method More Qty 2</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>items for the selected printing method.</pc_text>
+    <pc_help>items for the selected printing method.</pc_help>
+  </printingMethod_MoreQty_2>
+  <requiredDetailsAlert>
+    <pc_type>notification</pc_type>
+    <pc_label>Required Details Alert</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Please insert required details</pc_text>
+    <pc_help>Please insert required details</pc_help>
+  </requiredDetailsAlert>
+  <FillAtleastOneAlert>
+    <pc_type>notification</pc_type>
+    <pc_label>Fill Atleast One Field</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Please fill atleast one field</pc_text>
+    <pc_help>Please fill atleast one field</pc_help>
+  </FillAtleastOneAlert>
+  <tryAgain>
+    <pc_type>notification</pc_type>
+    <pc_label>Try Again</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Please try again!</pc_text>
+    <pc_help>Please try again!</pc_help>
+  </tryAgain>
+  <designOverwriteWarn>
+    <pc_type>notification</pc_type>
+    <pc_label>Overwrite Design</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Do you want to overwrite the design?</pc_text>
+    <pc_help>Do you want to overwrite the design?</pc_help>
+  </designOverwriteWarn>
+  <errorSaving>
+    <pc_type>notification</pc_type>
+    <pc_label>Error in saving</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Error in saving</pc_text>
+    <pc_help>Error in saving</pc_help>
+  </errorSaving>
+  <gallery_warn_msg>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gallery Warn Msg</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>There are no images in your gallery. You can upload images by clicking on Upload button.</pc_text>
+    <pc_help>There are no images in your gallery. You can upload images by clicking on Upload button.</pc_help>
+  </gallery_warn_msg>
+  <uploadBtnPopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Upload</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Upload</pc_text>
+    <pc_help>Upload</pc_help>
+  </uploadBtnPopup>
+  <galleryBtnPopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gallery</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Gallery</pc_text>
+    <pc_help>Gallery</pc_help>
+  </galleryBtnPopup>
+  <selectedSizeCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Selected Size</pc_text>
+    <pc_help>Selected Size</pc_help>
+  </selectedSizeCaption>
+  <QuantityCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Quantity</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Quantity</pc_text>
+    <pc_help>Quantity</pc_help>
+  </QuantityCaption>
+  <totalPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Total Price</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Total Price</pc_text>
+    <pc_help>Total Price</pc_help>
+  </totalPriceCaption>
+  <ClipArt>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>ClipArt</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Clipart</pc_text>
+    <pc_help>Clipart</pc_help>
+  </ClipArt>
+  <Image>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Image</pc_text>
+    <pc_help>Image</pc_help>
+  </Image>
+  <DesignAreaLabel>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Design Area</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Design Area</pc_text>
+    <pc_help>Design Area</pc_help>
+  </DesignAreaLabel>
+  <productInformation>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Info</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Product Info</pc_text>
+    <pc_help>Product Info</pc_help>
+  </productInformation>
+  <borderstyle>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>BORDER STYLE</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Border Style</pc_text>
+    <pc_help>Border Style</pc_help>
+  </borderstyle>
+  <bordersize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>BORDER SIZE</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Border Size</pc_text>
+    <pc_help>Border Size</pc_help>
+  </bordersize>
+  <imageUploadPrecaution1>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution1</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>We will store up to 150 photos for you in your gallery</pc_text>
+    <pc_help>We will store up to 150 photos for you in your gallery</pc_help>
+  </imageUploadPrecaution1>
+  <imageUploadPrecaution2>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution2</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Optimal Image Resolution: 1500 x 1500 pixels</pc_text>
+    <pc_help>Optimal Image Resolution: 1500 x 1500 pixels</pc_help>
+  </imageUploadPrecaution2>
+  <imageUploadPrecaution3>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>imageUploadPrecaution3</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Supported Formats: jpeg, jpg, png - up to 30 MB each</pc_text>
+    <pc_help>Supported Formats: jpeg, jpg,  png - up to 30 MB each</pc_help>
+  </imageUploadPrecaution3>
+  <tool_qrCode>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Qr Generate Button</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Generate</pc_text>
+    <pc_help>Generate</pc_help>
+  </tool_qrCode>
+  <productnotfound>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>productnotfound</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>No Product Found</pc_text>
+    <pc_help>No Product Found</pc_help>
+  </productnotfound>
+  <clipnotfound>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>clipnotfound</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>No Clipart Found</pc_text>
+    <pc_help>No Clipart Found</pc_help>
+  </clipnotfound>
+  <name_control_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Name</pc_text>
+    <pc_help>Name</pc_help>
+  </name_control_btn>
+  <num_control_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Number</pc_label>
+    <pc_maxlength>7</pc_maxlength>
+    <pc_text>Number</pc_text>
+    <pc_help>Number</pc_help>
+  </num_control_btn>
+  <name_num_close>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Close</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Close</pc_text>
+    <pc_help>Close</pc_help>
+  </name_num_close>
+  <enter_custom_list_btn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Enter Custom List</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Enter Custom List</pc_text>
+    <pc_help>Enter Custom List</pc_help>
+  </enter_custom_list_btn>
+  <sizeTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Size</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Size</pc_text>
+    <pc_help>Size</pc_help>
+  </sizeTableCaption>
+  <nameTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Name</pc_text>
+    <pc_help>Name</pc_help>
+  </nameTableCaption>
+  <numberTableCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>#</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>#</pc_text>
+    <pc_help>#</pc_help>
+  </numberTableCaption>
+  <addNewNameNumber>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add New</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Add New</pc_text>
+    <pc_help>Add New</pc_help>
+  </addNewNameNumber>
+  <name_num_backBtn>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Back</pc_text>
+    <pc_help>Back</pc_help>
+  </name_num_backBtn>
+  <nameNumberCloseButton>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Close</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Close</pc_text>
+    <pc_help>Close</pc_help>
+  </nameNumberCloseButton>
+  <clipartPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Clip Art Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Clipart Cost</pc_text>
+    <pc_help>Clipart Cost</pc_help>
+  </clipartPriceCaption>
+  <chooseartpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Art</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Choose Art</pc_text>
+    <pc_help>Choose Art</pc_help>
+  </chooseartpopup>
+  <choosedesignpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Choose Design</pc_text>
+    <pc_help>Choose Design</pc_help>
+  </choosedesignpopup>
+  <shapeToolCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Shape Tool</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Shape Tool</pc_text>
+    <pc_help>Shape Tool</pc_help>
+  </shapeToolCaption>
+  <loadDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Load Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Load Design</pc_text>
+    <pc_help>Load Design</pc_help>
+  </loadDesignCaption>
+  <PREV>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Previous</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Previous</pc_text>
+    <pc_help>Previous</pc_help>
+  </PREV>
+  <NEXT>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Next</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Next</pc_text>
+    <pc_help>Next</pc_help>
+  </NEXT>
+  <uploadHDCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>uploadHD</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Upload HD</pc_text>
+    <pc_help>Upload HD</pc_help>
+  </uploadHDCaption>
+  <selectedColorCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Selected Color</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Selected Color</pc_text>
+    <pc_help>Selected Color</pc_help>
+  </selectedColorCaption>
+  <imageDeleteWarn>
+    <pc_type>notification</pc_type>
+    <pc_label>Image Delete Warning</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Do you want to delete the image? If deleted, it will be removed from design from all sides.</pc_text>
+    <pc_help>Do you want to delete the image? If deleted, it will be removed from design from all sides.</pc_help>
+  </imageDeleteWarn>
+  <missingImagesInDesignEdit>
+    <pc_type>notification</pc_type>
+    <pc_label>Missing Image in Design Edit</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Some image(s) are missing in your design</pc_text>
+    <pc_help>Some image(s) are missing in your design</pc_help>
+  </missingImagesInDesignEdit>
+  <errorInConnection>
+    <pc_type>notification</pc_type>
+    <pc_label>Error In connection</pc_label>
+    <pc_maxlength>150</pc_maxlength>
+    <pc_text>Ooops! Something went wrong.</pc_text>
+    <pc_help>Ooops! Something went wrong.</pc_help>
+  </errorInConnection>
+  <namePriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Name Cost</pc_text>
+    <pc_help>Name Cost</pc_help>
+  </namePriceCaption>
+  <numberPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Number Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Number Cost</pc_text>
+    <pc_help>Number Cost</pc_help>
+  </numberPriceCaption>
+  <artWorkSetupPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Artwork Setup Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Artwork Setup Cost</pc_text>
+    <pc_help>Artwork Setup Cost</pc_help>
+  </artWorkSetupPriceCaption>
+  <avgPrintPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Avg Print Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Avg. Printing Cost</pc_text>
+    <pc_help>Avg. Printing Cost</pc_help>
+  </avgPrintPriceCaption>
+  <productPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Product Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Product Cost</pc_text>
+    <pc_help>Product Cost</pc_help>
+  </productPriceCaption>
+  <imageUploadPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Upload Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Image Upload Cost</pc_text>
+    <pc_help>Image Upload Cost</pc_help>
+  </imageUploadPriceCaption>
+  <printingPriceCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Printing Cost</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Printing Cost</pc_text>
+    <pc_help>Printing Cost</pc_help>
+  </printingPriceCaption>
+  <uploadImageInstructionCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image upload Instruction</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Instructions</pc_text>
+    <pc_help>Instructions</pc_help>
+  </uploadImageInstructionCaption>
+  <fontSizeCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Font size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Font size</pc_text>
+    <pc_help>Font size</pc_help>
+  </fontSizeCaption>
+  <currentFontSize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Current Font Size</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Current Font Size</pc_text>
+    <pc_help>Current Font Size</pc_help>
+  </currentFontSize>
+  <PhotoBox>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>PhotoBox</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>PhotoBox</pc_text>
+    <pc_help>PhotoBox</pc_help>
+  </PhotoBox>
+  <changeImageCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Change Image</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Change Image</pc_text>
+    <pc_help>Change Image</pc_help>
+  </changeImageCaption>
+  <removeImageCaption>
+    <pc_type>rollOver</pc_type>
+    <pc_label>Remove Image</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Remove Image</pc_text>
+    <pc_help>Remove Image</pc_help>
+  </removeImageCaption>
+  <WrongImageWarning>
+    <pc_type>notification</pc_type>
+    <pc_label>Wrong Image Warning</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Image does not supported.</pc_text>
+    <pc_help>Image does not supported.</pc_help>
+  </WrongImageWarning>
+  <fontSizeInstruction>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Font Size Instruction</pc_label>
+    <pc_maxlength>70</pc_maxlength>
+    <pc_text>Choose standard font size or use resize handles for custom font size</pc_text>
+    <pc_help>Choose standard font size or use resize handles for custom font size</pc_help>
+  </fontSizeInstruction>
+  <addNameNumberCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Name / #</pc_label>
+    <pc_maxlength>12</pc_maxlength>
+    <pc_text>Name / #</pc_text>
+    <pc_help>Name / #</pc_help>
+  </addNameNumberCaption>
+  <addtextCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Add Text</pc_label>
+    <pc_maxlength>15</pc_maxlength>
+    <pc_text>Add Text</pc_text>
+    <pc_help>Add Text</pc_help>
+  </addtextCaption>
+  <choosedesignpopup>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Choose Design</pc_text>
+    <pc_help>Choose Design</pc_help>
+  </choosedesignpopup>
+  <noDataFound>
+    <pc_type>notification</pc_type>
+    <pc_label>Item Not Found </pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Item Not Found </pc_text>
+    <pc_help>Item Not Found </pc_help>
+  </noDataFound>
+  <chooseDesignCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Choose Design</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Choose Design</pc_text>
+    <pc_help>Choose Design</pc_help>
+  </chooseDesignCaption>
+  <verySmall>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Very Small</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Very Small</pc_text>
+    <pc_help>Very Small</pc_help>
+  </verySmall>
+  <small>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Small</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Small</pc_text>
+    <pc_help>Small</pc_help>
+  </small>
+  <medium>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Medium</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Medium</pc_text>
+    <pc_help>Medium</pc_help>
+  </medium>
+  <large>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Large</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Large</pc_text>
+    <pc_help>Large</pc_help>
+  </large>
+  <extraLarge>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Extra Large</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Extra Large</pc_text>
+    <pc_help>Extra Large</pc_help>
+  </extraLarge>
+  <frontSide>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Front side</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Front side</pc_text>
+    <pc_help>Front side</pc_help>
+  </frontSide>
+  <backSide>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Back Side</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Back Side</pc_text>
+    <pc_help>Back Side</pc_help>
+  </backSide>
+  <mydesign>
+    <pc_type>others</pc_type>
+    <pc_label>My design</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>My Design</pc_text>
+    <pc_help>My Design</pc_help>
+  </mydesign>
+  <mymedia>
+    <pc_type>others</pc_type>
+    <pc_label>My Media</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>My Media</pc_text>
+    <pc_help>My Media</pc_help>
+  </mymedia>
+  <areyousure>
+    <pc_type>others</pc_type>
+    <pc_label>Are You Sure?</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Are You Sure?</pc_text>
+    <pc_help>Are You Sure?</pc_help>
+  </areyousure>
+  <errodeleterecord>
+    <pc_type>others</pc_type>
+    <pc_label>Error deleting record</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Error deleting record...!</pc_text>
+    <pc_help>Error deleting record...!</pc_help>
+  </errodeleterecord>
+  <uploadimage>
+    <pc_type>others</pc_type>
+    <pc_label>Upload Image</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Upload Image</pc_text>
+    <pc_help>Upload Image</pc_help>
+  </uploadimage>
+  <deleteimagenotavailable>
+    <pc_type>others</pc_type>
+    <pc_label>Deleted Image from Mymedia</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Deleted Image can not be available in new orders. Do you want to delete?</pc_text>
+    <pc_help>Deleted Image can not be available in new orders. Do you want to delete?</pc_help>
+  </deleteimagenotavailable>
+  <messageboard>
+    <pc_type>others</pc_type>
+    <pc_label>Message Board</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Message Board</pc_text>
+    <pc_help>Message Board</pc_help>
+  </messageboard>
+  <orderdetails>
+    <pc_type>others</pc_type>
+    <pc_label>Order Details</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Order Details</pc_text>
+    <pc_help>Order Details</pc_help>
+  </orderdetails>
+  <date>
+    <pc_type>others</pc_type>
+    <pc_label>Date</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Date</pc_text>
+    <pc_help>Date</pc_help>
+  </date>
+  <customer>
+    <pc_type>others</pc_type>
+    <pc_label>Customer</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Customer</pc_text>
+    <pc_help>Customer</pc_help>
+  </customer>
+  <noofitems>
+    <pc_type>others</pc_type>
+    <pc_label>No of Items</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>No of Items</pc_text>
+    <pc_help>No of Items</pc_help>
+  </noofitems>
+  <totalamount>
+    <pc_type>others</pc_type>
+    <pc_label>Total Amount</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Total Amount</pc_text>
+    <pc_help>Total Amount</pc_help>
+  </totalamount>
+  <notes>
+    <pc_type>others</pc_type>
+    <pc_label>Notes</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Notes</pc_text>
+    <pc_help>Notes</pc_help>
+  </notes>
+  <leaveacomment>
+    <pc_type>others</pc_type>
+    <pc_label>Leave a Comment</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Leave a Comment</pc_text>
+    <pc_help>Leave a Comment</pc_help>
+  </leaveacomment>
+  <addthiscomment>
+    <pc_type>others</pc_type>
+    <pc_label>Add This Comment</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Add This Comment</pc_text>
+    <pc_help>Add This Comment</pc_help>
+  </addthiscomment>
+  <emailnotifications>
+    <pc_type>others</pc_type>
+    <pc_label>Email Notifications</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Email Notifications</pc_text>
+    <pc_help>Email Notifications</pc_help>
+  </emailnotifications>
+  <emailnotificationmessage>
+    <pc_type>others</pc_type>
+    <pc_label>Email Notification Message</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>These email addresses are subscribed to receive email notifications when new comments are posted.</pc_text>
+    <pc_help>These email addresses are subscribed to receive email notifications when new comments are posted.</pc_help>
+  </emailnotificationmessage>
+  <subscribeemail>
+    <pc_type>others</pc_type>
+    <pc_label>Subscribe Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Subscribe new email address</pc_text>
+    <pc_help>Subscribe new email address</pc_help>
+  </subscribeemail>
+  <previewdesign>
+    <pc_type>others</pc_type>
+    <pc_label>Preview Designs</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Preview Designs</pc_text>
+    <pc_help>Preview Designs</pc_help>
+  </previewdesign>
+  <remove>
+    <pc_type>others</pc_type>
+    <pc_label>Remove</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Remove</pc_text>
+    <pc_help>Remove</pc_help>
+  </remove>
+  <add>
+    <pc_type>others</pc_type>
+    <pc_label>Add</pc_label>
+    <pc_maxlength>10</pc_maxlength>
+    <pc_text>Add</pc_text>
+    <pc_help>Add</pc_help>
+  </add>
+  <invalidemail>
+    <pc_type>others</pc_type>
+    <pc_label>Invalid Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Invalid Email...!</pc_text>
+    <pc_help>Invalid Email...!</pc_help>
+  </invalidemail>
+  <uploadhd>
+    <pc_type>others</pc_type>
+    <pc_label>Upload HD</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Upload HD</pc_text>
+    <pc_help>Upload HD</pc_help>
+  </uploadhd>
+  <erroconvertingpdf>
+    <pc_type>others</pc_type>
+    <pc_label>Error Converting Pdf</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>There was an error converting pdf page to thumnail:</pc_text>
+    <pc_help>There was an error converting pdf page to thumnail:</pc_help>
+  </erroconvertingpdf>
+  <somethingwentwrong>
+    <pc_type>others</pc_type>
+    <pc_label>Something Went Wrong</pc_label>
+    <pc_maxlength>200</pc_maxlength>
+    <pc_text>Something went wrong when saving the file, please try again.</pc_text>
+    <pc_help>Something went wrong when saving the file, please try again.</pc_help>
+  </somethingwentwrong>
+  <filetypenotallowed>
+    <pc_type>others</pc_type>
+    <pc_label>File Type Not Allowed</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Attached File Type is not allowed...!</pc_text>
+    <pc_help>Attached File Type is not allowed...!</pc_help>
+  </filetypenotallowed>
+  <emailalreadyexists>
+    <pc_type>others</pc_type>
+    <pc_label>Email Already Exists</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Email Already Exists...!</pc_text>
+    <pc_help>Email Already Exists...!</pc_help>
+  </emailalreadyexists>
+  <errorsavingemail>
+    <pc_type>others</pc_type>
+    <pc_label>Error Saving Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Error Saving Email...!</pc_text>
+    <pc_help>Error Saving Email...!</pc_help>
+  </errorsavingemail>
+  <errordeletingemail>
+    <pc_type>others</pc_type>
+    <pc_label>Error Deleting Email</pc_label>
+    <pc_maxlength>50</pc_maxlength>
+    <pc_text>Error Deleting Email...!</pc_text>
+    <pc_help>Error Deleting Email...!</pc_help>
+  </errordeletingemail>
+  <errorcomment>
+    <pc_type>others</pc_type>
+    <pc_label>Error Adding Comment</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>There is some error adding comment!</pc_text>
+    <pc_help>There is some error adding comment!</pc_help>
+  </errorcomment>
+  <blankcommment>
+    <pc_type>others</pc_type>
+    <pc_label>Comment can not be blank!</pc_label>
+    <pc_maxlength>100</pc_maxlength>
+    <pc_text>Comment can not be blank!</pc_text>
+    <pc_help>Comment can not be blank!</pc_help>
+  </blankcommment>
+  <imageEffectBtnCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Edit Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Edit Effect</pc_text>
+    <pc_help>Edit Effect</pc_help>
+  </imageEffectBtnCaption>
+  <imageEffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Image Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Image Effect</pc_text>
+    <pc_help>Image Effect</pc_help>
+  </imageEffectCaption>
+  <MaskCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Mask</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Mask</pc_text>
+    <pc_help>Mask</pc_help>
+  </MaskCaption>
+  <EffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Effect</pc_text>
+    <pc_help>Effect</pc_help>
+  </EffectCaption>
+  <CustomEffectCaption>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Custom Effect</pc_label>
+    <pc_maxlength>20</pc_maxlength>
+    <pc_text>Custom Effect</pc_text>
+    <pc_help>Custom Effect</pc_help>
+  </CustomEffectCaption>
+  <posterize>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Posterize</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Posterize</pc_text>
+    <pc_help>Posterize</pc_help>
+  </posterize>
+  <css_brightness>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Brightness</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Brightness</pc_text>
+    <pc_help>Brightness</pc_help>
+  </css_brightness>
+  <brightness_threshold>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Threshold</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Threshold</pc_text>
+    <pc_help>Threshold</pc_help>
+  </brightness_threshold>
+  <css_invert>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Invert</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Invert</pc_text>
+    <pc_help>Invert</pc_help>
+  </css_invert>
+  <gamma_correct>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Color Correct</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Color Correct</pc_text>
+    <pc_help>Color Correct</pc_help>
+  </gamma_correct>
+  <gamma_correct2>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Gamma Correct</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Gamma Correct</pc_text>
+    <pc_help>Gamma Correct</pc_help>
+  </gamma_correct2>
+  <css_grayscale>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Grayscale</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Grayscale</pc_text>
+    <pc_help>Grayscale</pc_help>
+  </css_grayscale>
+  <css_sharpen>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Sharpen</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Sharpen</pc_text>
+    <pc_help>Sharpen</pc_help>
+  </css_sharpen>
+  <css_hue_rotate>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Hue</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Hue</pc_text>
+    <pc_help>Hue</pc_help>
+  </css_hue_rotate>
+  <luminance_mask>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Luminance</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Luminance</pc_text>
+    <pc_help>Luminance</pc_help>
+  </luminance_mask>
+  <css_sepia>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Sepia</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Sepia</pc_text>
+    <pc_help>Sepia</pc_help>
+  </css_sepia>
+  <dusk>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Dusk</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Dusk</pc_text>
+    <pc_help>Dusk</pc_help>
+  </dusk>
+  <oneColor>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Monotone</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Monotone</pc_text>
+    <pc_help>Monotone</pc_help>
+  </oneColor>
+  <twoColor>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>Duotone</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>Duotone</pc_text>
+    <pc_help>Duotone</pc_help>
+  </twoColor>
+  <original>
+    <pc_type>elementLabel</pc_type>
+    <pc_label>None</pc_label>
+    <pc_maxlength>25</pc_maxlength>
+    <pc_text>None</pc_text>
+    <pc_help>None</pc_help>
+  </original>
+</printcommerce_multilanguage>

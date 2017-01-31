@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+      <config>
+          <modules>
+              <Designnbuy_Checkoutcart>
+                  <version>0.1.0</version>
+              </Designnbuy_Checkoutcart>
+          </modules>
+          <global>
+            <!-- This rewrite rule could be added to the database instead -->
+              <rewrite>
+                  <!-- This is an identifier for your rewrite that should be unique -->
+                  <!-- THIS IS THE CLASSNAME IN YOUR OWN CONTROLLER -->
+                  <designnbuy_checkoutcart_checkout_cart>
+                      <from><![CDATA[#^/checkout/cart/#]]></from>
+                      <to>/checkoutcart/checkout_cart/</to>
+                  </designnbuy_checkoutcart_checkout_cart>
+              </rewrite>
+			  <models>
+					<checkout>
+						<rewrite>
+							<cart>Designnbuy_Checkoutcart_Model_Cart</cart>
+						</rewrite>	
+					</checkout>
+				</models>
+	</global>
+         <frontend>
+              <routers>
+                  <designnbuy_checkoutcart>
+                     	<use>standard</use>
+                      <args>
+                          <module>Designnbuy_Checkoutcart</module>
+                          <frontName>checkoutcart</frontName>
+                      </args>
+                  </designnbuy_checkoutcart>
+              </routers>
+          </frontend>
+      </config>   

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Clearandfizzy_EnhancedCMS>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Clearandfizzy_EnhancedCMS>
+    </modules>
+</config>
